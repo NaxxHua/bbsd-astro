@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Services - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[70vh] min-h-[500px] w-full overflow-hidden">
+      <img
+        src="/images/services/services-hero.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-5xl font-bold text-white md:text-7xl">Services</h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Our Expertise in Engineering & Site Support
+        </p>
+      </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="bg-white py-24">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <a
+            href="/services/engineering"
+            class="group overflow-hidden rounded-2xl border border-gray-light/20 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
+          >
+            <div class="mb-4 text-4xl">⚙️</div>
+            <h3
+              class="mb-2 text-lg font-bold text-dark group-hover:text-orange-primary"
+            >
+              Engineering Services
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Comprehensive engineering solutions from concept to detailed
+              design.
+            </p>
+          </a>
+
+          <a
+            href="/services/fabrication"
+            class="group overflow-hidden rounded-2xl border border-gray-light/20 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
+          >
+            <div class="mb-4 text-4xl">🔧</div>
+            <h3
+              class="mb-2 text-lg font-bold text-dark group-hover:text-orange-primary"
+            >
+              Fabrication & Site Support
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Reliable on-site services ensuring quality, safety, and timely
+              execution.
+            </p>
+          </a>
+
+          <a
+            href="/services/procurement"
+            class="group overflow-hidden rounded-2xl border border-gray-light/20 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
+          >
+            <div class="mb-4 text-4xl">🚛</div>
+            <h3
+              class="mb-2 text-lg font-bold text-dark group-hover:text-orange-primary"
+            >
+              Procurement & Materials Supply
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Strategic sourcing to optimize cost, quality, and delivery.
+            </p>
+          </a>
+
+          <a
+            href="/services/commissioning"
+            class="group overflow-hidden rounded-2xl border border-gray-light/20 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
+          >
+            <div class="mb-4 text-4xl">✓</div>
+            <h3
+              class="mb-2 text-lg font-bold text-dark group-hover:text-orange-primary"
+            >
+              Commissioning
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Ensuring systems operate safely, efficiently, and ready for
+              handover.
+            </p>
+          </a>
+
+          <a
+            href="/services/piping-spools-pre-fabrication"
+            class="group overflow-hidden rounded-2xl border border-gray-light/20 bg-white p-8 shadow-sm transition-all hover:shadow-lg"
+          >
+            <div class="mb-4 text-4xl">🔩</div>
+            <h3
+              class="mb-2 text-lg font-bold text-dark group-hover:text-orange-primary"
+            >
+              Piping Spools Pre-fabrication
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Off-site fabrication to ensure quality, efficiency, and faster
+              installation.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Commissioning - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/services/service-4.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
+          Commissioning
+        </h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Ensuring systems operate safely, efficiently, and ready for handover.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="mb-12">
+          <h2 class="mb-4 text-2xl font-bold text-dark">
+            Commissioning Support
+          </h2>
+          <p class="max-w-3xl text-sm leading-relaxed text-gray">
+            BBSD provides comprehensive commissioning services to ensure systems
+            and facilities are fully functional, safe, and compliant before
+            handover. Our expertise covers the critical final phase of project
+            delivery, minimizing risks and ensuring smooth start-up operations.
+          </p>
+        </div>
+
+        <div class="grid gap-12 md:grid-cols-2">
+          <div>
+            <h3 class="mb-3 text-xl font-bold text-dark">Flange Management</h3>
+            <p class="text-sm leading-relaxed text-gray">
+              We implement systematic flange management programs to guarantee
+              leak-free start-up. By controlling flange assembly, torqueing, and
+              documentation, we enhance safety, reduce operational risks, and
+              ensure compliance with international standards.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-3 text-xl font-bold text-dark">
+              Flushing & Chemical Cleaning
+            </h3>
+            <p class="text-sm leading-relaxed text-gray">
+              Our flushing and chemical cleaning services remove construction
+              debris, contaminants, and residues from piping and process
+              systems. Using proven procedures and certified cleaning agents, we
+              safeguard equipment performance, extend asset life, and prepare
+              systems for efficient operation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

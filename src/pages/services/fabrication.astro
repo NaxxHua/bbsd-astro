@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Fabrication & Site Support - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/services/service-2.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
+          Fabrication & Site Support
+        </h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Reliable on-site services ensuring quality, safety, and timely
+          execution.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="grid gap-16">
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">
+              Project Management
+            </h2>
+            <p class="text-sm leading-relaxed text-gray">
+              BBSD oversees fabrication processes from vendor qualification to
+              workshop inspections. We ensure adherence to design
+              specifications, welding standards, and project timelines, helping
+              clients achieve seamless delivery from shop to site.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Site Supervision</h2>
+            <p class="text-sm leading-relaxed text-gray">
+              Our site engineers provide daily supervision and coordination with
+              contractors, ensuring safety, compliance, and timely progress. We
+              support multi-disciplinary construction, monitoring quality and
+              resolving issues promptly.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">
+              Inspection Services (NDT, Welding, QC)
+            </h2>
+            <p class="text-sm leading-relaxed text-gray">
+              We deliver Non-Destructive Testing (NDT), welding inspection, and
+              quality control services. Our certified inspectors ensure
+              compliance with codes (AWS, ISO, EN) and provide transparent
+              reporting for clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

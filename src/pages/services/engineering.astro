@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Engineering Services - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/services/service-1.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
+          Engineering Services
+        </h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Comprehensive engineering solutions from concept to detailed design.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick Nav -->
+    <section class="border-b border-gray-light/20 bg-white">
+      <div class="mx-auto flex max-w-[1200px] flex-wrap gap-4 px-6 py-4">
+        <a
+          href="/engineering-services/structural-engineering"
+          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
+          >Structural Engineering</a
+        >
+        <a
+          href="/engineering-services/piping-engineering"
+          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
+          >Piping Engineering</a
+        >
+        <a
+          href="/engineering-services/mechanical-engineering"
+          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
+          >Mechanical Engineering</a
+        >
+        <a
+          href="/engineering-services/e-i-engineering"
+          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
+          >Electrical & Instrumentation</a
+        >
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="grid gap-16">
+          <div class="grid items-start gap-8 md:grid-cols-2">
+            <div>
+              <h2 class="mb-4 text-2xl font-bold text-dark">
+                Structural Engineering
+              </h2>
+              <p class="text-sm leading-relaxed text-gray">
+                BBSD provides structural design and analysis for offshore,
+                onshore, and utility projects. We specialize in steel and
+                structures, seismic analysis, and load-bearing assessments. Our
+                approach emphasizes safety, durability, and compliance with
+                global engineering standards.
+              </p>
+            </div>
+            <img
+              src="/images/services/service-2.jpg"
+              alt="Structural Engineering"
+              class="w-full rounded-xl object-cover"
+            />
+          </div>
+
+          <div class="grid items-start gap-8 md:grid-cols-2">
+            <img
+              src="/images/services/service-3.jpg"
+              alt="Piping Design"
+              class="order-2 w-full rounded-xl object-cover md:order-1"
+            />
+            <div class="order-1 md:order-2">
+              <h2 class="mb-4 text-2xl font-bold text-dark">
+                Piping Design & Routing
+              </h2>
+              <p class="text-sm leading-relaxed text-gray">
+                Our piping design services cover concept to detailed
+                engineering, including routing optimization, stress analysis,
+                and 3D modeling. We ensure compliance with international codes
+                (ASME, ISO) and deliver cost-effective, safe, and maintainable
+                piping systems for energy and infrastructure projects.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid items-start gap-8 md:grid-cols-2">
+            <div>
+              <h2 class="mb-4 text-2xl font-bold text-dark">
+                Mechanical Engineering
+              </h2>
+              <p class="text-sm leading-relaxed text-gray">
+                Our mechanical engineering services cover equipment selection,
+                design, and integration for process industries. We support
+                rotating and static equipment, pressure vessels, and HVAC
+                systems, ensuring reliable performance across project
+                lifecycles.
+              </p>
+            </div>
+            <img
+              src="/images/services/service-4.jpg"
+              alt="Mechanical Engineering"
+              class="w-full rounded-xl object-cover"
+            />
+          </div>
+
+          <div class="grid items-start gap-8 md:grid-cols-2">
+            <img
+              src="/images/services/service-5.jpg"
+              alt="E&I Engineering"
+              class="order-2 w-full rounded-xl object-cover md:order-1"
+            />
+            <div class="order-1 md:order-2">
+              <h2 class="mb-4 text-2xl font-bold text-dark">E&I Engineering</h2>
+              <p class="text-sm leading-relaxed text-gray">
+                BBSD offers Electrical and Instrumentation (E&I) engineering
+                services covering power generation and distribution, lighting,
+                instrumentation, automation, and control systems, with a focus
+                on safety, redundancy, and compliance with industry standards
+                and regulations such as IEC, IEEE, API, and DNV.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

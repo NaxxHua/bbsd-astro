@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Procurement & Materials Supply - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/services/service-3.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
+          Procurement & Materials Supply
+        </h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Strategic sourcing to optimize cost, quality, and delivery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <h2 class="mb-8 text-2xl font-bold text-dark">Materials We Supply</h2>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {
+            [
+              "Carbon Steel Pipes",
+              "Stainless Steel Pipes",
+              "Copper-Nickel Pipes",
+              "Glass Reinforced Epoxy Piping",
+              "Hose",
+              "CS Pipe Fittings",
+              "SS Pipe Fittings",
+              "Fasteners",
+              "Electrical Cables",
+              "Valves",
+              "Spectacle Blinds",
+              "Insulation",
+            ].map((item) => (
+              <div class="rounded-xl border border-gray-light/20 bg-blue-light p-5 text-center">
+                <p class="text-sm font-medium text-dark">{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Piping Spools Pre-fabrication - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/services/service-5.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
+          Piping Spools Pre-fabrication
+        </h1>
+        <p class="max-w-2xl text-lg text-white/80">
+          Off-site fabrication to ensure quality, efficiency, and faster
+          installation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="max-w-3xl">
+          <h2 class="mb-6 text-2xl font-bold text-dark">
+            Piping Spools Pre-fabrication
+          </h2>
+          <p class="text-sm leading-relaxed text-gray">
+            Piping spools pre-fabrication involves the off-site fabrication of
+            piping sections under controlled workshop conditions before delivery
+            to site. This process includes cutting, welding, fitting,
+            inspection, and surface treatment in accordance with approved
+            drawings and international standards.
+          </p>
+          <p class="mt-4 text-sm leading-relaxed text-gray">
+            Pre-fabrication improves installation efficiency, reduces on-site
+            work and safety risks, enhances quality control, and shortens
+            overall project schedules, making it especially suitable for
+            offshore, modular, and large-scale industrial projects.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

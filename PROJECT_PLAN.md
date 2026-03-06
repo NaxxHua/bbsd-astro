@@ -208,17 +208,17 @@ fontFamily: {
 ## Phase 5: Services 页面
 
 ### 5.1 Services 主页
-- [ ] Hero: 工厂脚手架背景 + "Services" 标题
-- [ ] 5个服务分类展示 (与首页类似但更详细)
-- [ ] 每个服务链接到子页面
+- [x] Hero: 工厂脚手架背景 + "Services" 标题
+- [x] 5个服务分类展示 (与首页类似但更详细)
+- [x] 每个服务链接到子页面
 
 ### 5.2 Services 子页面 (5个)
-- [ ] /services/engineering
-- [ ] /services/fabrication
-- [ ] /services/procurement
-- [ ] /services/commissioning
-- [ ] /services/piping-spools-pre-fabrication
-- [ ] 每个页面: Hero + 详细描述 + 图片 + 相关服务链接
+- [x] /services/engineering
+- [x] /services/fabrication
+- [x] /services/procurement
+- [x] /services/commissioning
+- [x] /services/piping-spools-pre-fabrication
+- [x] 每个页面: Hero + 详细描述 + 图片 + 相关服务链接
 
 ---
 
