@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+import Header from "../components/common/Header.tsx";
+import Footer from "../components/common/Footer.astro";
+import FloatingButtons from "../components/common/FloatingButtons.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "BBSD - Your Trusted Engineering Partner",
+  description = "BBSD provides professional engineering, fabrication, procurement, and commissioning services for offshore, renewable energy, and onshore plant projects.",
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-white text-dark antialiased">
+    <Header client:load currentPath={currentPath} />
+    <slot />
+    <Footer />
+    <FloatingButtons />
+  </body>
+</html>
