@@ -244,7 +244,7 @@ fontFamily: {
 - [x] Hero (会议演示背景)
 - [x] "Let's get in touch" 标题
 - [x] 联系表单 (Name, Email, Phone, Message)
-- [ ] 图片轮播 (工作场景)
+- [x] 图片轮播 (工作场景)
 - [x] Google Maps嵌入
 - [x] 地址信息
 
