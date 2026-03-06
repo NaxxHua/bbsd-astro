@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Piping Engineering - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img src="/images/services/service-3.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">Piping Engineering</h1>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
+          BBSD offers piping engineering services for both onshore and offshore plants. The piping engineering services includes but not limited to:
+        </p>
+
+        <div class="grid gap-16">
+          <!-- Materials Specification -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Piping Materials Specification</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              Piping Materials includes defining material classes, corrosion control strategies, and specifications for pipes, fittings, flanges, valves, and gaskets. For offshore projects, our engineers are familiar with harsh marine environments, high pressures, extreme temperatures, and weight optimization while adhering to codes like ASME, API, and ISO.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Material Selection & Specification for pipes, fittings, flanges, gaskets, valves, and special items</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Documentation and Specification Development (PMS, MSD, MRs and Valve Datasheets)</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Procurement Support</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Coordination & Interface Management</li>
+            </ul>
+          </div>
+
+          <!-- Layout & Routing -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Plant Layout Design & Piping Routing</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              Piping Routing is the pivot discipline for offshore plant design. The piping design focuses on developing efficient, safe, and maintainable piping systems within the limited space of offshore facilities. BBSD offers design activities from Single Function Module to Entire Plant like Full FPSO Topside.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Plant Layout Development</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Pipe Routing Design</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>3D Modelling using cutting edge tools like E3D and PDMS</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Interface and Coordination (Design Review and Clash Check)</li>
+            </ul>
+          </div>
+
+          <!-- Stress Analysis -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Piping Stress Analysis</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              Piping Stress discipline ensure that piping systems can safely withstand internal pressures, thermal expansion, dynamic loads, and external forces while meeting code and project requirements. This discipline involves analyzing piping flexibility, support design, and load transfer to equipment and structures using tools like CAESAR II or AutoPIPE.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Piping Stress Analysis</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Support Design and Optimization</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Equipment Nozzle Load Evaluation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-16 flex justify-between">
+          <a href="/engineering-services/mechanical-engineering" class="text-sm font-medium text-blue-link hover:underline">‹ Mechanical Engineering</a>
+          <a href="/engineering-services/structural-engineering" class="text-sm font-medium text-blue-link hover:underline">Structural Engineering ›</a>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="BBSD - First Year Anniversary">
+  <main>
+    <article class="bg-white py-20">
+      <div class="mx-auto max-w-[800px] px-6">
+        <p class="mb-4 text-sm text-gray-light">Nov 20, 2025</p>
+        <h1 class="mb-8 text-3xl font-bold text-dark md:text-5xl">BBSD - First Year Anniversary</h1>
+
+        <img src="/images/news/anniversary.jpg" alt="BBSD First Year Anniversary" class="mb-10 w-full rounded-xl object-cover" />
+
+        <div class="prose max-w-none space-y-4 text-sm leading-relaxed text-gray">
+          <p>Today marks one year of BBSD. A year of growth, collaboration, and delivering reliable engineering solutions.</p>
+          <p>Thank you to our clients, partners, and team for the trust and hard work. Here's to building even better in the years ahead.</p>
+          <p><strong>BBSD - One year strong!</strong></p>
+        </div>
+
+        <div class="mt-12">
+          <a href="/news" class="text-sm font-medium text-blue-link hover:underline">← Back to News</a>
+        </div>
+      </div>
+    </article>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

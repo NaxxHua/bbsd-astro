@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ScrollReveal from "../components/animations/ScrollReveal.tsx";
+---
+
+<BaseLayout title="Contact - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img src="/images/contact/hero.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">Let's get in touch</h1>
+        <p class="max-w-xl text-lg text-white/80">We'd love to hear from you. Reach out to us for any inquiries about our services.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form + Info -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="grid gap-16 lg:grid-cols-2">
+          <!-- Form -->
+          <ScrollReveal client:visible>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="mb-2 block text-sm font-medium text-dark">Name</label>
+                <input type="text" id="name" name="name" required class="w-full rounded-lg border border-gray-light/30 px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-blue-dark" placeholder="Your full name" />
+              </div>
+              <div>
+                <label for="email" class="mb-2 block text-sm font-medium text-dark">Email</label>
+                <input type="email" id="email" name="email" required class="w-full rounded-lg border border-gray-light/30 px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-blue-dark" placeholder="your@email.com" />
+              </div>
+              <div>
+                <label for="phone" class="mb-2 block text-sm font-medium text-dark">Phone</label>
+                <input type="tel" id="phone" name="phone" class="w-full rounded-lg border border-gray-light/30 px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-blue-dark" placeholder="Your phone number" />
+              </div>
+              <div>
+                <label for="message" class="mb-2 block text-sm font-medium text-dark">Message</label>
+                <textarea id="message" name="message" rows="5" required class="w-full resize-none rounded-lg border border-gray-light/30 px-4 py-3 text-sm text-dark outline-none transition-colors focus:border-blue-dark" placeholder="Tell us about your project..."></textarea>
+              </div>
+              <button type="submit" class="rounded-full bg-orange-primary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-hover">Send Message</button>
+            </form>
+          </ScrollReveal>
+
+          <!-- Office Info -->
+          <div class="space-y-10">
+            <ScrollReveal client:visible>
+              <div>
+                <h3 class="mb-3 text-xl font-bold text-dark">Rotterdam Office</h3>
+                <p class="text-sm leading-relaxed text-gray">3356 LX</p>
+                <p class="text-sm leading-relaxed text-gray">Buitendijks 53, Papendrecht</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal client:visible>
+              <div>
+                <h3 class="mb-3 text-xl font-bold text-dark">Nantong Office</h3>
+                <p class="text-sm leading-relaxed text-gray">No. 218 Yongxing Road</p>
+                <p class="text-sm leading-relaxed text-gray">Yongxing Sub-district, Chongchuan District, Nantong City, Jiangsu Province, China</p>
+              </div>
+            </ScrollReveal>
+
+            <!-- Google Maps Embed -->
+            <ScrollReveal client:visible>
+              <div class="overflow-hidden rounded-xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3417.5!2d120.86!3d32.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDAwJzM2LjAiTiAxMjDCsDUxJzM2LjAiRQ!5e0!3m2!1sen!2s!4v1234567890"
+                  width="100%"
+                  height="300"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="BBSD Nantong Office Location"
+                ></iframe>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="E&I Engineering - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img src="/images/services/service-1.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">E&I Engineering</h1>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
+          BBSD offers Electrical and Instrumentation (E&I) engineering services covers power generation and distribution, lighting, instrumentation, automation, and control systems, with a focus on safety, redundancy, and compliance with industry standards and regulations such as IEC, IEEE, API, and DNV.
+        </p>
+
+        <div class="grid gap-16">
+          <!-- Electrical System Design -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Electrical System Design</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              Electrical Design designs the Electrical power generation and distribution. Its work starts with inventory of all consumers in the electrical consumer list, along with hidden consumers such as packages and machinery auxiliaries.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Switchgear, transformers, MCCs, VFDs, and cabling</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Primary and secondary power distribution networks (HV, MV, LV)</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Define lighting, grounding, and earthing systems for hazardous areas</li>
+            </ul>
+          </div>
+
+          <!-- Instrumentation & Control -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">Instrumentation & Control Design</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              Instrument Design develops control philosophies for process automation, safety shutdown, and emergency systems and ensure compliances with IEC and DNV standards.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Define architecture for DCS, ESD, F&G (Fire & Gas), PAGA and SCADA system</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Select field instruments such as transmitters, analyzers, control valves, and sensors</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Specify smart instrumentation and communication protocols (e.g., HART, Foundation Fieldbus)</li>
+            </ul>
+          </div>
+
+          <!-- 3D Modeling -->
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">3D Modeling & Layout Integration</h2>
+            <p class="mb-4 text-sm leading-relaxed text-gray">
+              3D Modelling is the key for offshore plant design which requires complicated multiciliary coordination with piping layout design, mechanical Equipment and Structural Design.
+            </p>
+            <ul class="space-y-2 text-sm text-gray">
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Define routing and layout for electrical cables, cable trays, junction boxes, and control panels</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Integrate instrument location plans and cable schedules into 3D models (e.g., Aveva E3D, SmartPlant)</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Perform clash detection with piping, structural, and mechanical systems</li>
+              <li class="flex items-start gap-2"><span class="mt-1 text-orange-primary">•</span>Optimize layouts for space constraints, accessibility, and maintainability</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="mt-16 flex justify-end">
+          <a href="/engineering-services/mechanical-engineering" class="text-sm font-medium text-blue-link hover:underline">Mechanical Engineering ›</a>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

@@ -225,31 +225,31 @@ fontFamily: {
 ## Phase 6: 其他页面
 
 ### 6.1 Market 页面
-- [ ] Hero + "Market" 标题
-- [ ] 市场分类详情
+- [x] Hero + "Market" 标题
+- [x] 市场分类详情
 
 ### 6.2 Engineering Services 页面
-- [ ] 主页 + 4个子页面
-- [ ] E&I Engineering / Mechanical / Piping / Structural
+- [x] 主页 + 4个子页面
+- [x] E&I Engineering / Mechanical / Piping / Structural
 
 ### 6.3 Projects 页面
-- [ ] 项目展示页
-- [ ] 项目详情页
+- [x] 项目展示页
+- [x] 项目详情页
 
 ### 6.4 News 页面
-- [ ] 新闻列表页
-- [ ] 4篇新闻详情页 (Content Collections)
+- [x] 新闻列表页
+- [x] 4篇新闻详情页 (Content Collections)
 
 ### 6.5 Contact 页面
-- [ ] Hero (会议演示背景)
-- [ ] "Let's get in touch" 标题
-- [ ] 联系表单 (Name, Email, Phone, Message)
+- [x] Hero (会议演示背景)
+- [x] "Let's get in touch" 标题
+- [x] 联系表单 (Name, Email, Phone, Message)
 - [ ] 图片轮播 (工作场景)
-- [ ] Google Maps嵌入
-- [ ] 地址信息
+- [x] Google Maps嵌入
+- [x] 地址信息
 
 ### 6.6 Careers 页面
-- [ ] 招聘信息展示
+- [x] 招聘信息展示
 
 ---
 

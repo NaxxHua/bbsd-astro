@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ScrollReveal from "../components/animations/ScrollReveal.tsx";
+import TextReveal from "../components/animations/TextReveal.tsx";
+import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="Our Market - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img
+        src="/images/market/hero.jpg"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div
+        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <p class="mb-4 text-sm tracking-widest text-white/60 uppercase">
+          Our journey has been marked by continuous improvement, expansion of
+          our service offerings and a relentless focus on customer satisfaction.
+        </p>
+        <h1 class="text-4xl font-bold text-white md:text-6xl">Our Market</h1>
+      </div>
+    </section>
+
+    <!-- Market Description -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <TextReveal
+          client:visible
+          text="Our Market"
+          tag="h2"
+          className="mb-4 text-3xl font-bold text-blue-dark md:text-5xl"
+        />
+        <p class="mb-12 text-lg text-gray">Where We Make an Impact.</p>
+
+        <div class="grid gap-12">
+          <!-- FPSO -->
+          <ScrollReveal client:visible>
+            <div
+              class="grid items-center gap-8 overflow-hidden rounded-2xl bg-blue-light md:grid-cols-2"
+            >
+              <div class="p-8 md:p-12">
+                <h3
+                  class="mb-2 text-xs font-semibold tracking-widest text-gray-light uppercase"
+                >
+                  OFFSHORE
+                </h3>
+                <h4 class="mb-4 text-2xl font-bold text-dark">FPSO Modulars</h4>
+                <p class="text-sm leading-relaxed text-gray">
+                  Driving the future of energy with expertise in offshore wind,
+                  hydrogen, and oil & gas, delivering safe, efficient, and
+                  sustainable solutions.
+                </p>
+              </div>
+              <img
+                src="/images/home/fpso-platform.jpg"
+                alt="FPSO Modulars"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </ScrollReveal>
+
+          <!-- Renewable Energy -->
+          <ScrollReveal client:visible>
+            <div
+              class="grid items-center gap-8 overflow-hidden rounded-2xl bg-blue-light md:grid-cols-2"
+            >
+              <img
+                src="/images/market/renewable.jpg"
+                alt="Renewable Energy"
+                class="order-2 h-full w-full object-cover md:order-1"
+              />
+              <div class="order-1 p-8 md:order-2 md:p-12">
+                <h3
+                  class="mb-2 text-xs font-semibold tracking-widest text-gray-light uppercase"
+                >
+                  ENERGY
+                </h3>
+                <h4 class="mb-4 text-2xl font-bold text-dark">
+                  Renewable Energy
+                </h4>
+                <p class="text-sm leading-relaxed text-gray">
+                  Building stronger cities through reliable engineering for
+                  bridges, pipelines, and essential urban utilities, designed
+                  for safety and long-term resilience.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <!-- Onshore -->
+          <ScrollReveal client:visible>
+            <div
+              class="grid items-center gap-8 overflow-hidden rounded-2xl bg-blue-light md:grid-cols-2"
+            >
+              <div class="p-8 md:p-12">
+                <h3
+                  class="mb-2 text-xs font-semibold tracking-widest text-gray-light uppercase"
+                >
+                  ONSHORE
+                </h3>
+                <h4 class="mb-4 text-2xl font-bold text-dark">
+                  Onshore Plant Modulars
+                </h4>
+                <p class="text-sm leading-relaxed text-gray">
+                  Your trusted partner for cross-border projects, combining
+                  local expertise and compliance to ensure seamless execution
+                  between China and Europe.
+                </p>
+              </div>
+              <img
+                src="/images/home/offshore-crane.jpg"
+                alt="Onshore Plant Modulars"
+                class="h-full w-full object-cover"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

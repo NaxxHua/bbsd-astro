@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ScrollReveal from "../components/animations/ScrollReveal.tsx";
+import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
+
+const positions = [
+  { level: "Senior", title: "Structural Design Engineer", date: "JAN 2026" },
+  { level: "Senior", title: "Piping Design Engineer", date: "NOVEMBER 2025" },
+  { level: "Senior", title: "Electrical & Instrumentation (E&I) Design Engineer", date: "JUNE 2025" },
+  { level: "Junior", title: "Procurement Specialist", date: "AUGUST 2025" },
+];
+---
+
+<BaseLayout title="Careers - BBSD">
+  <main>
+    <!-- Hero -->
+    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
+      <img src="/images/careers/hero.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">Careers</h1>
+      </div>
+    </section>
+
+    <!-- Come Join -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <ScrollReveal client:visible>
+            <div>
+              <h2 class="mb-6 text-3xl font-bold text-dark md:text-4xl">Come join our team</h2>
+              <p class="text-sm leading-relaxed text-gray">
+                At BBSD, we design and deliver world-class offshore and marine engineering solutions. Our success is driven by talented professionals who are passionate about engineering excellence, safety, and innovation.
+              </p>
+              <p class="mt-4 text-sm leading-relaxed text-gray">
+                We offer a collaborative working environment, exposure to international offshore projects, and opportunities for long-term career development.
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal client:visible>
+            <img src="/images/careers/team.jpg" alt="Team at work" class="w-full rounded-xl object-cover" />
+          </ScrollReveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="bg-blue-light py-20">
+      <div class="mx-auto max-w-[1200px] px-6">
+        <h2 class="mb-10 text-3xl font-bold text-dark">Open Positions</h2>
+
+        <!-- Table Header -->
+        <div class="mb-4 hidden grid-cols-3 gap-4 px-6 md:grid">
+          <p class="text-xs font-semibold tracking-widest text-gray-light uppercase">Level</p>
+          <p class="text-xs font-semibold tracking-widest text-gray-light uppercase">Title</p>
+          <p class="text-xs font-semibold tracking-widest text-gray-light uppercase">Date</p>
+        </div>
+
+        <div class="space-y-3">
+          {positions.map((pos) => (
+            <ScrollReveal client:visible>
+              <div class="grid items-center gap-4 rounded-xl bg-white p-6 md:grid-cols-3">
+                <div>
+                  <span class="inline-block rounded-full bg-blue-light px-3 py-1 text-xs font-medium text-blue-dark">{pos.level}</span>
+                </div>
+                <h3 class="text-sm font-bold text-dark">{pos.title}</h3>
+                <p class="text-sm text-gray-light">{pos.date}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>
