@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutHero from "../components/about/AboutHero.astro";
+import TimelineYear from "../components/about/TimelineYear.tsx";
+import WhoWeAre from "../components/about/WhoWeAre.tsx";
+import VisionMissionValues from "../components/about/VisionMissionValues.tsx";
+import TeamSection from "../components/about/TeamSection.tsx";
+import ISOCertifications from "../components/about/ISOCertifications.tsx";
+import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
+---
+
+<BaseLayout title="About Us - BBSD">
+  <main>
+    <AboutHero />
+    <TimelineYear client:visible />
+    <WhoWeAre client:visible />
+    <VisionMissionValues client:visible />
+    <TeamSection client:visible />
+    <ISOCertifications client:visible />
+    <GetInTouchBanner client:visible />
+  </main>
+</BaseLayout>

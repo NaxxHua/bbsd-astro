@@ -184,6 +184,7 @@ bbsd-astro/
 - Work incrementally (small refactors / single feature steps).
 - After each incremental change:
   - Run `npx astro build` (or start dev server for preview) to verify no syntax/build errors.
+  - Update `PROJECT_PLAN.md`: check off completed items (`- [x]`).
   - Stage modified files (do NOT run `git commit`).
   - Suggest a Conventional Commit message: `feat:`, `fix:`, `refactor:`,
     `docs:`, `style:`, `test:`, `chore:`.

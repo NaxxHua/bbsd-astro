@@ -70,138 +70,138 @@ fontFamily: {
 ## Phase 2: 公共组件开发
 
 ### 2.1 BaseLayout.astro
-- [ ] HTML结构 + meta tags + SEO
-- [ ] Google Fonts 引入
-- [ ] 全局CSS (global.css)
+- [x] HTML结构 + meta tags + SEO
+- [x] Google Fonts 引入
+- [x] 全局CSS (global.css)
 - [ ] i18n context provider
 
 ### 2.2 Header 组件
-- [ ] Logo (链接到首页)
-- [ ] 导航菜单: Home, About, Market, Services, Projects, News
-- [ ] 电话号码: (86) 15927327738
-- [ ] Contact CTA按钮 (橙色)
-- [ ] 移动端汉堡菜单 (需React交互)
-- [ ] 当前页面高亮
-- [ ] 深色背景(半透明/实色根据页面)
+- [x] Logo (链接到首页)
+- [x] 导航菜单: Home, About, Market, Services, Projects, News
+- [x] 电话号码: (86) 15927327738
+- [x] Contact CTA按钮 (橙色)
+- [x] 移动端汉堡菜单 (需React交互)
+- [x] 当前页面高亮
+- [x] 深色背景(半透明/实色根据页面)
 
 ### 2.3 Footer 组件
-- [ ] Logo + 公司描述
-- [ ] Rotterdam办公室地址 + Google Maps链接
-- [ ] Nantong办公室地址 + Google Maps链接
-- [ ] 底部版权 + 快捷链接(Home, About, Contact, News)
+- [x] Logo + 公司描述
+- [x] Rotterdam办公室地址 + Google Maps链接
+- [x] Nantong办公室地址 + Google Maps链接
+- [x] 底部版权 + 快捷链接(Home, About, Contact, News)
 
 ### 2.4 FloatingButtons 组件
-- [ ] "Contact us" 黑色按钮 (星号icon)
-- [ ] "Join us" 白色按钮
-- [ ] 固定定位: left:20px, bottom:94px
-- [ ] z-index足够高
+- [x] "Contact us" 黑色按钮 (星号icon)
+- [x] "Join us" 白色按钮
+- [x] 固定定位: left:20px, bottom:94px
+- [x] z-index足够高
 
 ### 2.5 GetInTouchBanner 组件 (多页面复用)
-- [ ] 深色渐变背景
-- [ ] "Get In Touch With Us" 标题
-- [ ] Contact 橙色按钮
-- [ ] 文字逐字reveal动画
+- [x] 深色渐变背景
+- [x] "Get In Touch With Us" 标题
+- [x] Contact 橙色按钮
+- [x] 文字逐字reveal动画
 
 ### 2.6 动画组件 (React + Framer Motion)
-- [ ] `ScrollReveal.tsx` - 滚动触发淡入+上移
-- [ ] `TextReveal.tsx` - 文字逐字/逐词渐入
-- [ ] `FadeIn.tsx` - 简单淡入
-- [ ] `SlideIn.tsx` - 滑入(左/右/上/下)
+- [x] `ScrollReveal.tsx` - 滚动触发淡入+上移
+- [x] `TextReveal.tsx` - 文字逐字/逐词渐入
+- [x] `FadeIn.tsx` - 简单淡入
+- [x] `SlideIn.tsx` - 滑入(左/右/上/下)
 
 ---
 
 ## Phase 3: 首页开发 (index.astro)
 
 ### 3.1 HeroSection
-- [ ] 全屏视频背景 (autoplay, loop, muted)
-- [ ] 暗色叠加层
-- [ ] "BBSD" + "Your trusted engineering partner" 大标题
-- [ ] "BBSD Innovative · Energy Services" 副标题
-- [ ] "Explore our services" 橙色CTA按钮
-- [ ] 入场动画
+- [x] 全屏视频背景 (autoplay, loop, muted)
+- [x] 暗色叠加层
+- [x] "BBSD" + "Your trusted engineering partner" 大标题
+- [x] "BBSD Innovative · Energy Services" 副标题
+- [x] "Explore our services" 橙色CTA按钮
+- [x] 入场动画
 
 ### 3.2 AboutPreview
-- [ ] 全宽工厂/工地背景图片
-- [ ] "↗ About us" 小标签
-- [ ] 大段公司简介文字 (白色，带渐入)
-- [ ] 暗色叠加层
+- [x] 全宽工厂/工地背景图片
+- [x] "↗ About us" 小标签
+- [x] 大段公司简介文字 (白色，带渐入)
+- [x] 暗色叠加层
 
 ### 3.3 CoreStrengths
-- [ ] 白色背景
-- [ ] "Our Core Strengths" 大标题
-- [ ] 3个优势点(蓝色勾icon + 标题 + 描述)
+- [x] 白色背景
+- [x] "Our Core Strengths" 大标题
+- [x] 3个优势点(蓝色勾icon + 标题 + 描述)
   - Engineering Excellence
   - Global-Local Integration
   - Reliable Project Delivery
-- [ ] 右侧大图(焊接工人) + "Learn more about us →" 链接
-- [ ] 图片圆角
+- [x] 右侧大图(焊接工人) + "Learn more about us →" 链接
+- [x] 图片圆角
 
 ### 3.4 MarketCards
-- [ ] 浅蓝(#e6eefa)背景
-- [ ] "Our Market" 蓝色标题 (文字reveal动画)
-- [ ] 3列等宽卡片:
+- [x] 浅蓝(#e6eefa)背景
+- [x] "Our Market" 蓝色标题 (文字reveal动画)
+- [x] 3列等宽卡片:
   - OFFSHORE FPSO Modulars + 图 + 描述
   - Renewable Energy + 图 + 描述
   - Onshore Plant Modulars + 图 + 描述
-- [ ] 卡片白底圆角，hover效果
+- [x] 卡片白底圆角，hover效果
 
 ### 3.5 ServicesGrid
-- [ ] 深黑渐变背景 (radial-gradient)
-- [ ] "Our services" 白色标题
-- [ ] 4+1 服务卡片 (半透明边框):
+- [x] 深黑渐变背景 (radial-gradient)
+- [x] "Our services" 白色标题
+- [x] 4+1 服务卡片 (半透明边框):
   - ⚙️ Engineering Services
   - 🔧 Fabrication & Site Support
   - 🚛 Procurement & Materials Supply
   - ✓ Commissioning
   - 🔩 Piping Spools Pre-fabrication
-- [ ] 每个卡片: icon + 标题 + 描述
-- [ ] 卡片hover效果
+- [x] 每个卡片: icon + 标题 + 描述
+- [x] 卡片hover效果
 
 ### 3.6 CTABanner
-- [ ] 深色背景延续
-- [ ] "Need a professional solution?" 文字
-- [ ] "Contact Us" 橙色按钮
+- [x] 深色背景延续
+- [x] "Need a professional solution?" 文字
+- [x] "Contact Us" 橙色按钮
 
 ### 3.7 NewsPreview
-- [ ] 白色背景
-- [ ] "Latest News" 大标题 (有滚动触发的reveal)
-- [ ] 描述文字
-- [ ] 3列新闻卡片:
+- [x] 白色背景
+- [x] "Latest News" 大标题 (有滚动触发的reveal)
+- [x] 描述文字
+- [x] 3列新闻卡片:
   - 图片 + 日期 + 标题 + "Read more →"
-- [ ] 链接到详情页
+- [x] 链接到详情页
 
 ---
 
 ## Phase 4: About Us 页面
 
 ### 4.1 AboutHero
-- [ ] 全屏团队+平台背景图
-- [ ] "About Us" 大标题
-- [ ] 描述文字
+- [x] 全屏团队+平台背景图
+- [x] "About Us" 大标题
+- [x] 描述文字
 
 ### 4.2 Timeline / Year
-- [ ] "2025" 大数字
-- [ ] 时间线或成立年份展示
+- [x] "2025" 大数字
+- [x] 时间线或成立年份展示
 
 ### 4.3 WhoWeAre
-- [ ] "Who We Are" 文字reveal标题
-- [ ] 团队合照(会议室)
-- [ ] 公司介绍段落
+- [x] "Who We Are" 文字reveal标题
+- [x] 团队合照(会议室)
+- [x] 公司介绍段落
 
 ### 4.4 VisionMissionValues
-- [ ] BBSD Vision + 图片 (工人背影)
-- [ ] BBSD Mission + 图片 (海上平台)
-- [ ] BBSD Values: Safety, Quality, Efficiency, Integrity
+- [x] BBSD Vision + 图片 (工人背影)
+- [x] BBSD Mission + 图片 (海上平台)
+- [x] BBSD Values: Safety, Quality, Efficiency, Integrity
 
 ### 4.5 Team Section
-- [ ] "Meet the team" 标题
-- [ ] 团队成员卡片 (9人): 照片 + 姓名 + 职位
+- [x] "Meet the team" 标题
+- [x] 团队成员卡片 (9人): 照片 + 姓名 + 职位
   - Jack Lu, Yin Yuanxin, Zhu Lin, Carol Zhou, Cici Zhu, Stella Zhang, Yang Junmin, Katrina Pu, Wang Ying
 
 ### 4.6 ISO Certifications
-- [ ] "Our ISO Certifications" 标题
-- [ ] "Ensuring Quality, Safety, and Environmental Responsibility"
-- [ ] 证书图片展示
+- [x] "Our ISO Certifications" 标题
+- [x] "Ensuring Quality, Safety, and Environmental Responsibility"
+- [x] 证书图片展示
 
 ---
 
