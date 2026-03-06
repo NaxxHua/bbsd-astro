@@ -22,6 +22,8 @@
   --breakpoint-sm: 390px;
   --breakpoint-md: 810px;
   --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1400px;
+  --breakpoint-2xl: 1536px;
 }
 
 /* ===== Base Styles ===== */
@@ -32,8 +34,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Note: Tailwind v4 handles box-sizing via @layer base.
+   Do NOT use * { padding: 0 } as it overrides utility classes. */

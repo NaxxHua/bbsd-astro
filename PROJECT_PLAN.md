@@ -253,55 +253,52 @@ fontFamily: {
 
 ---
 
-## Phase 7: i18n 国际化
+## Phase 7: 动画 & 打磨
 
-### 7.1 语言切换方案
-- [ ] URL前缀: `/en/...` 和 `/zh/...`
-- [ ] 默认语言: 英文 (根据原站)
-- [ ] 语言切换按钮 (Header中)
-
-### 7.2 翻译文件
-- [ ] `src/i18n/en.json` - 所有英文文案
-- [ ] `src/i18n/zh.json` - 所有中文文案
-- [ ] `src/i18n/utils.ts` - i18n工具函数
-
----
-
-## Phase 8: 动画 & 打磨
-
-### 8.1 滚动动画
-- [ ] 所有section的ScrollReveal接入
-- [ ] 文字reveal效果 (大标题)
+### 7.1 滚动动画
+- [x] 所有section的ScrollReveal接入
+- [x] 文字reveal效果 (大标题)
 - [ ] 图片懒加载 + 淡入
 
-### 8.2 页面过渡
+### 7.2 页面过渡
 - [ ] Astro View Transitions (可选)
 - [ ] 页面切换平滑过渡
 
-### 8.3 响应式适配
-- [ ] Desktop (1200px+)
-- [ ] Tablet (810px-1199px)
-- [ ] Mobile (< 810px)
-- [ ] 移动端汉堡菜单
-- [ ] 图片响应式
+### 7.3 响应式适配 (首页已完成)
+- [x] Desktop (1200px+)
+- [x] Tablet (810px-1199px)
+- [x] Mobile (< 810px)
+- [x] 移动端汉堡菜单
+- [x] 图片响应式
+- [x] Header: 3层响应式 (mobile hamburger / tablet inline nav / desktop pill nav + phone)
+- [x] Hero: 全断点左对齐，响应式字体
+- [x] CoreStrengths: mobile 1列 → desktop 2列
+- [x] MarketCards: 1→2→3列 + 副标题 "Where We Make an Impact."
+- [x] ServicesGrid: 1→2→4+1列 + 副标题 "Our Expertise in Engineering & Site Support"
+- [x] NewsPreview: 1→2→3列
+- [x] GetInTouchBanner: mobile 竖排 → desktop 横排
+- [x] Footer: mobile 1列 → desktop 3列
+- [x] FloatingButtons: 响应式尺寸
+- [x] 修复 Tailwind v4 CSS reset 冲突 (移除 `* { padding: 0 }` 覆盖)
+- [ ] 子页面响应式适配 (About, Services, Contact, Market, Projects, News, Careers)
 
 ---
 
-## Phase 9: 优化 & 部署
+## Phase 8: 优化 & 部署
 
-### 9.1 性能优化
+### 8.1 性能优化
 - [ ] 图片优化 (WebP, 压缩)
 - [ ] 字体子集化
 - [ ] 视频压缩 / 懒加载
 - [ ] Lighthouse 90+ 分
 
-### 9.2 SEO
+### 8.2 SEO
 - [ ] Meta tags (title, description, og:image)
 - [ ] sitemap.xml
 - [ ] robots.txt
 - [ ] 结构化数据
 
-### 9.3 部署
+### 8.3 部署
 - [ ] 选择平台 (Vercel/Netlify/Cloudflare Pages)
 - [ ] CI/CD 配置
 - [ ] 域名绑定
@@ -318,9 +315,8 @@ fontFamily: {
 | P1 | Phase 5 Services | 重要页面 |
 | P1 | Phase 6.5 Contact | 重要页面 |
 | P2 | Phase 6 其他页面 | 次要页面 |
-| P2 | Phase 7 i18n | 双语支持 |
-| P3 | Phase 8 动画打磨 | 还原度提升 |
-| P3 | Phase 9 优化部署 | 上线准备 |
+| P3 | Phase 7 动画打磨 | 还原度提升 |
+| P3 | Phase 8 优化部署 | 上线准备 |
 
 ---
 

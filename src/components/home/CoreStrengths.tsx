@@ -6,41 +6,41 @@ const strengths = [
   {
     title: 'Engineering Excellence',
     description:
-      'Our team of experienced engineers delivers high-quality, innovative solutions across multiple disciplines including piping, structural, mechanical, and E&I engineering.',
+      'Comprehensive offshore solutions covering detailed engineering, procurement management, construction supervision, and commissioning support, all aligned with international standards such as ASME and PED.',
   },
   {
     title: 'Global-Local Integration',
     description:
-      'With offices in Rotterdam and Nantong, we bridge European standards with competitive Asian manufacturing, ensuring world-class quality at optimized costs.',
+      'Combining European engineering standards with efficient Chinese manufacturing capabilities, we bridge the gap between global compliance and local cost advantages.',
   },
   {
     title: 'Reliable Project Delivery',
     description:
-      'We are committed to delivering projects on time, within budget, and to the highest safety and quality standards, building lasting trust with our clients.',
+      'Focused on safety, efficiency, and cost-effectiveness, ensuring projects are delivered on time and within budget, from concept to operation.',
   },
 ]
 
 export default function CoreStrengths() {
   return (
-    <section className="bg-white py-24">
-      <div className="mx-auto max-w-[1200px] px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+    <section className="bg-white py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[1200px] px-5 md:px-6">
+        <div className="grid items-start gap-10 md:gap-12 lg:grid-cols-2">
           {/* Left: Text */}
           <div>
             <TextReveal
               text="Our Core Strengths"
               tag="h2"
-              className="mb-10 text-4xl font-bold text-blue-dark md:text-5xl"
+              className="mb-8 text-3xl font-bold text-dark md:mb-10 md:text-4xl lg:text-5xl"
             />
 
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               {strengths.map((item, i) => (
                 <ScrollReveal key={item.title} delay={i * 0.15}>
-                  <div className="flex gap-4">
-                    {/* Check icon */}
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-dark">
+                  <div className="flex gap-3 md:gap-4">
+                    {/* Blue check circle icon */}
+                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-dark md:h-6 md:w-6">
                       <svg
-                        className="h-3.5 w-3.5 text-white"
+                        className="h-3 w-3 text-white md:h-3.5 md:w-3.5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -54,10 +54,10 @@ export default function CoreStrengths() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="mb-1.5 text-lg font-semibold text-dark">
+                      <h3 className="mb-1.5 text-base font-bold text-dark md:mb-2 md:text-lg">
                         {item.title}
                       </h3>
-                      <p className="text-sm leading-relaxed text-gray">
+                      <p className="text-xs leading-relaxed text-gray md:text-sm">
                         {item.description}
                       </p>
                     </div>
@@ -67,22 +67,22 @@ export default function CoreStrengths() {
             </div>
           </div>
 
-          {/* Right: Image */}
+          {/* Right: Image with overlay link */}
           <SlideIn direction="right" delay={0.2}>
-            <div className="overflow-hidden rounded-2xl">
+            <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
               <img
                 src="/images/home/welder.jpg"
                 alt="Engineering professional at work"
                 className="h-auto w-full object-cover"
               />
+              {/* Overlay link at bottom */}
+              <a
+                href="/about-us"
+                className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent px-5 py-5 text-base font-medium text-white transition-colors hover:text-orange-primary md:px-6 md:py-6 md:text-lg"
+              >
+                Learn more about us →
+              </a>
             </div>
-            <a
-              href="/about-us"
-              className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-dark transition-colors hover:text-orange-primary"
-            >
-              Learn more about us
-              <span>→</span>
-            </a>
           </SlideIn>
         </div>
       </div>
