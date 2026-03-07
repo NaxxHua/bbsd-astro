@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { url } from '../../utils/url'
 
 export default function HeroSection() {
   return (
@@ -11,7 +12,7 @@ export default function HeroSection() {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/hero-video.mp4" type="video/mp4" />
+        <source src="https://framerusercontent.com/assets/9hrnL8wk0Xl8NB6KEorCiK14g.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlay */}
@@ -47,7 +48,7 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.a
-          href="/services"
+          href={url('/services')}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}

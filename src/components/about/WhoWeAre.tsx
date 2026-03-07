@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function WhoWeAre() {
   return (
@@ -24,7 +25,7 @@ export default function WhoWeAre() {
 
           <ScrollReveal delay={0.2}>
             <img
-              src="/images/about/collab-1.jpg"
+              src={url('/images/about/collab-1.jpg')}
               alt="Team collaboration"
               className="w-full rounded-2xl object-cover"
             />

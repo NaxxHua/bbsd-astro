@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="ISO 9000 Quality Management System Certification - BBSD">
@@ -14,7 +15,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
         </h1>
 
         <img
-          src="/images/news/iso-article.jpg"
+          src={`${base}images/news/iso-article.jpg`}
           alt="ISO 9000 Certification"
           class="mb-10 w-full rounded-xl object-cover"
         />
@@ -99,7 +100,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 
         <div class="mt-12">
           <a
-            href="/news"
+            href={`${base}news`}
             class="text-sm font-medium text-blue-link hover:underline"
             >← Back to News</a
           >

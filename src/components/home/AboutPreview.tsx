@@ -1,4 +1,5 @@
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function AboutPreview() {
   return (
@@ -7,7 +8,7 @@ export default function AboutPreview() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/images/home/welder.jpg')",
+          backgroundImage: `url('${url('/images/home/welder.jpg')}')`,
         }}
       />
       {/* Dark overlay */}

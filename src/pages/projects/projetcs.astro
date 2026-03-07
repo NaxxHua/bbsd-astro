@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Abigail Joseph – NAG Project - BBSD">
@@ -8,7 +9,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/projects/nag-project.jpg"
+        src={`${base}images/projects/nag-project.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
@@ -67,17 +68,17 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
           <h2 class="mb-4 text-lg font-bold text-dark">BBSD Services:</h2>
           <div class="flex flex-wrap gap-3">
             <a
-              href="/services/procurement"
+              href={`${base}services/procurement`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
               >Project Procurement Services</a
             >
             <a
-              href="/services/engineering"
+              href={`${base}services/engineering`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
               >Topside Module Details Design Services - Structure/Piping/E&I</a
             >
             <a
-              href="/services"
+              href={`${base}services`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
               >Topside Module Construction – Site Supervision Services</a
             >
@@ -126,7 +127,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 
         <div class="mt-12">
           <a
-            href="/projects"
+            href={`${base}projects`}
             class="inline-flex items-center gap-2 rounded-full bg-dark px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark/80"
             >MORE PROJECTS</a
           >

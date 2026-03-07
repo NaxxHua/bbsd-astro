@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 const newsItems = [
   {
@@ -40,10 +41,10 @@ export default function NewsPreview() {
         <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {newsItems.map((news, i) => (
             <ScrollReveal key={news.href} delay={i * 0.15}>
-              <a href={news.href} className="group block">
+              <a href={url(news.href)} className="group block">
                 <div className="overflow-hidden rounded-lg md:rounded-xl">
                   <img
-                    src={news.image}
+                    src={url(news.image)}
                     alt={news.title}
                     className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-56"
                   />

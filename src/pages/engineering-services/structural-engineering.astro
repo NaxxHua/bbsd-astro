@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Structural Engineering - BBSD">
@@ -8,7 +9,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/services/service-2.jpg"
+        src={`${base}images/services/service-2.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
@@ -123,7 +124,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
         <!-- Navigation -->
         <div class="mt-16 flex justify-start">
           <a
-            href="/engineering-services/piping-engineering"
+            href={`${base}engineering-services/piping-engineering`}
             class="text-sm font-medium text-blue-link hover:underline"
             >‹ Piping Engineering</a
           >

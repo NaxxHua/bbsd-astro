@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Commissioning - BBSD">
@@ -8,7 +9,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/services/service-4.jpg"
+        src={`${base}images/services/service-4.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />

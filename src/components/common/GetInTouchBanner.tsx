@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function GetInTouchBanner() {
   return (
@@ -15,7 +16,7 @@ export default function GetInTouchBanner() {
         />
         <ScrollReveal delay={0.3}>
           <a
-            href="/contact"
+            href={url('/contact')}
             className="inline-block shrink-0 self-start rounded-lg bg-orange-primary px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:self-auto md:px-8 md:py-3.5"
           >
             Contact

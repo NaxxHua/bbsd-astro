@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 const markets = [
   {
@@ -43,7 +44,7 @@ export default function MarketCards() {
               <div className="group overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-lg md:rounded-2xl">
                 <div className="overflow-hidden">
                   <img
-                    src={market.image}
+                    src={url(market.image)}
                     alt={market.title}
                     className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-56"
                   />

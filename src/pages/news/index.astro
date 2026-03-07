@@ -3,33 +3,34 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ScrollReveal from "../../components/animations/ScrollReveal.tsx";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 
+const base = import.meta.env.BASE_URL;
 const articles = [
   {
     slug: "bbsd-first-year-anniversary",
     title: "BBSD - First Year Anniversary",
     date: "Nov 20, 2025",
-    image: "/images/news/anniversary.jpg",
+    image: `${base}images/news/anniversary.jpg`,
   },
   {
     slug: "our-company-signs-industry-university-research-strategic-cooperation-agreement-with-nantong-university",
     title:
       "Our Company Signs Industry-University-Research Strategic Cooperation Agreement with Nantong University",
     date: "Apr 18, 2025",
-    image: "/images/news/signing.jpg",
+    image: `${base}images/news/signing.jpg`,
   },
   {
     slug: "launches-iso-9000-quality-management-system-certification",
     title:
       "BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Officially Launches ISO 9000 Quality Management System Certification",
     date: "Jun 4, 2025",
-    image: "/images/news/iso-article.jpg",
+    image: `${base}images/news/iso-article.jpg`,
   },
   {
     slug: "successfully-holds-fire-safety-emergency-drill",
     title:
       "BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Successfully Holds Fire Safety Emergency Drill",
     date: "Aug 27, 2025",
-    image: "/images/news/fire-drill.jpg",
+    image: `${base}images/news/fire-drill.jpg`,
   },
 ];
 ---
@@ -57,7 +58,7 @@ const articles = [
             articles.map((article) => (
               <ScrollReveal client:visible>
                 <a
-                  href={`/news/${article.slug}`}
+                  href={`${base}news/${article.slug}`}
                   class="group block overflow-hidden rounded-2xl border border-gray-light/20 transition-shadow hover:shadow-lg"
                 >
                   <img

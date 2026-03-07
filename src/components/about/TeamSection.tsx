@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 const teamMembers = [
   {
@@ -73,7 +74,7 @@ export default function TeamSection() {
           <div className="text-center">
             <div className="mx-auto mb-4 h-48 w-48 overflow-hidden rounded-full">
               <img
-                src="/images/about/team-overview.jpg"
+                src={url('/images/about/team-overview.jpg')}
                 alt="BBSD General Manager"
                 className="h-full w-full object-cover"
               />
@@ -91,7 +92,7 @@ export default function TeamSection() {
               <div className="text-center">
                 <div className="mx-auto mb-4 h-64 w-full max-w-[260px] overflow-hidden rounded-2xl">
                   <img
-                    src={member.image}
+                    src={url(member.image)}
                     alt={member.name}
                     className="h-full w-full object-cover"
                   />

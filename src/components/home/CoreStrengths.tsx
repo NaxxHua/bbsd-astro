@@ -1,6 +1,7 @@
 import ScrollReveal from '../animations/ScrollReveal'
 import TextReveal from '../animations/TextReveal'
 import SlideIn from '../animations/SlideIn'
+import { url } from '../../utils/url'
 
 const strengths = [
   {
@@ -71,13 +72,13 @@ export default function CoreStrengths() {
           <SlideIn direction="right" delay={0.2}>
             <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
               <img
-                src="/images/home/welder.jpg"
+                src={url('/images/home/welder.jpg')}
                 alt="Engineering professional at work"
                 className="h-auto w-full object-cover"
               />
               {/* Overlay link at bottom */}
               <a
-                href="/about-us"
+                href={url('/about-us')}
                 className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent px-5 py-5 text-base font-medium text-white transition-colors hover:text-orange-primary md:px-6 md:py-6 md:text-lg"
               >
                 Learn more about us →

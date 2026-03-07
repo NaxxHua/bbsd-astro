@@ -1,4 +1,5 @@
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function CTABanner() {
   return (
@@ -11,7 +12,7 @@ export default function CTABanner() {
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
           <a
-            href="/contact"
+            href={url('/contact')}
             className="inline-block rounded-full bg-orange-primary px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-8 md:py-3.5"
           >
             Contact Us

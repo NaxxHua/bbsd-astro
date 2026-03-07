@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ScrollReveal from "../components/animations/ScrollReveal.tsx";
 import ImageCarousel from "../components/contact/ImageCarousel.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Contact - BBSD">
@@ -9,7 +10,7 @@ import ImageCarousel from "../components/contact/ImageCarousel.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/contact/hero.jpg"
+        src={`${base}images/contact/hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />

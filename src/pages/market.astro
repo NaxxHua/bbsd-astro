@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ScrollReveal from "../components/animations/ScrollReveal.tsx";
 import TextReveal from "../components/animations/TextReveal.tsx";
 import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Our Market - BBSD">
@@ -10,7 +11,7 @@ import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/market/hero.jpg"
+        src={`${base}images/market/hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
@@ -57,7 +58,7 @@ import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
                 </p>
               </div>
               <img
-                src="/images/home/fpso-platform.jpg"
+                src={`${base}images/home/fpso-platform.jpg`}
                 alt="FPSO Modulars"
                 class="h-full w-full object-cover"
               />
@@ -70,7 +71,7 @@ import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
               class="grid items-center gap-8 overflow-hidden rounded-2xl bg-blue-light md:grid-cols-2"
             >
               <img
-                src="/images/market/renewable.jpg"
+                src={`${base}images/market/renewable.jpg`}
                 alt="Renewable Energy"
                 class="order-2 h-full w-full object-cover md:order-1"
               />
@@ -113,7 +114,7 @@ import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
                 </p>
               </div>
               <img
-                src="/images/home/offshore-crane.jpg"
+                src={`${base}images/home/offshore-crane.jpg`}
                 alt="Onshore Plant Modulars"
                 class="h-full w-full object-cover"
               />

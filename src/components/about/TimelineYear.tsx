@@ -1,4 +1,5 @@
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function TimelineYear() {
   return (
@@ -7,7 +8,7 @@ export default function TimelineYear() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <ScrollReveal>
             <img
-              src="/images/about/team-overview.jpg"
+              src={url('/images/about/team-overview.jpg')}
               alt="Our experts"
               className="w-full rounded-2xl object-cover"
             />

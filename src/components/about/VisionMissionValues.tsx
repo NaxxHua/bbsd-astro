@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 const values = [
   { title: 'Safety', icon: '🛡️' },
@@ -16,7 +17,7 @@ export default function VisionMissionValues() {
         <div className="mb-20 grid items-center gap-12 lg:grid-cols-2">
           <ScrollReveal>
             <img
-              src="/images/about/collab-2.jpg"
+              src={url('/images/about/collab-2.jpg')}
               alt="BBSD team at work"
               className="w-full rounded-2xl object-cover"
             />
@@ -55,7 +56,7 @@ export default function VisionMissionValues() {
           </div>
           <ScrollReveal className="order-1 lg:order-2">
             <img
-              src="/images/home/fpso-platform.jpg"
+              src={url('/images/home/fpso-platform.jpg')}
               alt="Offshore platform"
               className="w-full rounded-2xl object-cover"
             />

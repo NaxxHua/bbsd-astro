@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Engineering Services - BBSD">
@@ -8,7 +9,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
     <!-- Hero -->
     <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
       <img
-        src="/images/services/service-1.jpg"
+        src={`${base}images/services/service-1.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
@@ -29,22 +30,22 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
     <section class="border-b border-gray-light/20 bg-white">
       <div class="mx-auto flex max-w-[1200px] flex-wrap gap-4 px-6 py-4">
         <a
-          href="/engineering-services/structural-engineering"
+          href={`${base}engineering-services/structural-engineering`}
           class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
           >Structural Engineering</a
         >
         <a
-          href="/engineering-services/piping-engineering"
+          href={`${base}engineering-services/piping-engineering`}
           class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
           >Piping Engineering</a
         >
         <a
-          href="/engineering-services/mechanical-engineering"
+          href={`${base}engineering-services/mechanical-engineering`}
           class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
           >Mechanical Engineering</a
         >
         <a
-          href="/engineering-services/e-i-engineering"
+          href={`${base}engineering-services/e-i-engineering`}
           class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
           >Electrical & Instrumentation</a
         >
@@ -69,7 +70,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
               </p>
             </div>
             <img
-              src="/images/services/service-2.jpg"
+              src={`${base}images/services/service-2.jpg`}
               alt="Structural Engineering"
               class="w-full rounded-xl object-cover"
             />
@@ -77,7 +78,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 
           <div class="grid items-start gap-8 md:grid-cols-2">
             <img
-              src="/images/services/service-3.jpg"
+              src={`${base}images/services/service-3.jpg`}
               alt="Piping Design"
               class="order-2 w-full rounded-xl object-cover md:order-1"
             />
@@ -109,7 +110,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
               </p>
             </div>
             <img
-              src="/images/services/service-4.jpg"
+              src={`${base}images/services/service-4.jpg`}
               alt="Mechanical Engineering"
               class="w-full rounded-xl object-cover"
             />
@@ -117,7 +118,7 @@ import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 
           <div class="grid items-start gap-8 md:grid-cols-2">
             <img
-              src="/images/services/service-5.jpg"
+              src={`${base}images/services/service-5.jpg`}
               alt="E&I Engineering"
               class="order-2 w-full rounded-xl object-cover md:order-1"
             />

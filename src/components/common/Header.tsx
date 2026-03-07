@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { url } from '../../utils/url'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -21,9 +22,9 @@ export default function Header({ currentPath = '/' }: Props) {
     <header className="fixed top-0 left-0 z-50 w-full">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 md:px-6 md:py-5">
         {/* Logo */}
-        <a href="/" className="z-10 shrink-0">
+        <a href={url('/')} className="z-10 shrink-0">
           <img
-            src="/images/home/logo.png"
+            src={url('/images/home/logo.png')}
             alt="BBSD"
             className="h-8 w-auto md:h-10"
           />
@@ -34,7 +35,7 @@ export default function Header({ currentPath = '/' }: Props) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={url(link.href)}
               className={`text-sm font-medium transition-colors hover:text-orange-primary ${
                 currentPath === link.href
                   ? 'text-orange-primary'
@@ -51,7 +52,7 @@ export default function Header({ currentPath = '/' }: Props) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={url(link.href)}
               className={`text-sm font-medium transition-colors hover:text-orange-primary ${
                 currentPath === link.href
                   ? 'text-orange-primary'
@@ -78,7 +79,7 @@ export default function Header({ currentPath = '/' }: Props) {
 
           {/* Contact button - visible on mobile + tablet + desktop */}
           <a
-            href="/contact"
+            href={url('/contact')}
             className="rounded-lg bg-orange-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-6 md:py-2.5"
           >
             Contact
@@ -119,7 +120,7 @@ export default function Header({ currentPath = '/' }: Props) {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={url(link.href)}
                   className={`text-base font-medium transition-colors hover:text-orange-primary ${
                     currentPath === link.href
                       ? 'text-orange-primary'

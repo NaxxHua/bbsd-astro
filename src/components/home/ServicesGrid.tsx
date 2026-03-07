@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 const services = [
   {
@@ -78,7 +79,7 @@ export default function ServicesGrid() {
           {services.slice(0, 4).map((service, i) => (
             <ScrollReveal key={service.title} delay={i * 0.1}>
               <a
-                href={service.href}
+                href={url(service.href)}
                 className="group flex h-full flex-col rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10 md:p-6"
               >
                 <div className="mb-4 md:mb-5">{service.icon}</div>
@@ -98,7 +99,7 @@ export default function ServicesGrid() {
           <div className="w-full md:w-1/2 lg:w-1/4">
             <ScrollReveal delay={0.4}>
               <a
-                href={services[4].href}
+                href={url(services[4].href)}
                 className="group flex h-full flex-col rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all hover:border-white/25 hover:bg-white/10 md:p-6"
               >
                 <div className="mb-4 md:mb-5">{services[4].icon}</div>
