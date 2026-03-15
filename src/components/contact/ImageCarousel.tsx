@@ -1,52 +1,58 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef, useEffect } from "react";
+
+function url(path: string) {
+  const base = import.meta.env.BASE_URL;
+  return `${base}${path.startsWith("/") ? path.slice(1) : path}`;
+}
 
 const images = [
-  { src: "/images/services/service-1.jpg", alt: "Engineering work" },
-  { src: "/images/services/service-2.jpg", alt: "Site operations" },
-  { src: "/images/about/collab-1.jpg", alt: "Team collaboration" },
-  { src: "/images/services/service-3.jpg", alt: "Piping work" },
-  { src: "/images/about/collab-2.jpg", alt: "Office meeting" },
+  { src: url("images/about/collab-1.jpg"), alt: "Team collaboration" },
+  { src: url("images/services/service-2.jpg"), alt: "Engineering review" },
+  { src: url("images/about/collab-2.jpg"), alt: "Office meeting" },
+  { src: url("images/services/service-1.jpg"), alt: "Engineering work" },
+  { src: url("images/services/service-3.jpg"), alt: "Piping work" },
 ];
 
 export default function ImageCarousel() {
-  const [current, setCurrent] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(timer);
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let animId: number;
+    let scrollPos = 0;
+
+    const scroll = () => {
+      scrollPos += 0.5;
+      if (scrollPos >= el.scrollWidth / 2) {
+        scrollPos = 0;
+      }
+      el.scrollLeft = scrollPos;
+      animId = requestAnimationFrame(scroll);
+    };
+
+    animId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animId);
   }, []);
 
-  return (
-    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={current}
-          src={images[current].src}
-          alt={images[current].alt}
-          className="absolute inset-0 h-full w-full object-cover"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        />
-      </AnimatePresence>
+  // Duplicate images for seamless loop
+  const allImages = [...images, ...images];
 
-      {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-2 w-2 rounded-full transition-colors ${
-              i === current ? "bg-white" : "bg-white/40"
-            }`}
-            aria-label={`Go to slide ${i + 1}`}
-          />
-        ))}
-      </div>
+  return (
+    <div
+      ref={scrollRef}
+      className="flex gap-4 overflow-hidden"
+      style={{ scrollBehavior: "auto" }}
+    >
+      {allImages.map((img, i) => (
+        <img
+          key={i}
+          src={img.src}
+          alt={img.alt}
+          className="h-[250px] w-[320px] flex-shrink-0 rounded-xl object-cover"
+        />
+      ))}
     </div>
   );
 }
