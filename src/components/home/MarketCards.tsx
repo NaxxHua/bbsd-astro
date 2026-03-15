@@ -5,19 +5,19 @@ import { url } from '../../utils/url'
 const markets = [
   {
     title: 'OFFSHORE FPSO Modulars',
-    image: '/images/home/fpso-platform.jpg',
+    image: '/images/home/offshore-crane.jpg',
     description:
       'Driving the future of energy with expertise in offshore wind, hydrogen, and oil & gas, delivering safe, efficient, and sustainable solutions.',
   },
   {
     title: 'Renewable Energy',
-    image: '/images/home/wind-energy.jpg',
+    image: '/images/home/market-renewable.jpg',
     description:
       'Building stronger cities through reliable engineering for bridges, pipelines, and essential urban utilities, designed for safety and long-term resilience.',
   },
   {
     title: 'Onshore Plant Modulars',
-    image: '/images/home/offshore-crane.jpg',
+    image: '/images/home/market-onshore.jpg',
     description:
       'Your trusted partner for cross-border projects, combining local expertise and compliance to ensure seamless execution between China and Europe.',
   },

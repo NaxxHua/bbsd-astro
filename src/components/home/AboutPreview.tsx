@@ -4,15 +4,15 @@ import { url } from '../../utils/url'
 export default function AboutPreview() {
   return (
     <section className="relative overflow-hidden">
-      {/* Background image - factory/workshop scene */}
+      {/* Background image - FPSO platform (matching original) */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('${url('/images/home/welder.jpg')}')`,
+          backgroundImage: `url('${url('/images/home/fpso-platform.jpg')}')`,
         }}
       />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/65" />
+      {/* Dark overlay matching original: ~70% opacity */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(0,0,0,0.71), rgba(0,0,0,0.69))' }} />
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 py-16 md:px-6 md:py-24 lg:py-32">
         <ScrollReveal>
@@ -25,7 +25,7 @@ export default function AboutPreview() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <h3 className="max-w-4xl text-base leading-relaxed font-light text-white md:text-xl md:leading-relaxed lg:text-[28px] lg:leading-[1.7]">
+          <h3 className="max-w-4xl text-lg leading-relaxed font-light text-white md:text-2xl md:leading-relaxed lg:text-[32px] lg:leading-[1.7]">
             BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. is a
             dynamic, wholly foreign-owned enterprise based in Nantong,
             Jiangsu Province. Backed by a core team from Jord Oil & Gas, a

@@ -72,7 +72,7 @@ export default function CoreStrengths() {
           <SlideIn direction="right" delay={0.2}>
             <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
               <img
-                src={url('/images/home/welder.jpg')}
+                src={url('/images/home/wind-energy.jpg')}
                 alt="Engineering professional at work"
                 className="h-auto w-full object-cover"
               />
