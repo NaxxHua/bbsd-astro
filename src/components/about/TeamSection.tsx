@@ -45,8 +45,8 @@ const teamMembers = [
   },
   {
     name: 'Wang Ying',
-    role: 'Team Member',
-    image: '/images/about/collab-1.jpg',
+    role: 'Structural Engineer',
+    image: '/images/about/wang-ying.jpg',
   },
 ]
 
@@ -60,7 +60,7 @@ export default function TeamSection() {
           className="mb-4 text-center text-4xl font-bold text-dark md:text-5xl"
         />
         <ScrollReveal>
-          <p className="mx-auto mb-12 max-w-3xl text-center text-sm leading-relaxed text-gray">
+          <p className="mx-auto mb-16 max-w-3xl text-center text-sm leading-relaxed text-gray">
             Our strength lies in our people. BBSD's engineers, supervisors, and
             project managers bring extensive international experience and diverse
             expertise across mechanical, structural, and piping disciplines.
@@ -69,38 +69,22 @@ export default function TeamSection() {
           </p>
         </ScrollReveal>
 
-        {/* Featured: General Manager */}
-        <ScrollReveal className="mb-12 flex justify-center">
-          <div className="text-center">
-            <div className="mx-auto mb-4 h-48 w-48 overflow-hidden rounded-full">
-              <img
-                src={url('/images/about/team-overview.jpg')}
-                alt="BBSD General Manager"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <p className="text-xs font-medium tracking-wider text-orange-primary uppercase">
-              BBSD General Manager
-            </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Team Grid */}
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+        {/* Team Grid - 4 columns */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member, i) => (
-            <ScrollReveal key={member.name} delay={i * 0.08}>
-              <div className="text-center">
-                <div className="mx-auto mb-4 h-64 w-full max-w-[260px] overflow-hidden rounded-2xl">
+            <ScrollReveal key={member.name} delay={i * 0.06}>
+              <div className="text-left">
+                <div className="mb-4 aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gray-100">
                   <img
                     src={url(member.image)}
                     alt={member.name}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <h3 className="text-base font-semibold text-dark">
+                <p className="text-xs text-gray">{member.role}</p>
+                <h3 className="mt-1 text-base font-semibold text-dark">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm text-gray">{member.role}</p>
               </div>
             </ScrollReveal>
           ))}

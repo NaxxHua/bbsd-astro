@@ -1,9 +1,10 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import { url } from '../../utils/url'
 
 export default function ISOCertifications() {
   return (
-    <section className="bg-blue-light py-24">
+    <section className="bg-white py-24">
       <div className="mx-auto max-w-[1200px] px-6 text-center">
         <TextReveal
           text="Our ISO Certifications"
@@ -11,34 +12,40 @@ export default function ISOCertifications() {
           className="mb-4 text-4xl font-bold text-dark md:text-5xl"
         />
         <ScrollReveal>
-          <p className="mx-auto mb-12 max-w-2xl text-base text-gray">
+          <p className="mx-auto mb-12 max-w-2xl text-base text-gray italic">
             Ensuring Quality, Safety, and Environmental Responsibility
           </p>
         </ScrollReveal>
 
+        {/* ISO Badge */}
+        <ScrollReveal delay={0.1}>
+          <div className="mx-auto mb-16 max-w-xl">
+            <img
+              src={url('/images/about/iso-combined-badge.jpg')}
+              alt="ABS Quality Evaluations - ANAB Accredited - ISO 9001, ISO 14001, ISO 45001"
+              className="mx-auto w-full max-w-md"
+            />
+          </div>
+        </ScrollReveal>
+
+        {/* Certificate Images */}
         <ScrollReveal delay={0.2}>
-          <div className="mx-auto grid max-w-3xl gap-6 md:grid-cols-3">
-            <div className="rounded-xl bg-white p-8 shadow-sm">
-              <div className="mb-4 text-4xl text-blue-dark">📋</div>
-              <h3 className="text-lg font-bold text-dark">ISO 9001</h3>
-              <p className="mt-2 text-sm text-gray">
-                Quality Management System
-              </p>
-            </div>
-            <div className="rounded-xl bg-white p-8 shadow-sm">
-              <div className="mb-4 text-4xl text-blue-dark">🛡️</div>
-              <h3 className="text-lg font-bold text-dark">ISO 14001</h3>
-              <p className="mt-2 text-sm text-gray">
-                Environmental Management System
-              </p>
-            </div>
-            <div className="rounded-xl bg-white p-8 shadow-sm">
-              <div className="mb-4 text-4xl text-blue-dark">⚙️</div>
-              <h3 className="text-lg font-bold text-dark">ISO 45001</h3>
-              <p className="mt-2 text-sm text-gray">
-                Occupational Health & Safety
-              </p>
-            </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <img
+              src={url('/images/about/iso-cert-1.jpg')}
+              alt="ISO 9001 Certificate"
+              className="w-full rounded-lg shadow-sm"
+            />
+            <img
+              src={url('/images/about/iso-cert-2.jpg')}
+              alt="ISO 14001 Certificate"
+              className="w-full rounded-lg shadow-sm"
+            />
+            <img
+              src={url('/images/about/iso-cert-3.jpg')}
+              alt="ISO 45001 Certificate"
+              className="w-full rounded-lg shadow-sm"
+            />
           </div>
         </ScrollReveal>
       </div>
