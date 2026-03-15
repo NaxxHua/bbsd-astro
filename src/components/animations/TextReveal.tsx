@@ -48,6 +48,7 @@ export default function TextReveal({
           variants={container}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
+          className={className?.includes('text-center') ? 'justify-center' : ''}
           style={{ display: 'flex', flexWrap: 'wrap' }}
         >
           {words.map((word, i) => (
