@@ -5,42 +5,42 @@ import { url } from '../../utils/url'
 const teamMembers = [
   {
     name: 'Jack Lu',
-    role: 'Structural Design Leader / Fabrication Supervisor',
+    role: 'BBSD General Manager',
     image: '/images/about/jack-lu.jpg',
   },
   {
     name: 'Yin Yuanxin',
-    role: 'Senior E&I Engineer',
+    role: 'Structural Design Leader/Fabrication Supervisor',
     image: '/images/about/yin-yuanxin.png',
   },
   {
     name: 'Zhu Lin',
-    role: 'Procurement Engineer',
+    role: 'Senior E&I Engineer',
     image: '/images/about/zhu-lin.jpg',
   },
   {
     name: 'Carol Zhou',
-    role: 'Senior Executive Secretary',
+    role: 'Procurement Engineer',
     image: '/images/about/carol-zhou.jpg',
   },
   {
     name: 'Cici Zhu',
-    role: 'Mechanical Engineer',
+    role: 'Senior Executive Secretary',
     image: '/images/about/cici-zhu.jpg',
   },
   {
     name: 'Stella Zhang',
-    role: 'Senior Piping Engineer',
+    role: 'Mechanical Engineer',
     image: '/images/about/stella-zhang.jpg',
   },
   {
     name: 'Yang Junmin',
-    role: 'Document Controller',
+    role: 'Senior Piping Engineer',
     image: '/images/about/yang-junmin.jpg',
   },
   {
     name: 'Katrina Pu',
-    role: 'Structural Engineer',
+    role: 'Document Controller',
     image: '/images/about/katrina-pu.jpg',
   },
   {
