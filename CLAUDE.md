@@ -174,6 +174,7 @@ bbsd-astro/
 ```
 
 ## 开发注意事项
+- **视觉调试必须使用 Chrome 浏览器 MCP 工具**，禁止使用 Claude Preview (preview_*) 工具进行视觉对比和验证，因为 Preview 分辨率与实际浏览器不一致，会导致判断偏差。
 - 所有图片从 framerusercontent.com 下载到 public/images/
 - Astro 组件用 .astro，需要交互/动画的用 React + client:visible
 - i18n 用 URL前缀方案: /en/... 和 /zh/... (或用locale切换)
