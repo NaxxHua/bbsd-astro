@@ -46,6 +46,7 @@ export default function NewsPreview() {
                   <img
                     src={url(news.image)}
                     alt={news.title}
+                    loading="lazy"
                     className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-56"
                   />
                 </div>

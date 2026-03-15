@@ -74,6 +74,7 @@ export default function CoreStrengths() {
               <img
                 src={url('/images/home/wind-energy.jpg')}
                 alt="Engineering professional at work"
+                loading="lazy"
                 className="h-auto w-full object-cover"
               />
               {/* Overlay link at bottom */}

@@ -50,6 +50,7 @@ export default function ImageCarousel() {
           key={i}
           src={img.src}
           alt={img.alt}
+          loading="lazy"
           className="h-[250px] w-[320px] flex-shrink-0 rounded-xl object-cover"
         />
       ))}

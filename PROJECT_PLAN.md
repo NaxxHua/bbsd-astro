@@ -258,11 +258,11 @@ fontFamily: {
 ### 7.1 滚动动画
 - [x] 所有section的ScrollReveal接入
 - [x] 文字reveal效果 (大标题)
-- [ ] 图片懒加载 + 淡入
+- [x] 图片懒加载 + 淡入 (CSS fade-in + JS loaded class handler)
 
 ### 7.2 页面过渡
-- [ ] Astro View Transitions (可选)
-- [ ] 页面切换平滑过渡
+- [x] Astro View Transitions
+- [x] 页面切换平滑过渡
 
 ### 7.3 响应式适配 (首页已完成)
 - [x] Desktop (1200px+)
@@ -280,7 +280,7 @@ fontFamily: {
 - [x] Footer: mobile 1列 → desktop 3列
 - [x] FloatingButtons: 响应式尺寸
 - [x] 修复 Tailwind v4 CSS reset 冲突 (移除 `* { padding: 0 }` 覆盖)
-- [ ] 子页面响应式适配 (About, Services, Contact, Market, Projects, News, Careers)
+- [x] 子页面响应式适配 (About, Services, Contact, Market, Projects, News, Careers)
 
 ---
 
@@ -288,18 +288,18 @@ fontFamily: {
 
 ### 8.1 性能优化
 - [ ] 图片优化 (WebP, 压缩)
-- [ ] 字体子集化
-- [ ] 视频压缩 / 懒加载
+- [x] 字体加载优化 (preconnect + link stylesheet, 移除CSS @import)
+- [x] 视频本地化 + preload="metadata"
 - [ ] Lighthouse 90+ 分
 
 ### 8.2 SEO
-- [ ] Meta tags (title, description, og:image)
-- [ ] sitemap.xml
-- [ ] robots.txt
-- [ ] 结构化数据
+- [x] Meta tags (title, description, og:image, canonical, twitter card)
+- [x] sitemap.xml (@astrojs/sitemap)
+- [x] robots.txt
+- [x] 结构化数据 (JSON-LD Organization schema)
 
 ### 8.3 部署
-- [ ] 选择平台 (Vercel/Netlify/Cloudflare Pages)
+- [x] GitHub Pages配置 (site + base in astro.config.mjs)
 - [ ] CI/CD 配置
 - [ ] 域名绑定
 

@@ -23,6 +23,7 @@ export default function ISOCertifications() {
             <img
               src={url('/images/about/iso-combined-badge.jpg')}
               alt="ABS Quality Evaluations - ANAB Accredited - ISO 9001, ISO 14001, ISO 45001"
+              loading="lazy"
               className="mx-auto w-full max-w-md"
             />
           </div>
@@ -34,16 +35,19 @@ export default function ISOCertifications() {
             <img
               src={url('/images/about/iso-cert-1.jpg')}
               alt="ISO 9001 Certificate"
+              loading="lazy"
               className="w-full rounded-lg shadow-sm"
             />
             <img
               src={url('/images/about/iso-cert-2.jpg')}
               alt="ISO 14001 Certificate"
+              loading="lazy"
               className="w-full rounded-lg shadow-sm"
             />
             <img
               src={url('/images/about/iso-cert-3.jpg')}
               alt="ISO 45001 Certificate"
+              loading="lazy"
               className="w-full rounded-lg shadow-sm"
             />
           </div>

@@ -25,6 +25,7 @@ export default function VisionMissionValues() {
             <img
               src={url('/images/about/vision-workers.png')}
               alt="BBSD workers"
+              loading="lazy"
               className="w-full rounded-2xl object-cover"
             />
           </ScrollReveal>
@@ -36,6 +37,7 @@ export default function VisionMissionValues() {
             <img
               src={url('/images/about/mission-platform.jpg')}
               alt="Industrial module transport"
+              loading="lazy"
               className="w-full rounded-2xl object-cover"
             />
           </ScrollReveal>
@@ -76,6 +78,7 @@ export default function VisionMissionValues() {
             <img
               src={url('/images/about/values-night.jpg')}
               alt="Offshore platform at night"
+              loading="lazy"
               className="w-full rounded-2xl object-cover"
             />
           </ScrollReveal>

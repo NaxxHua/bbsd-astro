@@ -12,6 +12,7 @@ export default function WhoWeAre() {
               <img
                 src={url('/images/about/team-overview.jpg')}
                 alt="Our team"
+                loading="lazy"
                 className="w-full object-cover"
               />
               <div className="absolute bottom-6 left-6">

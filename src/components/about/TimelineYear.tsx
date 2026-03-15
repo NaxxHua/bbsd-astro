@@ -10,6 +10,7 @@ export default function TimelineYear() {
             <img
               src={url('/images/about/team-overview.jpg')}
               alt="Our experts"
+              loading="lazy"
               className="w-full rounded-2xl object-cover"
             />
           </ScrollReveal>

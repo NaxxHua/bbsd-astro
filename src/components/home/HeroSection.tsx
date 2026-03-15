@@ -10,9 +10,10 @@ export default function HeroSection() {
         loop
         muted
         playsInline
+        preload="metadata"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="https://framerusercontent.com/assets/9hrnL8wk0Xl8NB6KEorCiK14g.mp4" type="video/mp4" />
+        <source src={url('/videos/hero-video.mp4')} type="video/mp4" />
       </video>
 
       {/* Dark overlay - lighter to match original */}

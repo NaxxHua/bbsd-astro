@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* ===== Google Fonts ===== */
-@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;900&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap");
+/* Google Fonts loaded via <link> in BaseLayout.astro head for optimal loading */
 
 /* ===== Custom Theme ===== */
 @theme {
@@ -36,3 +35,13 @@ body {
 
 /* Note: Tailwind v4 handles box-sizing via @layer base.
    Do NOT use * { padding: 0 } as it overrides utility classes. */
+
+/* ===== Lazy-loaded image fade-in ===== */
+@keyframes lazyFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+img[loading="lazy"] {
+  animation: lazyFadeIn 0.5s ease-in-out;
+}
