@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 export default function GetInTouchBanner() {
@@ -11,6 +12,7 @@ export default function GetInTouchBanner() {
       <div className="relative mx-auto flex max-w-[1200px] flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between md:px-6">
         <TextReveal
           text="Get In Touch With Us"
+          zh="与我们取得联系"
           tag="h2"
           className="text-2xl font-bold text-white md:text-3xl lg:text-4xl"
         />
@@ -19,7 +21,7 @@ export default function GetInTouchBanner() {
             href={url('/contact')}
             className="inline-block shrink-0 self-start rounded-lg bg-orange-primary px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:self-auto md:px-8 md:py-3.5"
           >
-            Contact
+            <T en="Contact" zh="联系我们" />
           </a>
         </ScrollReveal>
       </div>

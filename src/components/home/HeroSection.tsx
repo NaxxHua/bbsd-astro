@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 export default function HeroSection() {
@@ -36,7 +37,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-4 text-3xl font-light text-white md:text-4xl lg:mb-3 lg:text-[56px] lg:leading-tight"
         >
-          Your trusted engineering partner
+          <T en="Your trusted engineering partner" zh="您值得信赖的工程合作伙伴" />
         </motion.p>
 
         <motion.p
@@ -45,7 +46,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mb-8 text-sm font-medium tracking-wider text-white/70 md:text-base lg:mb-10"
         >
-          BBSD Innovative · Energy Services
+          <T en="BBSD Innovative · Energy Services" zh="BBSD 创新 · 能源服务" />
         </motion.p>
 
         <motion.a
@@ -55,7 +56,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="rounded-lg bg-orange-primary px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-10 md:py-4 md:text-base"
         >
-          Explore our services
+          <T en="Explore our services" zh="探索我们的服务" />
         </motion.a>
       </div>
     </section>

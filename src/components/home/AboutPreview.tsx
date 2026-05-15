@@ -1,4 +1,5 @@
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 export default function AboutPreview() {
@@ -20,18 +21,16 @@ export default function AboutPreview() {
             <svg className="h-3 w-3 md:h-3.5 md:w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
-            About us
+            <T en="About us" zh="关于我们" />
           </span>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
           <h3 className="max-w-4xl text-lg leading-relaxed font-light text-white md:text-2xl md:leading-relaxed lg:text-[32px] lg:leading-[1.7]">
-            BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. is a
-            dynamic, wholly foreign-owned enterprise based in Nantong,
-            Jiangsu Province. Backed by a core team from Jord Oil & Gas, a
-            leading European EPC company, we bring world-class expertise to
-            deliver integrated engineering solutions for the global offshore oil
-            and gas industry.
+            <T
+              en="BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. is a dynamic, wholly foreign-owned enterprise based in Nantong, Jiangsu Province. Backed by a core team from Jord Oil & Gas, a leading European EPC company, we bring world-class expertise to deliver integrated engineering solutions for the global offshore oil and gas industry."
+              zh="BBSD（江苏南通）工程技术有限公司是一家充满活力的外商独资企业，总部位于江苏省南通市。依托来自欧洲领先 EPC 公司 Jord Oil & Gas 的核心团队，我们以世界一流的专业能力，为全球海洋油气行业提供一体化工程解决方案。"
+            />
           </h3>
         </ScrollReveal>
       </div>

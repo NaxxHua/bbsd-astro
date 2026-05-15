@@ -1,4 +1,5 @@
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 export default function CTABanner() {
@@ -7,7 +8,7 @@ export default function CTABanner() {
       <div className="mx-auto max-w-[1200px] px-5 text-center md:px-6">
         <ScrollReveal>
           <p className="mb-5 text-xl font-semibold text-white md:mb-6 md:text-2xl lg:text-3xl">
-            Need a professional solution?
+            <T en="Need a professional solution?" zh="需要专业的解决方案？" />
           </p>
         </ScrollReveal>
         <ScrollReveal delay={0.2}>
@@ -15,7 +16,7 @@ export default function CTABanner() {
             href={url('/contact')}
             className="inline-block rounded-full bg-orange-primary px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-8 md:py-3.5"
           >
-            Contact Us
+            <T en="Contact Us" zh="联系我们" />
           </a>
         </ScrollReveal>
       </div>

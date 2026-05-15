@@ -2,7 +2,10 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 interface Props {
+  /** English text (revealed word-by-word) */
   text: string
+  /** Chinese text — when provided, the component renders bilingually */
+  zh?: string
   className?: string
   delay?: number
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span'
@@ -11,12 +14,13 @@ interface Props {
 
 export default function TextReveal({
   text,
+  zh,
   className = '',
   delay = 0,
   tag: Tag = 'h2',
   staggerChildren = 0.03,
 }: Props) {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   const words = text.split(' ')
@@ -42,9 +46,11 @@ export default function TextReveal({
   }
 
   return (
-    <motion.div ref={ref}>
-      <Tag className={className}>
+    <Tag className={className}>
+      {/* English — word-by-word reveal animation */}
+      <span data-lang-en>
         <motion.span
+          ref={ref}
           variants={container}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
@@ -61,7 +67,9 @@ export default function TextReveal({
             </motion.span>
           ))}
         </motion.span>
-      </Tag>
-    </motion.div>
+      </span>
+      {/* Chinese — shown statically (the reveal flourish is English-default only) */}
+      {zh && <span data-lang-zh>{zh}</span>}
+    </Tag>
   )
 }

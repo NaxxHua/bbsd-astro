@@ -1,11 +1,14 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 const services = [
   {
     title: 'Engineering Services',
+    titleZh: '工程服务',
     description: 'Comprehensive engineering solutions from concept to detailed design.',
+    descriptionZh: '从概念到详细设计的全面工程解决方案。',
     href: '/services/engineering',
     icon: (
       <svg className="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -16,7 +19,9 @@ const services = [
   },
   {
     title: 'Fabrication & Site Support',
+    titleZh: '制造与现场支持',
     description: 'Reliable on-site services ensuring quality, safety, and timely execution.',
+    descriptionZh: '可靠的现场服务，确保质量、安全与按时执行。',
     href: '/services/fabrication',
     icon: (
       <svg className="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -26,7 +31,9 @@ const services = [
   },
   {
     title: 'Procurement & Materials Supply',
+    titleZh: '采购与物资供应',
     description: 'Strategic sourcing to optimize cost, quality, and delivery.',
+    descriptionZh: '战略采购，优化成本、质量与交付。',
     href: '/services/procurement',
     icon: (
       <svg className="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -36,7 +43,9 @@ const services = [
   },
   {
     title: 'Commissioning',
+    titleZh: '调试',
     description: 'Ensuring systems operate safely, efficiently, and ready for handover.',
+    descriptionZh: '确保系统安全、高效运行并具备移交条件。',
     href: '/services/commissioning',
     icon: (
       <svg className="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -46,7 +55,9 @@ const services = [
   },
   {
     title: 'Piping Spools Pre-fabrication',
+    titleZh: '管段预制',
     description: 'Off-site fabrication to ensure quality, efficiency, and faster installation.',
+    descriptionZh: '场外预制，确保质量、效率与更快的安装。',
     href: '/services/piping-spools-pre-fabrication',
     icon: (
       <svg className="h-8 w-8 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -66,12 +77,16 @@ export default function ServicesGrid() {
       <div className="relative z-10 mx-auto max-w-[1200px] px-5 md:px-6">
         <TextReveal
           text="Our services"
+          zh="我们的服务"
           tag="h2"
           className="mb-3 text-center text-3xl font-bold text-white md:mb-4 md:text-4xl lg:text-5xl"
         />
         <ScrollReveal>
           <p className="mb-10 text-center text-sm text-white/50 md:mb-14 md:text-base lg:mb-16">
-            "Our Expertise in Engineering & Site Support"
+            <T
+              en={'"Our Expertise in Engineering & Site Support"'}
+              zh="工程与现场支持领域的专业实力"
+            />
           </p>
         </ScrollReveal>
 
@@ -84,10 +99,10 @@ export default function ServicesGrid() {
               >
                 <div className="mb-4 md:mb-5">{service.icon}</div>
                 <h3 className="mb-2 text-sm font-semibold text-white md:mb-3 md:text-base">
-                  {service.title}
+                  <T en={service.title} zh={service.titleZh} />
                 </h3>
                 <p className="text-xs leading-relaxed text-white/50 md:text-sm">
-                  {service.description}
+                  <T en={service.description} zh={service.descriptionZh} />
                 </p>
               </a>
             </ScrollReveal>
@@ -104,10 +119,10 @@ export default function ServicesGrid() {
               >
                 <div className="mb-4 md:mb-5">{services[4].icon}</div>
                 <h3 className="mb-2 text-sm font-semibold text-white md:mb-3 md:text-base">
-                  {services[4].title}
+                  <T en={services[4].title} zh={services[4].titleZh} />
                 </h3>
                 <p className="text-xs leading-relaxed text-white/50 md:text-sm">
-                  {services[4].description}
+                  <T en={services[4].description} zh={services[4].descriptionZh} />
                 </p>
               </a>
             </ScrollReveal>

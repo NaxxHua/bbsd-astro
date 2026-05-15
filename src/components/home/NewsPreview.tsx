@@ -1,24 +1,31 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 const newsItems = [
   {
     image: '/images/news/anniversary.jpg',
     date: 'Nov 20, 2025',
+    dateZh: '2025年11月20日',
     title: 'BBSD - First Year Anniversary',
+    titleZh: 'BBSD 一周年纪念',
     href: '/news/bbsd-first-year-anniversary',
   },
   {
     image: '/images/news/signing.jpg',
     date: 'Apr 18, 2025',
+    dateZh: '2025年4月18日',
     title: 'Our Company Signs Industry-University-Research Strategic Cooperation Agreement with Nantong University',
+    titleZh: '我司与南通大学签署产学研战略合作协议',
     href: '/news/our-company-signs-industry-university-research-strategic-cooperation-agreement-with-nantong-university',
   },
   {
     image: '/images/news/ceremony.jpeg',
     date: 'Jun 4, 2025',
+    dateZh: '2025年6月4日',
     title: 'BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Officially Launches ISO 9000 Quality Management System Certification',
+    titleZh: 'BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证',
     href: '/news/launches-iso-9000-quality-management-system-certification',
   },
 ]
@@ -29,12 +36,16 @@ export default function NewsPreview() {
       <div className="mx-auto max-w-[1200px] px-5 md:px-6">
         <TextReveal
           text="Latest News"
+          zh="最新动态"
           tag="h2"
           className="mb-3 text-3xl font-bold text-dark md:mb-4 md:text-4xl lg:text-center lg:text-5xl"
         />
         <ScrollReveal>
           <p className="mb-10 max-w-2xl text-xs leading-relaxed text-gray md:mb-14 md:text-sm lg:mx-auto lg:text-center">
-            Stay updated with our latest company developments, industry insights, and project milestones.
+            <T
+              en="Stay updated with our latest company developments, industry insights, and project milestones."
+              zh="及时了解我们最新的公司动态、行业洞察与项目里程碑。"
+            />
           </p>
         </ScrollReveal>
 
@@ -52,13 +63,13 @@ export default function NewsPreview() {
                 </div>
                 <div className="mt-4 md:mt-5">
                   <p className="mb-1.5 text-xs font-medium text-gray-light md:mb-2">
-                    {news.date}
+                    <T en={news.date} zh={news.dateZh} />
                   </p>
                   <h3 className="mb-2 line-clamp-3 text-sm font-bold text-dark transition-colors group-hover:text-blue-dark md:mb-3 md:text-base">
-                    {news.title}
+                    <T en={news.title} zh={news.titleZh} />
                   </h3>
                   <span className="text-xs font-medium text-blue-dark transition-colors group-hover:text-orange-primary md:text-sm">
-                    Read more →
+                    <T en="Read more →" zh="阅读更多 →" />
                   </span>
                 </div>
               </a>

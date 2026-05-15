@@ -1,4 +1,5 @@
 ---
+import T from "../../i18n/T.astro";
 const year = new Date().getFullYear();
 const base = import.meta.env.BASE_URL;
 ---
@@ -12,15 +13,17 @@ const base = import.meta.env.BASE_URL;
           <img src={`${base}images/home/logo.png`} alt="BBSD" class="mb-5 h-10 w-auto md:mb-6 md:h-12" />
         </a>
         <p class="text-xs leading-relaxed text-gray md:text-sm">
-          BBSD delivers trusted engineering and site services for global energy and
-          infrastructure projects
+          <T
+            en="BBSD delivers trusted engineering and site services for global energy and infrastructure projects"
+            zh="BBSD 为全球能源与基础设施项目提供值得信赖的工程与现场服务"
+          />
         </p>
       </div>
 
       <!-- Rotterdam Office -->
       <div>
         <h4 class="mb-3 text-base font-bold text-dark md:mb-4 md:text-lg">
-          Rotterdam
+          <T en="Rotterdam" zh="鹿特丹" />
         </h4>
         <address class="text-xs leading-relaxed text-gray not-italic md:text-sm">
           3356 LX<br />
@@ -32,19 +35,21 @@ const base = import.meta.env.BASE_URL;
           rel="noopener noreferrer"
           class="mt-2 inline-block text-xs font-medium text-blue-link hover:text-blue-dark md:mt-3 md:text-sm"
         >
-          View on Google
+          <T en="View on Google" zh="在 Google 地图查看" />
         </a>
       </div>
 
       <!-- Nantong Office -->
       <div>
         <h4 class="mb-3 text-base font-bold text-dark md:mb-4 md:text-lg">
-          Nantong
+          <T en="Nantong" zh="南通" />
         </h4>
         <address class="text-xs leading-relaxed text-gray not-italic md:text-sm">
-          No. 218 Yongxing Road<br />
-          Yongxing Sub-district, Chongchuan District, Nantong City, Jiangsu
-          Province, China
+          <T en="No. 218 Yongxing Road" zh="永兴路 218 号" /><br />
+          <T
+            en="Yongxing Sub-district, Chongchuan District, Nantong City, Jiangsu Province, China"
+            zh="中国江苏省南通市崇川区永兴街道"
+          />
         </address>
         <a
           href="https://maps.google.com/?q=218+Yongxing+Road+Nantong+Jiangsu"
@@ -52,7 +57,7 @@ const base = import.meta.env.BASE_URL;
           rel="noopener noreferrer"
           class="mt-2 inline-block text-xs font-medium text-blue-link hover:text-blue-dark md:mt-3 md:text-sm"
         >
-          View on Google
+          <T en="View on Google" zh="在 Google 地图查看" />
         </a>
       </div>
     </div>
@@ -65,10 +70,10 @@ const base = import.meta.env.BASE_URL;
         &copy; {year} - BBSD
       </p>
       <nav class="flex flex-wrap justify-center gap-4 text-xs md:gap-6 md:text-sm">
-        <a href={base} class="text-gray transition-colors hover:text-dark">Home</a>
-        <a href={`${base}about-us`} class="text-gray transition-colors hover:text-dark">About</a>
-        <a href={`${base}contact`} class="text-gray transition-colors hover:text-dark">Contact</a>
-        <a href={`${base}news`} class="text-gray transition-colors hover:text-dark">News</a>
+        <a href={base} class="text-gray transition-colors hover:text-dark"><T en="Home" zh="首页" /></a>
+        <a href={`${base}about-us`} class="text-gray transition-colors hover:text-dark"><T en="About" zh="关于我们" /></a>
+        <a href={`${base}contact`} class="text-gray transition-colors hover:text-dark"><T en="Contact" zh="联系我们" /></a>
+        <a href={`${base}news`} class="text-gray transition-colors hover:text-dark"><T en="News" zh="新闻" /></a>
       </nav>
     </div>
   </div>
