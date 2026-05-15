@@ -45,3 +45,12 @@ body {
 img[loading="lazy"] {
   animation: lazyFadeIn 0.5s ease-in-out;
 }
+
+/* ===== Bilingual (i18n) text visibility =====
+   Each translatable string is rendered twice (en + zh spans).
+   The active language is controlled by html[data-lang].
+   `display: contents` keeps the wrapper layout-transparent. */
+[data-lang-en] { display: contents; }
+[data-lang-zh] { display: none; }
+html[data-lang="zh"] [data-lang-en] { display: none; }
+html[data-lang="zh"] [data-lang-zh] { display: contents; }

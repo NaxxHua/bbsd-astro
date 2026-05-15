@@ -28,6 +28,22 @@ const canonicalURL = new URL(currentPath, Astro.site);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+
+    <!-- Apply stored language before paint to avoid flash of wrong language -->
+    <script is:inline>
+      (function () {
+        function applyLang() {
+          var l = "en";
+          try {
+            var stored = localStorage.getItem("bbsd-lang");
+            if (stored === "zh" || stored === "en") l = stored;
+          } catch (e) {}
+          document.documentElement.setAttribute("data-lang", l);
+        }
+        applyLang();
+        document.addEventListener("astro:after-swap", applyLang);
+      })();
+    </script>
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
 

@@ -1,0 +1,14 @@
+---
+/**
+ * Bilingual text component (Astro).
+ * Renders both English and Chinese; CSS in global.css shows the active one.
+ *
+ * Usage: <T en="Home" zh="首页" />
+ */
+interface Props {
+  en: string;
+  zh: string;
+}
+const { en, zh } = Astro.props;
+---
+<span data-lang-en>{en}</span><span data-lang-zh>{zh}</span>

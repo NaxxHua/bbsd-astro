@@ -1,15 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { url } from '../../utils/url'
+import T from '../../i18n/T'
 
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about-us' },
-  { label: 'Market', href: '/market' },
-  { label: 'Services', href: '/services' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'News', href: '/news' },
+  { en: 'Home', zh: '首页', href: '/' },
+  { en: 'About', zh: '关于我们', href: '/about-us' },
+  { en: 'Market', zh: '市场', href: '/market' },
+  { en: 'Services', zh: '服务', href: '/services' },
+  { en: 'Projects', zh: '项目', href: '/projects' },
+  { en: 'News', zh: '新闻', href: '/news' },
 ]
+
+function LanguageToggle() {
+  const [lang, setLang] = useState<'en' | 'zh'>('en')
+
+  useEffect(() => {
+    const current = document.documentElement.getAttribute('data-lang')
+    if (current === 'zh' || current === 'en') setLang(current)
+  }, [])
+
+  const toggle = () => {
+    const next = lang === 'en' ? 'zh' : 'en'
+    setLang(next)
+    try {
+      localStorage.setItem('bbsd-lang', next)
+    } catch (e) {}
+    document.documentElement.setAttribute('data-lang', next)
+  }
+
+  return (
+    <button
+      onClick={toggle}
+      aria-label="Switch language"
+      className="shrink-0 rounded-full border border-white/40 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:border-orange-primary hover:text-orange-primary"
+    >
+      {lang === 'en' ? '中文' : 'EN'}
+    </button>
+  )
+}
 
 interface Props {
   currentPath?: string
@@ -42,7 +71,7 @@ export default function Header({ currentPath = '/' }: Props) {
                   : 'text-white'
               }`}
             >
-              {link.label}
+              <T en={link.en} zh={link.zh} />
             </a>
           ))}
         </nav>
@@ -59,13 +88,13 @@ export default function Header({ currentPath = '/' }: Props) {
                   : 'text-white'
               }`}
             >
-              {link.label}
+              <T en={link.en} zh={link.zh} />
             </a>
           ))}
         </nav>
 
         {/* Right side */}
-        <div className="flex items-center gap-3 md:gap-5">
+        <div className="flex items-center gap-3 md:gap-4">
           {/* Phone - desktop only */}
           <a
             href="tel:+8615927327738"
@@ -77,12 +106,15 @@ export default function Header({ currentPath = '/' }: Props) {
             (86) 15927327738
           </a>
 
+          {/* Language toggle */}
+          <LanguageToggle />
+
           {/* Contact button - visible on mobile + tablet + desktop */}
           <a
             href={url('/contact')}
             className="rounded-lg bg-orange-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-6 md:py-2.5"
           >
-            Contact
+            <T en="Contact" zh="联系我们" />
           </a>
 
           {/* Mobile hamburger - only below md */}
@@ -127,7 +159,7 @@ export default function Header({ currentPath = '/' }: Props) {
                       : 'text-white'
                   }`}
                 >
-                  {link.label}
+                  <T en={link.en} zh={link.zh} />
                 </a>
               ))}
               <a href="tel:+8615927327738" className="text-sm text-gray-light">
