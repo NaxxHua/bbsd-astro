@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -18,7 +19,7 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <p class="mb-2 text-xs tracking-widest text-white/60 uppercase">
-          [ PROJECT ]
+          <T en="[ PROJECT ]" zh="[ 项目 ]" />
         </p>
         <h1 class="text-4xl font-bold text-white md:text-6xl">
           Abigail Joseph – NAG Project
@@ -37,7 +38,7 @@ const base = import.meta.env.BASE_URL;
             <p
               class="text-xs font-semibold tracking-widest text-gray-light uppercase"
             >
-              Project
+              <T en="Project" zh="项目" />
             </p>
             <p class="mt-1 text-sm font-medium text-dark">
               Abigail Joseph – NAG Project
@@ -47,7 +48,7 @@ const base = import.meta.env.BASE_URL;
             <p
               class="text-xs font-semibold tracking-widest text-gray-light uppercase"
             >
-              Client
+              <T en="Client" zh="客户" />
             </p>
             <p class="mt-1 text-sm font-medium text-dark">
               Yinson / Jord Oil & Gas
@@ -57,69 +58,80 @@ const base = import.meta.env.BASE_URL;
             <p
               class="text-xs font-semibold tracking-widest text-gray-light uppercase"
             >
-              Year
+              <T en="Year" zh="年份" />
             </p>
-            <p class="mt-1 text-sm font-medium text-dark">2024.11 to 2026.4</p>
+            <p class="mt-1 text-sm font-medium text-dark">
+              <T en="2024.11 to 2026.4" zh="2024年11月 至 2026年4月" />
+            </p>
           </div>
         </div>
 
         <!-- BBSD Services -->
         <div class="mb-12">
-          <h2 class="mb-4 text-lg font-bold text-dark">BBSD Services:</h2>
+          <h2 class="mb-4 text-lg font-bold text-dark">
+            <T en="BBSD Services:" zh="BBSD 服务：" />
+          </h2>
           <div class="flex flex-wrap gap-3">
             <a
               href={`${base}services/procurement`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              >Project Procurement Services</a
+              ><T en="Project Procurement Services" zh="项目采购服务" /></a
             >
             <a
               href={`${base}services/engineering`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              >Topside Module Details Design Services - Structure/Piping/E&I</a
+              ><T en="Topside Module Details Design Services - Structure/Piping/E&I" zh="上部模块详细设计服务 — 结构 / 管道 / 电气仪表" /></a
             >
             <a
               href={`${base}services`}
               class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              >Topside Module Construction – Site Supervision Services</a
+              ><T en="Topside Module Construction – Site Supervision Services" zh="上部模块施工 — 现场监理服务" /></a
             >
           </div>
         </div>
 
         <!-- Description -->
         <div class="max-w-3xl">
-          <h2 class="mb-4 text-lg font-bold text-dark">Project Description:</h2>
+          <h2 class="mb-4 text-lg font-bold text-dark">
+            <T en="Project Description:" zh="项目描述：" />
+          </h2>
           <div class="space-y-4 text-sm leading-relaxed text-gray">
             <p>
-              The FPSO Abigail Joseph, the facility required for treatment of
-              these hydrocarbons (Oil & Gas), has capacity constraints to
-              handling the expected oil and gas rates. A new NAG (Non-Associated
-              Gas) module is required, and a debottlenecking activity is to be
-              carried out on FPSO AJ to enable her to handle these increased
-              rates for phase 1.
+              <T
+                en="The FPSO Abigail Joseph, the facility required for treatment of these hydrocarbons (Oil & Gas), has capacity constraints to handling the expected oil and gas rates. A new NAG (Non-Associated Gas) module is required, and a debottlenecking activity is to be carried out on FPSO AJ to enable her to handle these increased rates for phase 1."
+                zh="FPSO Abigail Joseph 是处理这些油气烃类所需的设施，但其产能在应对预期的油气处理量方面存在限制。需要新增一个 NAG（非伴生气）模块，并对 FPSO AJ 进行消除瓶颈改造，使其能够在第一阶段处理增加后的处理量。"
+              />
             </p>
             <p>
-              The NAG Upgrade Project includes installation and integration of a
-              new build process module, containing equipment and systems for NAG
-              reception, separation & conditioning, water treatment and gas
-              compression & export metering. The new module shall be designed
-              and installed such that the gas production of the Abigail Joseph
-              FPSO shall increase from the original design capacity.
+              <T
+                en="The NAG Upgrade Project includes installation and integration of a new build process module, containing equipment and systems for NAG reception, separation & conditioning, water treatment and gas compression & export metering. The new module shall be designed and installed such that the gas production of the Abigail Joseph FPSO shall increase from the original design capacity."
+                zh="NAG 升级项目包括新建工艺模块的安装与集成，模块内含用于 NAG 接收、分离与调质、水处理及气体压缩与外输计量的设备和系统。新模块的设计与安装将使 Abigail Joseph FPSO 的天然气产量在原设计产能基础上提升。"
+              />
             </p>
             <p>
-              BBSD is awarded orders by Jord Oil & Gas for the tasks as below:
+              <T
+                en="BBSD is awarded orders by Jord Oil & Gas for the tasks as below:"
+                zh="BBSD 获得 Jord Oil & Gas 授予的以下任务订单："
+              />
             </p>
             <ol class="list-inside list-decimal space-y-2 pl-2">
               <li>
-                Support project procurements in China including piping bulk
-                materials, Electrical Cables, and other instruments.
+                <T
+                  en="Support project procurements in China including piping bulk materials, Electrical Cables, and other instruments."
+                  zh="支持在中国的项目采购，包括管道散装材料、电缆及其他仪表。"
+                />
               </li>
               <li>
-                Engineering Services to support details design for Structure,
-                E&I, and Piping disciplines.
+                <T
+                  en="Engineering Services to support details design for Structure, E&I, and Piping disciplines."
+                  zh="提供工程服务，支持结构、电气仪表与管道专业的详细设计。"
+                />
               </li>
               <li>
-                Supply professional team members for all disciplines to the
-                construction site for site supervision services.
+                <T
+                  en="Supply professional team members for all disciplines to the construction site for site supervision services."
+                  zh="为施工现场提供各专业的专业团队成员，提供现场监理服务。"
+                />
               </li>
             </ol>
           </div>
@@ -129,7 +141,7 @@ const base = import.meta.env.BASE_URL;
           <a
             href={`${base}projects`}
             class="inline-flex items-center gap-2 rounded-full bg-dark px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark/80"
-            >MORE PROJECTS</a
+            ><T en="MORE PROJECTS" zh="更多项目" /></a
           >
         </div>
       </div>

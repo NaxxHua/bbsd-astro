@@ -2,34 +2,45 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ScrollReveal from "../../components/animations/ScrollReveal.tsx";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 
 const base = import.meta.env.BASE_URL;
 const articles = [
   {
     slug: "bbsd-first-year-anniversary",
     title: "BBSD - First Year Anniversary",
+    titleZh: "BBSD 一周年纪念",
     date: "Nov 20, 2025",
+    dateZh: "2025年11月20日",
     image: `${base}images/news/anniversary.jpg`,
   },
   {
     slug: "our-company-signs-industry-university-research-strategic-cooperation-agreement-with-nantong-university",
     title:
       "Our Company Signs Industry-University-Research Strategic Cooperation Agreement with Nantong University",
+    titleZh: "我司与南通大学签署产学研战略合作协议",
     date: "Apr 18, 2025",
+    dateZh: "2025年4月18日",
     image: `${base}images/news/signing.jpg`,
   },
   {
     slug: "launches-iso-9000-quality-management-system-certification",
     title:
       "BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Officially Launches ISO 9000 Quality Management System Certification",
+    titleZh:
+      "BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证",
     date: "Jun 4, 2025",
+    dateZh: "2025年6月4日",
     image: `${base}images/news/iso-article.jpg`,
   },
   {
     slug: "successfully-holds-fire-safety-emergency-drill",
     title:
       "BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Successfully Holds Fire Safety Emergency Drill",
+    titleZh:
+      "BBSD（江苏南通）工程技术有限公司成功举行消防安全应急演练",
     date: "Aug 27, 2025",
+    dateZh: "2025年8月27日",
     image: `${base}images/news/fire-drill.jpg`,
   },
 ];
@@ -48,10 +59,14 @@ const articles = [
       <div
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
-        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">Latest News</h1>
+        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
+          <T en="Latest News" zh="最新动态" />
+        </h1>
         <p class="max-w-2xl text-base text-white/70 md:text-lg">
-          Our blog is designed to help you understand your plumbing system
-          better and provide valuable insights to keep it running smoothly.
+          <T
+            en="Our blog is designed to help you understand your plumbing system better and provide valuable insights to keep it running smoothly."
+            zh="我们的博客旨在帮助您更好地了解相关系统，并提供有价值的见解以保持其顺畅运行。"
+          />
         </p>
       </div>
     </section>
@@ -74,12 +89,14 @@ const articles = [
                     class="h-64 w-full object-cover transition-transform group-hover:scale-105"
                   />
                   <div class="p-6">
-                    <p class="mb-2 text-xs text-gray-light">{article.date}</p>
+                    <p class="mb-2 text-xs text-gray-light">
+                      <T en={article.date} zh={article.dateZh} />
+                    </p>
                     <h3 class="mb-3 text-lg font-bold leading-tight text-dark">
-                      {article.title}
+                      <T en={article.title} zh={article.titleZh} />
                     </h3>
                     <span class="text-sm font-medium text-orange-primary">
-                      Read more →
+                      <T en="Read more →" zh="阅读更多 →" />
                     </span>
                   </div>
                 </a>

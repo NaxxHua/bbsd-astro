@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -18,11 +19,13 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          Fabrication & Site Support
+          <T en="Fabrication & Site Support" zh="制造与现场支持" />
         </h1>
         <p class="max-w-2xl text-lg text-white/80">
-          Reliable on-site services ensuring quality, safety, and timely
-          execution.
+          <T
+            en="Reliable on-site services ensuring quality, safety, and timely execution."
+            zh="可靠的现场服务，确保质量、安全与按时执行。"
+          />
         </p>
       </div>
     </section>
@@ -33,35 +36,40 @@ const base = import.meta.env.BASE_URL;
         <div class="grid gap-16">
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Project Management
+              <T en="Project Management" zh="项目管理" />
             </h2>
             <p class="text-sm leading-relaxed text-gray">
-              BBSD oversees fabrication processes from vendor qualification to
-              workshop inspections. We ensure adherence to design
-              specifications, welding standards, and project timelines, helping
-              clients achieve seamless delivery from shop to site.
-            </p>
-          </div>
-
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">Site Supervision</h2>
-            <p class="text-sm leading-relaxed text-gray">
-              Our site engineers provide daily supervision and coordination with
-              contractors, ensuring safety, compliance, and timely progress. We
-              support multi-disciplinary construction, monitoring quality and
-              resolving issues promptly.
+              <T
+                en="BBSD oversees fabrication processes from vendor qualification to workshop inspections. We ensure adherence to design specifications, welding standards, and project timelines, helping clients achieve seamless delivery from shop to site."
+                zh="BBSD 全程监管制造流程，从供应商资格审核到车间检验。我们确保严格遵守设计规范、焊接标准与项目工期，助力客户实现从车间到现场的无缝交付。"
+              />
             </p>
           </div>
 
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Inspection Services (NDT, Welding, QC)
+              <T en="Site Supervision" zh="现场监理" />
             </h2>
             <p class="text-sm leading-relaxed text-gray">
-              We deliver Non-Destructive Testing (NDT), welding inspection, and
-              quality control services. Our certified inspectors ensure
-              compliance with codes (AWS, ISO, EN) and provide transparent
-              reporting for clients.
+              <T
+                en="Our site engineers provide daily supervision and coordination with contractors, ensuring safety, compliance, and timely progress. We support multi-disciplinary construction, monitoring quality and resolving issues promptly."
+                zh="我们的现场工程师提供日常监理并与承包商协调，确保安全、合规与进度。我们支持多专业施工，监控质量并及时解决问题。"
+              />
+            </p>
+          </div>
+
+          <div>
+            <h2 class="mb-4 text-2xl font-bold text-dark">
+              <T
+                en="Inspection Services (NDT, Welding, QC)"
+                zh="检验服务（无损检测、焊接、质量控制）"
+              />
+            </h2>
+            <p class="text-sm leading-relaxed text-gray">
+              <T
+                en="We deliver Non-Destructive Testing (NDT), welding inspection, and quality control services. Our certified inspectors ensure compliance with codes (AWS, ISO, EN) and provide transparent reporting for clients."
+                zh="我们提供无损检测（NDT）、焊接检验与质量控制服务。我们的持证检验员确保符合 AWS、ISO、EN 等规范，并为客户提供透明的报告。"
+              />
             </p>
           </div>
         </div>

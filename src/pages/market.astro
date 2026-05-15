@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ScrollReveal from "../components/animations/ScrollReveal.tsx";
 import TextReveal from "../components/animations/TextReveal.tsx";
 import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
+import T from "../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -19,10 +20,14 @@ const base = import.meta.env.BASE_URL;
       <div
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
-        <h1 class="mb-6 text-5xl font-bold text-white md:text-7xl">Our Market</h1>
+        <h1 class="mb-6 text-5xl font-bold text-white md:text-7xl">
+          <T en="Our Market" zh="我们的市场" />
+        </h1>
         <p class="max-w-2xl text-base text-white/70 md:text-lg">
-          Our journey has been marked by continuous improvement, expansion
-          of our service offerings and a relentless focus on customer satisfaction.
+          <T
+            en="Our journey has been marked by continuous improvement, expansion of our service offerings and a relentless focus on customer satisfaction."
+            zh="我们的发展历程，始终伴随着持续改进、服务范围的拓展，以及对客户满意度始终如一的专注。"
+          />
         </p>
       </div>
     </section>
@@ -34,10 +39,13 @@ const base = import.meta.env.BASE_URL;
           <TextReveal
             client:visible
             text="Our Market"
+            zh="我们的市场"
             tag="h2"
             className="text-3xl font-bold text-blue-dark md:text-5xl"
           />
-          <p class="text-base text-gray italic md:text-lg">Where We Make an Impact.</p>
+          <p class="text-base text-gray italic md:text-lg">
+            <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
+          </p>
         </div>
 
         <div class="grid gap-8 md:grid-cols-3">
@@ -54,12 +62,13 @@ const base = import.meta.env.BASE_URL;
               </div>
               <div class="p-6">
                 <h3 class="mb-3 text-lg font-bold text-dark">
-                  OFFSHORE FPSO Modulars
+                  <T en="OFFSHORE FPSO Modulars" zh="海上 FPSO 模块" />
                 </h3>
                 <p class="text-sm leading-relaxed text-gray">
-                  Driving the future of energy with expertise in offshore wind,
-                  hydrogen, and oil & gas, delivering safe, efficient, and
-                  sustainable solutions.
+                  <T
+                    en="Driving the future of energy with expertise in offshore wind, hydrogen, and oil & gas, delivering safe, efficient, and sustainable solutions."
+                    zh="凭借在海上风电、氢能及油气领域的专业能力引领能源未来，提供安全、高效、可持续的解决方案。"
+                  />
                 </p>
               </div>
             </div>
@@ -78,12 +87,13 @@ const base = import.meta.env.BASE_URL;
               </div>
               <div class="p-6">
                 <h3 class="mb-3 text-lg font-bold text-dark">
-                  Renewable Energy
+                  <T en="Renewable Energy" zh="可再生能源" />
                 </h3>
                 <p class="text-sm leading-relaxed text-gray">
-                  Building stronger cities through reliable engineering for
-                  bridges, pipelines, and essential urban utilities, designed
-                  for safety and long-term resilience.
+                  <T
+                    en="Building stronger cities through reliable engineering for bridges, pipelines, and essential urban utilities, designed for safety and long-term resilience."
+                    zh="通过为桥梁、管道及关键城市基础设施提供可靠工程，打造更坚固的城市，兼顾安全性与长期韧性。"
+                  />
                 </p>
               </div>
             </div>
@@ -102,12 +112,13 @@ const base = import.meta.env.BASE_URL;
               </div>
               <div class="p-6">
                 <h3 class="mb-3 text-lg font-bold text-dark">
-                  Onshore Plant Modulars
+                  <T en="Onshore Plant Modulars" zh="陆上工厂模块" />
                 </h3>
                 <p class="text-sm leading-relaxed text-gray">
-                  Your trusted partner for cross-border projects, combining
-                  local expertise and compliance to ensure seamless execution
-                  between China and Europe.
+                  <T
+                    en="Your trusted partner for cross-border projects, combining local expertise and compliance to ensure seamless execution between China and Europe."
+                    zh="作为跨境项目值得信赖的合作伙伴，融合本地专业能力与合规保障，确保中欧之间项目无缝执行。"
+                  />
                 </p>
               </div>
             </div>

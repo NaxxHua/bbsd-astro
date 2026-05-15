@@ -1,5 +1,6 @@
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
+import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 export default function ISOCertifications() {
@@ -8,12 +9,16 @@ export default function ISOCertifications() {
       <div className="mx-auto max-w-[1200px] px-6 text-center">
         <TextReveal
           text="Our ISO Certifications"
+          zh="我们的 ISO 认证"
           tag="h2"
           className="mb-4 text-4xl font-bold text-dark md:text-5xl"
         />
         <ScrollReveal>
           <p className="mx-auto mb-12 max-w-2xl text-base text-gray italic">
-            Ensuring Quality, Safety, and Environmental Responsibility
+            <T
+              en="Ensuring Quality, Safety, and Environmental Responsibility"
+              zh="确保质量、安全与环境责任"
+            />
           </p>
         </ScrollReveal>
 

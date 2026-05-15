@@ -1,7 +1,23 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
+
+const materials = [
+  { en: "Carbon Steel Pipes", zh: "碳钢管" },
+  { en: "Stainless Steel Pipes", zh: "不锈钢管" },
+  { en: "Copper-Nickel Pipes", zh: "铜镍合金管" },
+  { en: "Glass Reinforced Epoxy Piping", zh: "玻璃钢环氧管道" },
+  { en: "Hose", zh: "软管" },
+  { en: "CS Pipe Fittings", zh: "碳钢管件" },
+  { en: "SS Pipe Fittings", zh: "不锈钢管件" },
+  { en: "Fasteners", zh: "紧固件" },
+  { en: "Electrical Cables", zh: "电缆" },
+  { en: "Valves", zh: "阀门" },
+  { en: "Spectacle Blinds", zh: "8 字盲板" },
+  { en: "Insulation", zh: "保温材料" },
+];
 ---
 
 <BaseLayout title="Procurement & Materials Supply - BBSD">
@@ -18,10 +34,13 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          Procurement & Materials Supply
+          <T en="Procurement & Materials Supply" zh="采购与物资供应" />
         </h1>
         <p class="max-w-2xl text-lg text-white/80">
-          Strategic sourcing to optimize cost, quality, and delivery.
+          <T
+            en="Strategic sourcing to optimize cost, quality, and delivery."
+            zh="战略采购，优化成本、质量与交付。"
+          />
         </p>
       </div>
     </section>
@@ -29,25 +48,14 @@ const base = import.meta.env.BASE_URL;
     <!-- Content -->
     <section class="bg-white py-20">
       <div class="mx-auto max-w-[1200px] px-6">
-        <h2 class="mb-8 text-2xl font-bold text-dark">Materials We Supply</h2>
+        <h2 class="mb-8 text-2xl font-bold text-dark">
+          <T en="Materials We Supply" zh="我们供应的物资" />
+        </h2>
         <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
-            [
-              "Carbon Steel Pipes",
-              "Stainless Steel Pipes",
-              "Copper-Nickel Pipes",
-              "Glass Reinforced Epoxy Piping",
-              "Hose",
-              "CS Pipe Fittings",
-              "SS Pipe Fittings",
-              "Fasteners",
-              "Electrical Cables",
-              "Valves",
-              "Spectacle Blinds",
-              "Insulation",
-            ].map((item) => (
+            materials.map((item) => (
               <div class="rounded-xl border border-gray-light/20 bg-blue-light p-5 text-center">
-                <p class="text-sm font-medium text-dark">{item}</p>
+                <p class="text-sm font-medium text-dark"><T en={item.en} zh={item.zh} /></p>
               </div>
             ))
           }

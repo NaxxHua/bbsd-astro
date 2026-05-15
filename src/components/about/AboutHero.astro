@@ -1,4 +1,5 @@
 ---
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -16,10 +17,14 @@ const base = import.meta.env.BASE_URL;
   <div
     class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
   >
-    <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">About</h1>
+    <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
+      <T en="About" zh="关于我们" />
+    </h1>
     <p class="max-w-2xl text-base text-white/70 md:text-lg">
-      Our journey has been marked by continuous improvement, expansion
-      of our service offerings and a relentless focus on customer satisfaction.
+      <T
+        en="Our journey has been marked by continuous improvement, expansion of our service offerings and a relentless focus on customer satisfaction."
+        zh="我们的发展历程，始终伴随着持续改进、服务范围的拓展，以及对客户满意度始终如一的专注。"
+      />
     </p>
   </div>
 </section>

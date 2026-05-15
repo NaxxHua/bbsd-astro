@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -8,10 +9,14 @@ const base = import.meta.env.BASE_URL;
   <main>
     <article class="bg-white py-20">
       <div class="mx-auto max-w-[800px] px-6">
-        <p class="mb-4 text-sm text-gray-light">Aug 27, 2025</p>
+        <p class="mb-4 text-sm text-gray-light">
+          <T en="Aug 27, 2025" zh="2025年8月27日" />
+        </p>
         <h1 class="mb-8 text-3xl font-bold text-dark md:text-5xl">
-          BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Successfully
-          Holds Fire Safety Emergency Drill
+          <T
+            en="BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Successfully Holds Fire Safety Emergency Drill"
+            zh="BBSD（江苏南通）工程技术有限公司成功举行消防安全应急演练"
+          />
         </h1>
 
         <img
@@ -25,74 +30,69 @@ const base = import.meta.env.BASE_URL;
           class="prose max-w-none space-y-4 text-sm leading-relaxed text-gray"
         >
           <h2 class="text-lg font-bold text-dark">
-            Fortifying Safety Through Drills, Enhancing Skills Via Practical
-            Training
+            <T
+              en="Fortifying Safety Through Drills, Enhancing Skills Via Practical Training"
+              zh="以演练筑牢安全，以实训提升技能"
+            />
           </h2>
 
           <p>
-            To thoroughly implement the work safety policy of "Safety First,
-            Prevention First, Comprehensive Management", comprehensively improve
-            employees' fire safety awareness and emergency response
-            capabilities, and build a solid "firewall" for the company's work
-            safety, Best (Jiangsu Nantong) Engineering Technology Co., Ltd.
-            successfully held a fire safety emergency drill in its office park
-            on the morning of August 27.
+            <T
+              en={'To thoroughly implement the work safety policy of "Safety First, Prevention First, Comprehensive Management", comprehensively improve employees\' fire safety awareness and emergency response capabilities, and build a solid "firewall" for the company\'s work safety, Best (Jiangsu Nantong) Engineering Technology Co., Ltd. successfully held a fire safety emergency drill in its office park on the morning of August 27.'}
+              zh="为深入贯彻「安全第一、预防为主、综合治理」的安全生产方针，全面提升员工的消防安全意识与应急处置能力，为公司安全生产筑牢坚实的「防火墙」，BBSD（江苏南通）工程技术有限公司于 8 月 27 日上午在其办公园区成功举行消防安全应急演练。"
+            />
           </p>
 
           <p>
-            With "simulating real scenarios and testing practical response
-            capabilities" as the core, this drill covered the entire process of
-            fire early warning, emergency response, personnel evacuation, and
-            fire-fighting rescue, further consolidating the foundation of the
-            company's work safety management.
+            <T
+              en={'With "simulating real scenarios and testing practical response capabilities" as the core, this drill covered the entire process of fire early warning, emergency response, personnel evacuation, and fire-fighting rescue, further consolidating the foundation of the company\'s work safety management.'}
+              zh="本次演练以「模拟真实场景、检验实战处置能力」为核心，涵盖火灾预警、应急响应、人员疏散与灭火救援的全过程，进一步夯实了公司安全生产管理的基础。"
+            />
           </p>
 
           <p>
-            To ensure the drill was efficient, orderly and close to real
-            emergency situations, the company formulated a detailed plan in
-            advance: the General Affairs Department, in collaboration with
-            various departments, clarified the division of responsibilities,
-            defined evacuation routes and emergency assembly points, prepared
-            materials such as fire extinguishers and first-aid kits.
+            <T
+              en="To ensure the drill was efficient, orderly and close to real emergency situations, the company formulated a detailed plan in advance: the General Affairs Department, in collaboration with various departments, clarified the division of responsibilities, defined evacuation routes and emergency assembly points, prepared materials such as fire extinguishers and first-aid kits."
+              zh="为确保演练高效、有序并贴近真实应急情境，公司提前制定了详细方案：综合事务部联合各部门明确职责分工，确定疏散路线与应急集合点，并准备了灭火器、急救包等物资。"
+            />
           </p>
 
           <p>
-            <strong>Rapid Early Warning and Emergency Plan Activation:</strong> After
-            the "fire" broke out on site, the first discoverer immediately pressed
-            the manual fire alarm button and reported to the company's emergency command
-            team. The command team quickly verified the situation, activated the fire
-            safety emergency plan, and issued evacuation instructions.
+            <strong><T en="Rapid Early Warning and Emergency Plan Activation:" zh="快速预警，启动应急预案：" /></strong>
+            <T
+              en={'After the "fire" broke out on site, the first discoverer immediately pressed the manual fire alarm button and reported to the company\'s emergency command team. The command team quickly verified the situation, activated the fire safety emergency plan, and issued evacuation instructions.'}
+              zh="现场「起火」后，第一发现人立即按下手动火灾报警按钮，并向公司应急指挥组报告。指挥组迅速核实情况，启动消防安全应急预案，并下达疏散指令。"
+            />
           </p>
 
           <p>
-            <strong>Orderly Evacuation and Accurate First Aid:</strong> Evacuation
-            personnel guided employees to evacuate quickly by covering their mouths
-            and noses with wet towels and bending down. All safely arrived at the
-            designated assembly area within 5 minutes. The emergency team leader then
-            counted the number of people to confirm no one was left behind.
+            <strong><T en="Orderly Evacuation and Accurate First Aid:" zh="有序疏散，精准急救：" /></strong>
+            <T
+              en="Evacuation personnel guided employees to evacuate quickly by covering their mouths and noses with wet towels and bending down. All safely arrived at the designated assembly area within 5 minutes. The emergency team leader then counted the number of people to confirm no one was left behind."
+              zh="疏散引导员引导员工用湿毛巾捂住口鼻、弯腰快速撤离。全体人员在 5 分钟内安全抵达指定集合区域。随后，应急小组组长清点人数，确认无人滞留。"
+            />
           </p>
 
           <p>
-            <strong>Professional Fire-Fighting and Fire Control:</strong> Every employee
-            proficiently used fire extinguishers, followed the operation steps of
-            "lift, pull, hold, squeeze", and accurately put out the fire at the root
-            of the "fire source", quickly controlling the spread of the "fire".
+            <strong><T en="Professional Fire-Fighting and Fire Control:" zh="专业灭火，控制火情：" /></strong>
+            <T
+              en={'Every employee proficiently used fire extinguishers, followed the operation steps of "lift, pull, hold, squeeze", and accurately put out the fire at the root of the "fire source", quickly controlling the spread of the "fire".'}
+              zh="每位员工都熟练使用灭火器，按照「提、拔、握、压」的操作步骤，对准「火源」根部准确灭火，迅速控制了「火势」的蔓延。"
+            />
           </p>
 
           <p>
-            After the drill, Lu Liangjun, the company's safety supervisor,
-            summarized the activity: "This fire drill has tested the feasibility
-            of the company's emergency plan and the coordination ability of the
-            emergency team. In the future, the company will continue to improve
-            the safety management system and conduct various regular safety
-            drills."
+            <T
+              en={"After the drill, Lu Liangjun, the company's safety supervisor, summarized the activity: \"This fire drill has tested the feasibility of the company's emergency plan and the coordination ability of the emergency team. In the future, the company will continue to improve the safety management system and conduct various regular safety drills.\""}
+              zh="演练结束后，公司安全主管 Lu Liangjun 对活动进行了总结：「本次消防演练检验了公司应急预案的可行性以及应急小组的协同能力。未来，公司将继续完善安全管理体系，定期开展各类安全演练。」"
+            />
           </p>
 
           <p>
-            The successful holding of this fire safety drill has not only
-            improved all employees' awareness of fire prevention and emergency
-            response capabilities, but also strengthened the coordination
-            mechanism among various departments of the company.
+            <T
+              en="The successful holding of this fire safety drill has not only improved all employees' awareness of fire prevention and emergency response capabilities, but also strengthened the coordination mechanism among various departments of the company."
+              zh="本次消防安全演练的成功举行，不仅提升了全体员工的消防防范意识与应急处置能力，也强化了公司各部门之间的协同机制。"
+            />
           </p>
         </div>
 
@@ -100,7 +100,7 @@ const base = import.meta.env.BASE_URL;
           <a
             href={`${base}news`}
             class="text-sm font-medium text-blue-link hover:underline"
-            >← Back to News</a
+            ><T en="← Back to News" zh="← 返回新闻列表" /></a
           >
         </div>
       </div>

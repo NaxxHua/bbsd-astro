@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -18,7 +19,7 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          E&I Engineering
+          <T en="E&I Engineering" zh="电气与仪表工程" />
         </h1>
       </div>
     </section>
@@ -27,37 +28,36 @@ const base = import.meta.env.BASE_URL;
     <section class="bg-white py-20">
       <div class="mx-auto max-w-[1200px] px-6">
         <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
-          BBSD offers Electrical and Instrumentation (E&I) engineering services
-          covers power generation and distribution, lighting, instrumentation,
-          automation, and control systems, with a focus on safety, redundancy,
-          and compliance with industry standards and regulations such as IEC,
-          IEEE, API, and DNV.
+          <T
+            en="BBSD offers Electrical and Instrumentation (E&I) engineering services covers power generation and distribution, lighting, instrumentation, automation, and control systems, with a focus on safety, redundancy, and compliance with industry standards and regulations such as IEC, IEEE, API, and DNV."
+            zh="BBSD 提供电气与仪表（E&I）工程服务，涵盖发电与配电、照明、仪表、自动化与控制系统，注重安全性、冗余设计，并符合 IEC、IEEE、API、DNV 等行业标准与规范。"
+          />
         </p>
 
         <div class="grid gap-16">
           <!-- Electrical System Design -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Electrical System Design
+              <T en="Electrical System Design" zh="电气系统设计" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              Electrical Design designs the Electrical power generation and
-              distribution. Its work starts with inventory of all consumers in
-              the electrical consumer list, along with hidden consumers such as
-              packages and machinery auxiliaries.
+              <T
+                en="Electrical Design designs the Electrical power generation and distribution. Its work starts with inventory of all consumers in the electrical consumer list, along with hidden consumers such as packages and machinery auxiliaries."
+                zh="电气设计负责发电与配电的设计。其工作始于对电气负荷清单中所有用电设备的盘点，包括成套设备与机械辅助设备等隐性负荷。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Switchgear,
-                transformers, MCCs, VFDs, and cabling
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Switchgear, transformers, MCCs, VFDs, and cabling" zh="开关柜、变压器、电机控制中心（MCC）、变频器（VFD）与电缆" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Primary and
-                secondary power distribution networks (HV, MV, LV)
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Primary and secondary power distribution networks (HV, MV, LV)" zh="一级与二级配电网络（高压、中压、低压）" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Define lighting,
-                grounding, and earthing systems for hazardous areas
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Define lighting, grounding, and earthing systems for hazardous areas" zh="定义危险区域的照明、接地与防雷系统" />
               </li>
             </ul>
           </div>
@@ -65,28 +65,26 @@ const base = import.meta.env.BASE_URL;
           <!-- Instrumentation & Control -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Instrumentation & Control Design
+              <T en="Instrumentation & Control Design" zh="仪表与控制设计" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              Instrument Design develops control philosophies for process
-              automation, safety shutdown, and emergency systems and ensure
-              compliances with IEC and DNV standards.
+              <T
+                en="Instrument Design develops control philosophies for process automation, safety shutdown, and emergency systems and ensure compliances with IEC and DNV standards."
+                zh="仪表设计为工艺自动化、安全停车与应急系统制定控制理念，并确保符合 IEC 与 DNV 标准。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Define
-                architecture for DCS, ESD, F&G (Fire & Gas), PAGA and SCADA
-                system
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Define architecture for DCS, ESD, F&G (Fire & Gas), PAGA and SCADA system" zh="定义 DCS、ESD、火气系统（F&G）、PAGA 与 SCADA 系统的架构" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Select field
-                instruments such as transmitters, analyzers, control valves, and
-                sensors
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Select field instruments such as transmitters, analyzers, control valves, and sensors" zh="选择变送器、分析仪、控制阀与传感器等现场仪表" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Specify smart
-                instrumentation and communication protocols (e.g., HART,
-                Foundation Fieldbus)
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Specify smart instrumentation and communication protocols (e.g., HART, Foundation Fieldbus)" zh="确定智能仪表与通信协议（如 HART、Foundation Fieldbus）" />
               </li>
             </ul>
           </div>
@@ -94,31 +92,30 @@ const base = import.meta.env.BASE_URL;
           <!-- 3D Modeling -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              3D Modeling & Layout Integration
+              <T en="3D Modeling & Layout Integration" zh="三维建模与布置集成" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              3D Modelling is the key for offshore plant design which requires
-              complicated multiciliary coordination with piping layout design,
-              mechanical Equipment and Structural Design.
+              <T
+                en="3D Modelling is the key for offshore plant design which requires complicated multiciliary coordination with piping layout design, mechanical Equipment and Structural Design."
+                zh="三维建模是海上工厂设计的关键，需要与管道布置设计、机械设备与结构设计进行复杂的多专业协调。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Define routing
-                and layout for electrical cables, cable trays, junction boxes,
-                and control panels
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Define routing and layout for electrical cables, cable trays, junction boxes, and control panels" zh="定义电缆、电缆桥架、接线箱与控制盘的走向与布置" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Integrate
-                instrument location plans and cable schedules into 3D models
-                (e.g., Aveva E3D, SmartPlant)
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Integrate instrument location plans and cable schedules into 3D models (e.g., Aveva E3D, SmartPlant)" zh="将仪表位置图与电缆清单集成进三维模型（如 Aveva E3D、SmartPlant）" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Perform clash
-                detection with piping, structural, and mechanical systems
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Perform clash detection with piping, structural, and mechanical systems" zh="与管道、结构、机械系统进行碰撞检测" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Optimize layouts
-                for space constraints, accessibility, and maintainability
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Optimize layouts for space constraints, accessibility, and maintainability" zh="针对空间限制、可达性与可维护性优化布置" />
               </li>
             </ul>
           </div>
@@ -129,7 +126,7 @@ const base = import.meta.env.BASE_URL;
           <a
             href={`${base}engineering-services/mechanical-engineering`}
             class="text-sm font-medium text-blue-link hover:underline"
-            >Mechanical Engineering ›</a
+            ><T en="Mechanical Engineering ›" zh="机械工程 ›" /></a
           >
         </div>
       </div>

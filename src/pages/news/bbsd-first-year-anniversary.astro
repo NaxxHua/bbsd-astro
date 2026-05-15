@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -8,9 +9,11 @@ const base = import.meta.env.BASE_URL;
   <main>
     <article class="bg-white py-20">
       <div class="mx-auto max-w-[800px] px-6">
-        <p class="mb-4 text-sm text-gray-light">Nov 20, 2025</p>
+        <p class="mb-4 text-sm text-gray-light">
+          <T en="Nov 20, 2025" zh="2025年11月20日" />
+        </p>
         <h1 class="mb-8 text-3xl font-bold text-dark md:text-5xl">
-          BBSD - First Year Anniversary
+          <T en="BBSD - First Year Anniversary" zh="BBSD 一周年纪念" />
         </h1>
 
         <img
@@ -24,21 +27,27 @@ const base = import.meta.env.BASE_URL;
           class="prose max-w-none space-y-4 text-sm leading-relaxed text-gray"
         >
           <p>
-            Today marks one year of BBSD. A year of growth, collaboration, and
-            delivering reliable engineering solutions.
+            <T
+              en="Today marks one year of BBSD. A year of growth, collaboration, and delivering reliable engineering solutions."
+              zh="今天是 BBSD 成立一周年的日子。这一年里，我们不断成长、携手协作，交付可靠的工程解决方案。"
+            />
           </p>
           <p>
-            Thank you to our clients, partners, and team for the trust and hard
-            work. Here's to building even better in the years ahead.
+            <T
+              en="Thank you to our clients, partners, and team for the trust and hard work. Here's to building even better in the years ahead."
+              zh="感谢我们的客户、合作伙伴与团队的信任与辛勤付出。愿我们在未来的岁月里建得更好。"
+            />
           </p>
-          <p><strong>BBSD - One year strong!</strong></p>
+          <p>
+            <strong><T en="BBSD - One year strong!" zh="BBSD —— 一周年，再出发！" /></strong>
+          </p>
         </div>
 
         <div class="mt-12">
           <a
             href={`${base}news`}
             class="text-sm font-medium text-blue-link hover:underline"
-            >← Back to News</a
+            ><T en="← Back to News" zh="← 返回新闻列表" /></a
           >
         </div>
       </div>

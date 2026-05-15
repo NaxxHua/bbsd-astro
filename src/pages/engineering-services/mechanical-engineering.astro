@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -18,7 +19,7 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          Mechanical Engineering
+          <T en="Mechanical Engineering" zh="机械工程" />
         </h1>
       </div>
     </section>
@@ -27,37 +28,36 @@ const base = import.meta.env.BASE_URL;
     <section class="bg-white py-20">
       <div class="mx-auto max-w-[1200px] px-6">
         <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
-          BBSD offers mechanical engineering services for both onshore and
-          offshore plants. The mechanical engineering focuses on the
-          specification, design, selection, and integration of static and
-          rotating equipment to ensure safe, reliable, and efficient operation
-          in harsh offshore environments.
+          <T
+            en="BBSD offers mechanical engineering services for both onshore and offshore plants. The mechanical engineering focuses on the specification, design, selection, and integration of static and rotating equipment to ensure safe, reliable, and efficient operation in harsh offshore environments."
+            zh="BBSD 为陆上与海上工厂提供机械工程服务。机械工程专注于静设备与动设备的规格制定、设计、选型与集成，确保在恶劣海上环境中安全、可靠、高效运行。"
+          />
         </p>
 
         <div class="grid gap-16">
           <!-- Equipment Design -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Equipment Design and Specification
+              <T en="Equipment Design and Specification" zh="设备设计与规格" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              Equipment Design collects design inputs from Process data sheets
-              and P&ID's and define design criteria for equipment selection and
-              sizing. The design ensure compliance with standards like ASME
-              Section VIII, API 617, API 650, API 660, API 680, TEMA.
+              <T
+                en="Equipment Design collects design inputs from Process data sheets and P&ID's and define design criteria for equipment selection and sizing. The design ensure compliance with standards like ASME Section VIII, API 617, API 650, API 660, API 680, TEMA."
+                zh="设备设计从工艺数据表与 P&ID 中收集设计输入，并为设备选型与尺寸确定设计准则。设计确保符合 ASME 第 VIII 卷、API 617、API 650、API 660、API 680、TEMA 等标准。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Static Equipment:
-                Pressure vessels, storage tanks, filters and heat exchangers
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Static Equipment: Pressure vessels, storage tanks, filters and heat exchangers" zh="静设备：压力容器、储罐、过滤器与换热器" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Rotating
-                Equipment: Pumps, Compressors, Turbines
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Rotating Equipment: Pumps, Compressors, Turbines" zh="动设备：泵、压缩机、透平" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Skid-mounted and
-                packaged units: WHRU & HRSG
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Skid-mounted and packaged units: WHRU & HRSG" zh="撬装与成套装置：余热回收装置（WHRU）与余热锅炉（HRSG）" />
               </li>
             </ul>
           </div>
@@ -65,26 +65,26 @@ const base = import.meta.env.BASE_URL;
           <!-- Vendor Engagement -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Vendor Engagement and Procurement Support
+              <T en="Vendor Engagement and Procurement Support" zh="供应商对接与采购支持" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              Vendor Engagement and Procurement Support with our hands-on
-              dedicated mechanical engineers is the key success for on-time
-              delivery of various equipment.
+              <T
+                en="Vendor Engagement and Procurement Support with our hands-on dedicated mechanical engineers is the key success for on-time delivery of various equipment."
+                zh="由我们亲力亲为的专职机械工程师提供供应商对接与采购支持，是各类设备按期交付的成功关键。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Prepare Material
-                Requisitions (MRs) for procurement and conduct technical bid
-                evaluations (TBEs)
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Prepare Material Requisitions (MRs) for procurement and conduct technical bid evaluations (TBEs)" zh="编制采购用材料申请单（MR）并开展技术标书评估（TBE）" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Review and
-                approve vendor drawings, datasheets, and calculations
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Review and approve vendor drawings, datasheets, and calculations" zh="审查并批准供应商图纸、数据表与计算书" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Coordinate
-                Factory Acceptance Tests (FATs) and witness critical inspections
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Coordinate Factory Acceptance Tests (FATs) and witness critical inspections" zh="协调工厂验收测试（FAT）并见证关键检验" />
               </li>
             </ul>
           </div>
@@ -92,33 +92,30 @@ const base = import.meta.env.BASE_URL;
           <!-- Integration -->
           <div>
             <h2 class="mb-4 text-2xl font-bold text-dark">
-              Integration with Plant Layout Design
+              <T en="Integration with Plant Layout Design" zh="与工厂布置设计的集成" />
             </h2>
             <p class="mb-4 text-sm leading-relaxed text-gray">
-              Integration with Layout is the key for offshore plant design which
-              requires complicated multiciliary coordination with piping layout
-              design, E&I design and Structural Design.
+              <T
+                en="Integration with Layout is the key for offshore plant design which requires complicated multiciliary coordination with piping layout design, E&I design and Structural Design."
+                zh="与布置设计的集成是海上工厂设计的关键，需要与管道布置设计、电气仪表设计及结构设计进行复杂的多专业协调。"
+              />
             </p>
             <ul class="space-y-2 text-sm text-gray">
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Provide equipment
-                layout guidance to ensure optimized operations and efficient
-                installation
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Provide equipment layout guidance to ensure optimized operations and efficient installation" zh="提供设备布置指导，确保运营优化与高效安装" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Work with
-                structural engineers to confirm foundation, skid, and support
-                design
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Work with structural engineers to confirm foundation, skid, and support design" zh="与结构工程师协作，确认基础、撬块与支架设计" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Collaborate with
-                piping teams to verify nozzle loads and thermal expansion
-                allowances
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Collaborate with piping teams to verify nozzle loads and thermal expansion allowances" zh="与管道团队协作，核实接管口荷载与热膨胀裕量" />
               </li>
               <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>Produce
-                mechanical handling report and layout for plant maintenance and
-                operations
+                <span class="mt-1 text-orange-primary">•</span>
+                <T en="Produce mechanical handling report and layout for plant maintenance and operations" zh="编制机械搬运报告与布置图，用于工厂维护与运营" />
               </li>
             </ul>
           </div>
@@ -129,12 +126,12 @@ const base = import.meta.env.BASE_URL;
           <a
             href={`${base}engineering-services/e-i-engineering`}
             class="text-sm font-medium text-blue-link hover:underline"
-            >‹ E&I Engineering</a
+            ><T en="‹ E&I Engineering" zh="‹ 电气与仪表工程" /></a
           >
           <a
             href={`${base}engineering-services/piping-engineering`}
             class="text-sm font-medium text-blue-link hover:underline"
-            >Piping Engineering ›</a
+            ><T en="Piping Engineering ›" zh="管道工程 ›" /></a
           >
         </div>
       </div>

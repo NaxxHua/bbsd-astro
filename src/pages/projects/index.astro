@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ScrollReveal from "../../components/animations/ScrollReveal.tsx";
 import TextReveal from "../../components/animations/TextReveal.tsx";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
+import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -19,10 +20,14 @@ const base = import.meta.env.BASE_URL;
       <div
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
-        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">Our Projects</h1>
+        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
+          <T en="Our Projects" zh="我们的项目" />
+        </h1>
         <p class="max-w-2xl text-base text-white/70 md:text-lg">
-          Our journey has been marked by continuous improvement, expansion
-          of our service offerings and a relentless focus on customer satisfaction.
+          <T
+            en="Our journey has been marked by continuous improvement, expansion of our service offerings and a relentless focus on customer satisfaction."
+            zh="我们的发展历程，始终伴随着持续改进、服务范围的拓展，以及对客户满意度始终如一的专注。"
+          />
         </p>
       </div>
     </section>
@@ -33,10 +38,13 @@ const base = import.meta.env.BASE_URL;
         <TextReveal
           client:visible
           text="Our Projects"
+          zh="我们的项目"
           tag="h2"
           className="mb-4 text-3xl font-bold text-blue-dark md:text-5xl"
         />
-        <p class="mb-12 text-lg text-gray">Where We Make an Impact.</p>
+        <p class="mb-12 text-lg text-gray">
+          <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
+        </p>
 
         <div class="grid gap-8 md:grid-cols-2">
           <ScrollReveal client:visible>
@@ -62,7 +70,9 @@ const base = import.meta.env.BASE_URL;
             <div
               class="flex h-full items-center justify-center rounded-2xl border border-dashed border-gray-light/40 p-6"
             >
-              <p class="text-lg font-medium text-gray-light">More to come</p>
+              <p class="text-lg font-medium text-gray-light">
+                <T en="More to come" zh="敬请期待" />
+              </p>
             </div>
           </ScrollReveal>
         </div>

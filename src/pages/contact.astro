@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ScrollReveal from "../components/animations/ScrollReveal.tsx";
 import ImageCarousel from "../components/contact/ImageCarousel.tsx";
+import T from "../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -19,10 +20,13 @@ const base = import.meta.env.BASE_URL;
         class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
-          Contact
+          <T en="Contact" zh="联系我们" />
         </h1>
         <p class="max-w-2xl text-base text-white/70 md:text-lg">
-          Contact BBSD today and take the first step towards reliable and professional solutions.
+          <T
+            en="Contact BBSD today and take the first step towards reliable and professional solutions."
+            zh="立即联系 BBSD，迈出通向可靠、专业解决方案的第一步。"
+          />
         </p>
       </div>
     </section>
@@ -35,12 +39,16 @@ const base = import.meta.env.BASE_URL;
           <ScrollReveal client:visible>
             <div>
               <h2 class="mb-6 text-3xl font-bold leading-tight text-dark md:text-5xl">
-                Let's get in touch and work together!
+                <T
+                  en="Let's get in touch and work together!"
+                  zh="携手合作，与我们取得联系！"
+                />
               </h2>
               <p class="mb-8 text-base leading-relaxed text-gray">
-                Whether you're dealing with an emergency, need routine maintenance,
-                or have a question about our services, our team at BBSD is ready to
-                assist you.
+                <T
+                  en="Whether you're dealing with an emergency, need routine maintenance, or have a question about our services, our team at BBSD is ready to assist you."
+                  zh="无论您面临紧急情况、需要日常维护，还是对我们的服务有疑问，BBSD 团队都随时为您提供协助。"
+                />
               </p>
               <div class="flex items-center gap-3">
                 <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-dark">
@@ -57,7 +65,12 @@ const base = import.meta.env.BASE_URL;
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <p class="text-sm text-gray">No. 218 Yongxing Road, Yongxing Sub-district, Chongchuan District, Nantong, Jiangsu, China</p>
+                <p class="text-sm text-gray">
+                  <T
+                    en="No. 218 Yongxing Road, Yongxing Sub-district, Chongchuan District, Nantong, Jiangsu, China"
+                    zh="中国江苏省南通市崇川区永兴街道永兴路 218 号"
+                  />
+                </p>
               </div>
               <div class="mt-4 flex items-center gap-3">
                 <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-dark">
@@ -73,7 +86,9 @@ const base = import.meta.env.BASE_URL;
           <!-- Right: Form Card -->
           <ScrollReveal client:visible>
             <div class="rounded-2xl bg-blue-light p-8">
-              <h3 class="mb-6 text-center text-xl font-bold text-orange-primary">Send us a message</h3>
+              <h3 class="mb-6 text-center text-xl font-bold text-orange-primary">
+                <T en="Send us a message" zh="给我们留言" />
+              </h3>
               <form class="space-y-4">
                 <input
                   type="text"
@@ -99,7 +114,7 @@ const base = import.meta.env.BASE_URL;
                 <button
                   type="submit"
                   class="w-full rounded-lg bg-orange-primary py-4 text-base font-semibold text-white transition-colors hover:bg-orange-hover"
-                >Send message</button>
+                ><T en="Send message" zh="发送留言" /></button>
               </form>
             </div>
           </ScrollReveal>
