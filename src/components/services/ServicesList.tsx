@@ -1,4 +1,4 @@
-import { Gear, Wrench, Truck, Pipe } from '@phosphor-icons/react'
+import { Gear, Wrench, Truck, Pipe, ArrowRight } from '@phosphor-icons/react'
 import ScrollReveal from '../animations/ScrollReveal'
 import T from '../../i18n/T'
 import { url } from '../../utils/url'
@@ -70,7 +70,7 @@ export default function ServicesList() {
             <ScrollReveal key={service.href} delay={i * 0.1}>
               <a
                 href={url(service.href)}
-                className="flex flex-col items-start gap-5 rounded-[20px] bg-blue-light px-10 py-[50px] text-black shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-1 lg:py-20"
+                className="group flex flex-col items-start gap-5 rounded-[20px] bg-blue-light px-10 py-[50px] text-black shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)] lg:py-20"
               >
                 <img
                   src={url(`/images/services/${service.image}`)}
@@ -78,7 +78,15 @@ export default function ServicesList() {
                   loading="lazy"
                   className="h-[198px] w-full rounded-[15px] object-cover"
                 />
-                <service.Icon size={50} weight="regular" />
+                {/* Icon swaps to right-arrow on hover */}
+                <div className="relative h-[50px] w-[50px] overflow-hidden text-black">
+                  <span className="absolute inset-0 transition-opacity duration-300 ease-out group-hover:opacity-0">
+                    <service.Icon size={50} weight="regular" />
+                  </span>
+                  <span className="absolute inset-0 -translate-x-[50px] opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100">
+                    <ArrowRight size={50} weight="regular" />
+                  </span>
+                </div>
                 <div className="flex flex-col gap-[10px]">
                   <h3 className="text-[22px] font-semibold leading-[33px] tracking-[-0.44px] text-black">
                     <T en={service.en} zh={service.zh} />
