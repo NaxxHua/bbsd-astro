@@ -32,43 +32,49 @@ const newsItems = [
 
 export default function NewsPreview() {
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px] px-5 md:px-6">
-        <TextReveal
-          text="Latest News"
-          zh="最新动态"
-          tag="h2"
-          className="mb-3 text-3xl font-bold text-dark md:mb-4 md:text-4xl lg:text-center lg:text-5xl"
-        />
-        <ScrollReveal>
-          <p className="mb-10 max-w-2xl text-xs leading-relaxed text-gray md:mb-14 md:text-sm lg:mx-auto lg:text-center">
-            <T
-              en="Stay updated with our latest company developments, industry insights, and project milestones."
-              zh="及时了解我们最新的公司动态、行业洞察与项目里程碑。"
-            />
-          </p>
-        </ScrollReveal>
+    <section className="flex flex-col items-center justify-center overflow-hidden bg-white px-5 py-20 md:px-[30px] lg:py-[125px]">
+      <div className="flex w-full max-w-[1200px] flex-col gap-[75px]">
+        {/* Title area */}
+        <div className="flex flex-col items-center gap-5">
+          <TextReveal
+            text="Latest News"
+            zh="最新动态"
+            tag="h2"
+            className="text-center text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-black md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+          />
+          <ScrollReveal>
+            <p className="max-w-[600px] text-center text-base font-normal tracking-[-0.02em] text-gray lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]">
+              <T
+                en="Stay updated with our latest company developments, industry insights, and project milestones."
+                zh="及时了解我们最新的公司动态、行业洞察与项目里程碑。"
+              />
+            </p>
+          </ScrollReveal>
+        </div>
 
-        <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        {/* News cards */}
+        <div className="grid grid-cols-1 items-start gap-[30px] md:grid-cols-2 lg:grid-cols-3">
           {newsItems.map((news, i) => (
             <ScrollReveal key={news.href} delay={i * 0.15}>
-              <a href={url(news.href)} className="group block">
-                <div className="overflow-hidden rounded-lg md:rounded-xl">
+              <a href={url(news.href)} className="group flex flex-col items-center gap-[30px]">
+                <div className="w-full overflow-hidden rounded-[15px]">
                   <img
                     src={url(news.image)}
                     alt={news.title}
                     loading="lazy"
-                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-56"
+                    className="h-[312px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="mt-4 md:mt-5">
-                  <p className="mb-1.5 text-xs font-medium text-gray-light md:mb-2">
-                    <T en={news.date} zh={news.dateZh} />
-                  </p>
-                  <h3 className="mb-2 line-clamp-3 text-sm font-bold text-dark transition-colors group-hover:text-blue-dark md:mb-3 md:text-base">
-                    <T en={news.title} zh={news.titleZh} />
-                  </h3>
-                  <span className="text-xs font-medium text-blue-dark transition-colors group-hover:text-orange-primary md:text-sm">
+                <div className="flex w-full flex-col items-center gap-5 text-center">
+                  <div className="flex flex-col items-center gap-[5px]">
+                    <p className="text-[14px] font-normal leading-[22.4px] tracking-[-0.28px] text-[#8c8c8c]">
+                      <T en={news.date} zh={news.dateZh} />
+                    </p>
+                    <h4 className="text-[20px] font-semibold leading-[32px] tracking-[-0.4px] text-black">
+                      <T en={news.title} zh={news.titleZh} />
+                    </h4>
+                  </div>
+                  <span className="text-[16px] font-medium leading-[19.2px] tracking-[-0.32px] text-blue-dark transition-colors group-hover:text-orange-primary">
                     <T en="Read more →" zh="阅读更多 →" />
                   </span>
                 </div>

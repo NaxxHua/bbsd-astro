@@ -1,4 +1,4 @@
-import { Gear, HardHat, Truck, PaperPlaneTilt, Wrench, ArrowRight } from '@phosphor-icons/react'
+import { Gear, Wrench, Truck, PaperPlaneTilt, Pipe, ArrowRight } from '@phosphor-icons/react'
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
 import T from '../../i18n/T'
@@ -19,7 +19,7 @@ const services = [
     description: 'Reliable on-site services ensuring quality, safety, and timely execution.',
     descriptionZh: '可靠的现场服务，确保质量、安全与按时执行。',
     href: '/services/fabrication',
-    Icon: HardHat,
+    Icon: Wrench,
   },
   {
     title: 'Procurement & Materials Supply',
@@ -43,7 +43,7 @@ const services = [
     description: 'Off-site fabrication to ensure quality, efficiency, and faster installation.',
     descriptionZh: '场外预制，确保质量、效率与更快的安装。',
     href: '/services/piping-spools-pre-fabrication',
-    Icon: Wrench,
+    Icon: Pipe,
   },
 ]
 
