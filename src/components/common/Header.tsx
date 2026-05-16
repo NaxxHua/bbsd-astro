@@ -62,14 +62,14 @@ export default function Header({ currentPath = '/' }: Props) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-b from-black/75 via-black/30 to-transparent">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 md:px-6 md:py-5">
+    <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-b from-black to-black/30">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 pt-5 pb-4 md:px-[30px] md:pt-[30px] md:pb-5">
         {/* Logo */}
         <a href={url('/')} className="z-10 shrink-0">
           <img
             src={url('/images/home/logo.png')}
             alt="BBSD"
-            className="h-8 w-auto md:h-10"
+            className="h-12 w-auto md:h-14 lg:h-[84px]"
           />
         </a>
 
@@ -79,11 +79,7 @@ export default function Header({ currentPath = '/' }: Props) {
             <a
               key={link.href}
               href={url(link.href)}
-              className={`text-sm font-medium transition-colors hover:text-orange-primary ${
-                currentPath === link.href
-                  ? 'text-orange-primary'
-                  : 'text-white'
-              }`}
+              className="text-base font-medium text-white/70 transition-colors hover:text-white"
             >
               <T en={link.en} zh={link.zh} />
             </a>
@@ -91,16 +87,12 @@ export default function Header({ currentPath = '/' }: Props) {
         </nav>
 
         {/* Desktop Nav - pill container (lg+) */}
-        <nav className="hidden items-center gap-7 rounded-full bg-white/10 px-8 py-2.5 backdrop-blur-md lg:flex">
+        <nav className="hidden items-center gap-10 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={url(link.href)}
-              className={`text-sm font-medium transition-colors hover:text-orange-primary ${
-                currentPath === link.href
-                  ? 'text-orange-primary'
-                  : 'text-white'
-              }`}
+              className="text-base font-medium text-white/70 transition-colors hover:text-white"
             >
               <T en={link.en} zh={link.zh} />
             </a>
@@ -112,7 +104,7 @@ export default function Header({ currentPath = '/' }: Props) {
           {/* Phone - desktop only */}
           <a
             href="tel:+8615927327738"
-            className="hidden items-center gap-2 text-sm text-white lg:flex"
+            className="hidden items-center gap-2 text-sm tracking-[-0.28px] text-white lg:flex"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -126,7 +118,7 @@ export default function Header({ currentPath = '/' }: Props) {
           {/* Contact button - visible on mobile + tablet + desktop */}
           <a
             href={url('/contact')}
-            className="rounded-lg bg-orange-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-hover md:px-6 md:py-2.5"
+            className="rounded-[10px] bg-[#ff8000] px-[25px] py-[15px] text-base font-semibold text-black shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)] transition-colors hover:bg-orange-primary"
           >
             <T en="Contact" zh="联系我们" />
           </a>
