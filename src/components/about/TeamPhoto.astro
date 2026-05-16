@@ -1,16 +1,30 @@
 ---
 interface Props {
   image: string;
+  variant?: "tall" | "wide";
 }
-const { image } = Astro.props;
+const { image, variant = "tall" } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<section class="w-full overflow-hidden">
-  <img
-    src={`${base}images/about/${image}`}
-    alt="BBSD team"
-    loading="lazy"
-    class="w-full object-cover"
-  />
-</section>
+{
+  variant === "wide" ? (
+    <section class="w-full overflow-hidden px-5 md:px-[30px]">
+      <img
+        src={`${base}images/about/${image}`}
+        alt="BBSD team"
+        loading="lazy"
+        class="mx-auto h-[280px] w-full max-w-[1244px] object-cover md:h-[450px] lg:h-[618px]"
+      />
+    </section>
+  ) : (
+    <section class="w-full overflow-hidden">
+      <img
+        src={`${base}images/about/${image}`}
+        alt="BBSD facility"
+        loading="lazy"
+        class="h-[320px] w-full object-cover object-[21%_53%] md:h-[600px] lg:h-[1027px]"
+      />
+    </section>
+  )
+}
