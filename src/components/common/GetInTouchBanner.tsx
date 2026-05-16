@@ -20,7 +20,7 @@ export default function GetInTouchBanner() {
           text="Get In Touch With Us"
           zh="与我们取得联系"
           tag="h2"
-          className="flex-1 text-center text-[28px] font-semibold leading-[1.2] tracking-[-0.02em] text-white md:text-left md:text-[32px] lg:text-[40px] lg:leading-[50px]"
+          className="flex-1 text-[28px] font-semibold leading-[1.2] tracking-[-0.02em] text-white md:text-[32px] lg:text-[40px] lg:leading-[50px]"
         />
         <ScrollReveal delay={0.3}>
           <a
