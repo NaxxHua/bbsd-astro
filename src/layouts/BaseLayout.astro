@@ -40,8 +40,37 @@ const canonicalURL = new URL(currentPath, Astro.site);
           } catch (e) {}
           document.documentElement.setAttribute("data-lang", l);
         }
+        // Placeholders can't use the <T> element, so swap them by attribute.
+        function applyPlaceholders() {
+          var lang = document.documentElement.getAttribute("data-lang") || "en";
+          document.querySelectorAll("[data-ph-en]").forEach(function (el) {
+            var v =
+              lang === "zh"
+                ? el.getAttribute("data-ph-zh")
+                : el.getAttribute("data-ph-en");
+            if (v != null) el.setAttribute("placeholder", v);
+          });
+        }
+        function onReady() {
+          applyPlaceholders();
+          if (!window.__bbsdPhObserver) {
+            window.__bbsdPhObserver = new MutationObserver(applyPlaceholders);
+            window.__bbsdPhObserver.observe(document.documentElement, {
+              attributes: true,
+              attributeFilter: ["data-lang"],
+            });
+          }
+        }
         applyLang();
-        document.addEventListener("astro:after-swap", applyLang);
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", onReady);
+        } else {
+          onReady();
+        }
+        document.addEventListener("astro:after-swap", function () {
+          applyLang();
+          applyPlaceholders();
+        });
       })();
     </script>
     <link rel="canonical" href={canonicalURL.href} />
