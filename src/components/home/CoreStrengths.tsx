@@ -33,69 +33,59 @@ const strengths = [
 
 export default function CoreStrengths() {
   return (
-    <section className="bg-white py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px] px-5 md:px-6">
-        <div className="grid items-start gap-10 md:gap-12 lg:grid-cols-2">
-          {/* Left: Text */}
-          <div>
-            <TextReveal
-              text="Our Core Strengths"
-              zh="我们的核心优势"
-              tag="h2"
-              className="mb-8 text-3xl font-bold text-dark md:mb-10 md:text-4xl lg:text-5xl"
-            />
+    <section className="flex flex-col items-center justify-center overflow-hidden bg-white px-5 py-20 md:px-[30px] lg:h-[800px] lg:py-[125px]">
+      <div className="flex w-full max-w-[1200px] flex-col items-center gap-10 lg:flex-row lg:gap-[100px]">
+        {/* Left: Text */}
+        <div className="w-full flex-1">
+          <TextReveal
+            text="Our Core Strengths"
+            zh="我们的核心优势"
+            tag="h2"
+            className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-black md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+          />
 
-            <div className="space-y-6 md:space-y-8">
-              {strengths.map((item, i) => (
-                <ScrollReveal key={item.title} delay={i * 0.15}>
-                  <div className="flex gap-3 md:gap-4">
-                    {/* Blue check circle icon */}
-                    <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-dark md:h-6 md:w-6">
-                      <svg
-                        className="h-3 w-3 text-white md:h-3.5 md:w-3.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={3}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="mb-1.5 text-base font-bold text-dark md:mb-2 md:text-lg">
-                        <T en={item.title} zh={item.titleZh} />
-                      </h3>
-                      <p className="text-xs leading-relaxed text-gray md:text-sm">
-                        <T en={item.description} zh={item.descriptionZh} />
-                      </p>
-                    </div>
+          <div className="mt-[50px] flex flex-col gap-[15px]">
+            {strengths.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.15}>
+                <div className="flex flex-col gap-[15px]">
+                  {/* Title row: icon + heading */}
+                  <div className="flex items-center gap-[15px]">
+                    <svg
+                      className="h-[25px] w-[25px] shrink-0 text-blue-dark"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                    </svg>
+                    <h3 className="text-lg font-semibold text-black lg:text-[22px] lg:leading-[33px] lg:tracking-[-0.44px]">
+                      <T en={item.title} zh={item.titleZh} />
+                    </h3>
                   </div>
-                </ScrollReveal>
-              ))}
-            </div>
+                  {/* Body */}
+                  <p className="text-[15px] font-normal leading-[1.7] tracking-[-0.02em] text-gray md:text-base">
+                    <T en={item.description} zh={item.descriptionZh} />
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
+        </div>
 
-          {/* Right: Image with overlay link */}
+        {/* Right: Image card (linked) */}
+        <div className="w-full flex-1">
           <SlideIn direction="right" delay={0.2}>
-            <div className="relative overflow-hidden rounded-xl md:rounded-2xl">
+            <a
+              href={url('/about-us')}
+              className="block aspect-square w-full overflow-hidden rounded-[15px] shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)]"
+            >
               <img
                 src={url('/images/home/wind-energy.jpg')}
                 alt="Engineering professional at work"
                 loading="lazy"
-                className="h-auto w-full object-cover"
+                className="h-full w-full object-cover"
               />
-              {/* Overlay link at bottom */}
-              <a
-                href={url('/about-us')}
-                className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent px-5 py-5 text-base font-medium text-white transition-colors hover:text-orange-primary md:px-6 md:py-6 md:text-lg"
-              >
-                <T en="Learn more about us →" zh="了解更多关于我们 →" />
-              </a>
-            </div>
+            </a>
           </SlideIn>
         </div>
       </div>
