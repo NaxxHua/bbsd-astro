@@ -5,13 +5,15 @@ import { url } from '../../utils/url'
 export default function AboutPreview() {
   return (
     <section className="relative flex items-center justify-center overflow-hidden px-5 py-16 md:px-[30px] md:py-20 lg:h-[533px] lg:py-[75px]">
-      {/* Background image - real <img> object-cover, no overlay (matching original) */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage: `url('${url('/images/home/fpso-platform.jpg')}')`,
         }}
       />
+      {/* Light dark overlay for text contrast */}
+      <div className="absolute inset-0 bg-black/30" />
 
       <div className="relative z-10 w-full max-w-[1200px]">
         <div className="flex items-center p-5">
