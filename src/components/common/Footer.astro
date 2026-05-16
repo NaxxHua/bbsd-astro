@@ -4,15 +4,18 @@ const year = new Date().getFullYear();
 const base = import.meta.env.BASE_URL;
 ---
 
-<footer class="bg-white text-dark">
-  <div class="mx-auto max-w-[1200px] px-5 py-12 md:px-6 md:py-16">
-    <div class="grid gap-10 md:grid-cols-3 md:gap-12">
-      <!-- Logo & Description -->
-      <div>
-        <a href={base}>
-          <img src={`${base}images/home/logo.png`} alt="BBSD" class="mb-5 h-10 w-auto md:mb-6 md:h-12" />
+<footer class="w-full bg-white px-5 pt-16 pb-10 md:px-[30px] lg:pt-[100px] lg:pb-[50px]">
+  <div class="mx-auto flex max-w-[1200px] flex-col gap-16 lg:gap-[100px]">
+    <!-- Top: 4-col grid (col 1 spans 2) -->
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-[60px]">
+      <!-- Logo & Description (spans 2 columns) -->
+      <div class="flex flex-col gap-5 md:col-span-2">
+        <a href={base} class="w-fit">
+          <img src={`${base}images/home/logo.png`} alt="BBSD" class="h-14 w-auto md:h-[72px]" />
         </a>
-        <p class="text-xs leading-relaxed text-gray md:text-sm">
+        <p
+          class="text-base font-normal text-gray lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+        >
           <T
             en="BBSD delivers trusted engineering and site services for global energy and infrastructure projects"
             zh="BBSD 为全球能源与基础设施项目提供值得信赖的工程与现场服务"
@@ -21,11 +24,15 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <!-- Rotterdam Office -->
-      <div>
-        <h4 class="mb-3 text-base font-bold text-dark md:mb-4 md:text-lg">
+      <div class="flex flex-col gap-5">
+        <h4
+          class="text-lg font-semibold text-black lg:text-[20px] lg:leading-[32px] lg:tracking-[-0.4px]"
+        >
           <T en="Rotterdam" zh="鹿特丹" />
         </h4>
-        <address class="text-xs leading-relaxed text-gray not-italic md:text-sm">
+        <address
+          class="text-[15px] leading-[1.7] tracking-[-0.32px] text-gray not-italic md:text-base"
+        >
           3356 LX<br />
           Buitendijks 53, Papendrecht
         </address>
@@ -33,18 +40,22 @@ const base = import.meta.env.BASE_URL;
           href="https://maps.google.com/?q=Buitendijks+53+Papendrecht"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-2 inline-block text-xs font-medium text-blue-link hover:text-blue-dark md:mt-3 md:text-sm"
+          class="w-fit text-base font-medium text-blue-dark"
         >
           <T en="View on Google" zh="在 Google 地图查看" />
         </a>
       </div>
 
       <!-- Nantong Office -->
-      <div>
-        <h4 class="mb-3 text-base font-bold text-dark md:mb-4 md:text-lg">
+      <div class="flex flex-col gap-5">
+        <h4
+          class="text-lg font-semibold text-black lg:text-[20px] lg:leading-[32px] lg:tracking-[-0.4px]"
+        >
           <T en="Nantong" zh="南通" />
         </h4>
-        <address class="text-xs leading-relaxed text-gray not-italic md:text-sm">
+        <address
+          class="text-[15px] leading-[1.7] tracking-[-0.32px] text-gray not-italic md:text-base"
+        >
           <T en="No. 218 Yongxing Road" zh="永兴路 218 号" /><br />
           <T
             en="Yongxing Sub-district, Chongchuan District, Nantong City, Jiangsu Province, China"
@@ -55,25 +66,24 @@ const base = import.meta.env.BASE_URL;
           href="https://maps.google.com/?q=218+Yongxing+Road+Nantong+Jiangsu"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-2 inline-block text-xs font-medium text-blue-link hover:text-blue-dark md:mt-3 md:text-sm"
+          class="w-fit text-base font-medium text-blue-dark"
         >
           <T en="View on Google" zh="在 Google 地图查看" />
         </a>
       </div>
     </div>
 
-    <!-- Bottom bar -->
-    <div
-      class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-gray-light/20 pt-6 md:mt-12 md:flex-row md:pt-8"
-    >
-      <p class="text-xs text-gray-light">
+    <!-- Bottom row: copyright + mini nav -->
+    <div class="flex flex-col gap-4 pt-[30px] md:flex-row md:items-center">
+      <p
+        class="flex-1 text-base font-normal tracking-[-0.32px] text-gray"
+      >
         &copy; {year} - BBSD
       </p>
-      <nav class="flex flex-wrap justify-center gap-4 text-xs md:gap-6 md:text-sm">
-        <a href={base} class="text-gray transition-colors hover:text-dark"><T en="Home" zh="首页" /></a>
-        <a href={`${base}about-us`} class="text-gray transition-colors hover:text-dark"><T en="About" zh="关于我们" /></a>
-        <a href={`${base}contact`} class="text-gray transition-colors hover:text-dark"><T en="Contact" zh="联系我们" /></a>
-        <a href={`${base}news`} class="text-gray transition-colors hover:text-dark"><T en="News" zh="新闻" /></a>
+      <nav class="flex gap-6 text-base font-normal tracking-[-0.32px]">
+        <a href={base} class="text-black"><T en="Home" zh="首页" /></a>
+        <a href={`${base}about-us`} class="text-black"><T en="About" zh="关于我们" /></a>
+        <a href={`${base}contact`} class="text-black"><T en="Contact" zh="联系我们" /></a>
       </nav>
     </div>
   </div>
