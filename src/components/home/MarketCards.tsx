@@ -35,44 +35,50 @@ const markets = [
 
 export default function MarketCards() {
   return (
-    <section className="bg-blue-light py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[1200px] px-5 md:px-6">
-        <div className="mb-10 flex flex-col gap-3 md:mb-14 md:flex-row md:items-end md:justify-between lg:mb-16">
-          <TextReveal
-            text="Our Market"
-            zh="我们的市场"
-            tag="h2"
-            className="text-3xl font-bold text-blue-dark md:text-4xl lg:text-5xl"
-          />
-          <ScrollReveal>
-            <p className="text-sm text-gray md:text-base">
-              <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
-            </p>
-          </ScrollReveal>
+    <section className="flex flex-col items-center justify-center overflow-hidden bg-blue-light px-5 py-20 md:px-[50px] lg:py-[125px]">
+      <div className="flex w-full max-w-[1200px] flex-col gap-[75px]">
+        {/* Title row */}
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-[100px]">
+          <div className="flex-1">
+            <TextReveal
+              text="Our Market"
+              zh="我们的市场"
+              tag="h2"
+              className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-blue-dark md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+            />
+          </div>
+          <div className="flex-1">
+            <ScrollReveal>
+              <p className="text-base font-normal tracking-[-0.02em] text-blue-dark lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]">
+                <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
+              </p>
+            </ScrollReveal>
+          </div>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        {/* Cards row */}
+        <div className="flex flex-col gap-[30px] lg:flex-row">
           {markets.map((market, i) => (
-            <ScrollReveal key={market.title} delay={i * 0.15}>
-              <div className="group overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-lg md:rounded-2xl">
-                <div className="overflow-hidden">
+            <div key={market.title} className="flex-1">
+              <ScrollReveal delay={i * 0.15}>
+                <div className="flex w-full flex-col overflow-hidden rounded-[15px] bg-white lg:h-[563px]">
                   <img
                     src={url(market.image)}
                     alt={market.title}
                     loading="lazy"
-                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105 md:h-56"
+                    className="h-[352px] w-full shrink-0 object-cover"
                   />
+                  <div className="flex flex-1 flex-col gap-[10px] p-[30px]">
+                    <h4 className="text-[20px] font-semibold leading-[32px] tracking-[-0.4px] text-black">
+                      <T en={market.title} zh={market.titleZh} />
+                    </h4>
+                    <p className="text-base font-normal leading-[27.2px] tracking-[-0.32px] text-gray">
+                      <T en={market.description} zh={market.descriptionZh} />
+                    </p>
+                  </div>
                 </div>
-                <div className="p-5 md:p-6">
-                  <h3 className="mb-2 text-base font-bold text-dark md:mb-3 md:text-lg">
-                    <T en={market.title} zh={market.titleZh} />
-                  </h3>
-                  <p className="text-xs leading-relaxed text-gray md:text-sm">
-                    <T en={market.description} zh={market.descriptionZh} />
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           ))}
         </div>
       </div>

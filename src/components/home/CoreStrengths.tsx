@@ -17,9 +17,9 @@ const strengths = [
     title: 'Global-Local Integration',
     titleZh: '全球与本地融合',
     description:
-      'Combining European engineering standards with efficient Chinese manufacturing capabilities, we bridge the gap between global compliance and local cost advantages.',
+      'European technical expertise combined with local market adaptability, enabling seamless collaboration between international EPCs and Chinese project execution.',
     descriptionZh:
-      '将欧洲工程标准与高效的中国制造能力相结合，在全球合规要求与本地成本优势之间架起桥梁。',
+      '结合欧洲技术专长与本地市场适应能力，实现国际 EPC 与中国项目执行之间的无缝协作。',
   },
   {
     title: 'Reliable Project Delivery',
@@ -52,11 +52,15 @@ export default function CoreStrengths() {
                   <div className="flex items-center gap-[15px]">
                     <svg
                       className="h-[25px] w-[25px] shrink-0 text-blue-dark"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 20 20"
                       fill="currentColor"
                       aria-hidden="true"
                     >
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      />
                     </svg>
                     <h3 className="text-lg font-semibold text-black lg:text-[22px] lg:leading-[33px] lg:tracking-[-0.44px]">
                       <T en={item.title} zh={item.titleZh} />
@@ -77,7 +81,7 @@ export default function CoreStrengths() {
           <SlideIn direction="right" delay={0.2}>
             <a
               href={url('/about-us')}
-              className="block aspect-square w-full overflow-hidden rounded-[15px] shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)]"
+              className="group relative block aspect-square w-full overflow-hidden rounded-[15px] shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)]"
             >
               <img
                 src={url('/images/home/wind-energy.jpg')}
@@ -85,6 +89,11 @@ export default function CoreStrengths() {
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
+              <div className="absolute inset-0 flex flex-col items-start justify-end bg-[linear-gradient(rgba(0,0,0,0.16),rgba(0,0,0,0.47))] p-[50px]">
+                <span className="text-[24px] font-semibold leading-[33.6px] tracking-[-0.48px] text-white transition-colors group-hover:text-orange-primary">
+                  <T en="Learn more about us →" zh="了解更多关于我们 →" />
+                </span>
+              </div>
             </a>
           </SlideIn>
         </div>
