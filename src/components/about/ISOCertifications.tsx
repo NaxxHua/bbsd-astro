@@ -4,9 +4,12 @@ import T from '../../i18n/T'
 import { url } from '../../utils/url'
 
 const certs = [
-  { image: '/images/about/iso-cert-1.jpg', alt: 'ISO 9001 Certificate' },
-  { image: '/images/about/iso-cert-2.jpg', alt: 'ISO 14001 Certificate' },
-  { image: '/images/about/iso-cert-3.jpg', alt: 'ISO 45001 Certificate' },
+  '/images/about/iso-cert-1.jpg',
+  '/images/about/iso-cert-2.jpg',
+  '/images/about/iso-cert-3.jpg',
+  '/images/about/iso-cert-4.jpg',
+  '/images/about/iso-cert-5.jpg',
+  '/images/about/iso-cert-6.jpg',
 ]
 
 export default function ISOCertifications() {
@@ -32,8 +35,8 @@ export default function ISOCertifications() {
         {/* Combined accreditation banner */}
         <ScrollReveal>
           <img
-            src={url('/images/about/iso-combined-badge.jpg')}
-            alt="ABS Quality Evaluations - ANAB Accredited - ISO 9001, ISO 14001, ISO 45001"
+            src={url('/images/about/iso-banner.jpg')}
+            alt="BBSD ISO accreditation"
             loading="lazy"
             className="w-full max-w-[585px] object-cover"
           />
@@ -44,9 +47,9 @@ export default function ISOCertifications() {
           <div className="grid grid-cols-1 gap-x-[30px] gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
             {certs.map((cert) => (
               <img
-                key={cert.image}
-                src={url(cert.image)}
-                alt={cert.alt}
+                key={cert}
+                src={url(cert)}
+                alt="BBSD ISO certificate"
                 loading="lazy"
                 className="w-full object-cover"
               />

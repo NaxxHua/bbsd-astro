@@ -14,7 +14,7 @@ export default function VisionMissionValues() {
       <div className="flex w-full max-w-[1000px] flex-col">
         {/* Vision — text left, image right */}
         <div className="flex flex-col items-center gap-10 py-10 lg:flex-row lg:gap-[60px]">
-          <div className="flex w-full flex-1 flex-col gap-5">
+          <div className="flex w-full flex-1 flex-col gap-10">
             <TextReveal text="BBSD Vision" zh="BBSD 愿景" tag="h2" className={h2Class} />
             <ScrollReveal delay={0.2}>
               <p className={pClass}>
@@ -49,7 +49,7 @@ export default function VisionMissionValues() {
               />
             </ScrollReveal>
           </div>
-          <div className="order-1 flex w-full flex-1 flex-col gap-5 lg:order-2">
+          <div className="order-1 flex w-full flex-1 flex-col gap-10 lg:order-2">
             <TextReveal text="BBSD Mission" zh="BBSD 使命" tag="h2" className={h2Class} />
             <ScrollReveal delay={0.2}>
               <p className={pClass}>
@@ -74,7 +74,7 @@ export default function VisionMissionValues() {
               />
             </ScrollReveal>
           </div>
-          <div className="order-1 flex w-full flex-1 flex-col gap-5 lg:order-2">
+          <div className="order-1 flex w-full flex-1 flex-col gap-10 lg:order-2">
             <TextReveal text="BBSD Values" zh="BBSD 价值观" tag="h2" className={h2Class} />
             <ScrollReveal delay={0.2}>
               <div className="flex flex-col gap-1.5">
