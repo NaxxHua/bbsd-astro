@@ -45,7 +45,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="rounded-[10px] bg-orange-primary px-[30px] py-[20px] text-[18px] font-semibold text-black shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)] transition-colors hover:bg-orange-hover"
+            className="mt-[26px] rounded-[10px] bg-orange-primary px-[30px] py-[20px] text-[18px] font-semibold leading-[1.2] text-black shadow-[0_0.6px_1.6px_-1px_rgba(0,0,0,0.15),0_2.3px_6px_-2px_rgba(0,0,0,0.14),0_10px_26px_-3px_rgba(0,0,0,0.1)] transition-colors hover:bg-orange-hover"
           >
             <T en="Explore our services" zh="探索我们的服务" />
           </motion.a>
