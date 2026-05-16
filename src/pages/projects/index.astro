@@ -10,20 +10,27 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title="Our Projects - BBSD">
   <main>
     <!-- Hero -->
-    <section class="relative h-screen w-full overflow-hidden">
+    <section
+      class="relative flex flex-col items-center justify-center overflow-hidden px-5 pt-[150px] pb-20 md:px-[30px] lg:h-[900px] lg:pt-[200px] lg:pb-[125px]"
+    >
       <img
-        src={`${base}images/market/hero.jpg`}
+        src={`${base}images/projects/projects-hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/40"></div>
       <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.44),rgba(0,0,0,0.43))]"
       >
-        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
+      </div>
+      <div class="relative z-10 flex max-w-[600px] flex-col items-center gap-6 text-center">
+        <h1
+          class="text-[44px] font-semibold leading-[1.05] tracking-[-0.04em] text-white md:text-[56px] lg:text-[70px] lg:leading-[73.5px] lg:tracking-[-2.8px]"
+        >
           <T en="Our Projects" zh="我们的项目" />
         </h1>
-        <p class="max-w-2xl text-base text-white/70 md:text-lg">
+        <p
+          class="text-base font-normal text-[#cccccc] lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+        >
           <T
             en="Our journey has been marked by continuous improvement, expansion of our service offerings and a relentless focus on customer satisfaction."
             zh="我们的发展历程，始终伴随着持续改进、服务范围的拓展，以及对客户满意度始终如一的专注。"
@@ -32,47 +39,72 @@ const base = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <!-- Projects List -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
+    <!-- Title bar -->
+    <section
+      class="flex flex-col gap-4 px-5 py-12 md:flex-row md:items-center md:gap-[100px] md:py-20 md:pr-20 md:pl-[50px]"
+    >
+      <div class="flex-1">
         <TextReveal
           client:visible
           text="Our Projects"
           zh="我们的项目"
           tag="h2"
-          className="mb-4 text-3xl font-bold text-blue-dark md:text-5xl"
+          className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-orange-primary md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
         />
-        <p class="mb-12 text-lg text-gray">
+      </div>
+      <div class="flex-1">
+        <p
+          class="text-base font-normal tracking-[-0.02em] text-orange-primary lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+        >
           <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
         </p>
+      </div>
+    </section>
 
-        <div class="grid gap-8 md:grid-cols-2">
+    <!-- Project cards -->
+    <section class="mx-auto w-full max-w-[1100px] px-5 pt-[30px] pb-20 md:px-0">
+      <div class="flex flex-col gap-[30px] md:flex-row">
+        <!-- Card 1 -->
+        <div class="flex-1">
           <ScrollReveal client:visible>
             <a
               href={`${base}projects/projetcs`}
-              class="group block overflow-hidden rounded-2xl border border-gray-light/20 transition-shadow hover:shadow-lg"
+              class="flex flex-col overflow-hidden rounded-[15px] bg-white"
             >
               <img
-                src={`${base}images/projects/nag-project.jpg`}
+                src={`${base}images/projects/project-1.jpg`}
                 alt="Abigail Joseph NAG Project"
                 loading="lazy"
-                class="h-64 w-full object-cover transition-transform group-hover:scale-105"
+                class="h-[352px] w-full object-cover"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-dark">
+              <div class="p-[30px]">
+                <h4
+                  class="text-[20px] font-semibold leading-[32px] tracking-[-0.4px] text-black"
+                >
                   Abigail Joseph – NAG Project
-                </h3>
+                </h4>
               </div>
             </a>
           </ScrollReveal>
+        </div>
 
-          <ScrollReveal client:visible>
-            <div
-              class="flex h-full items-center justify-center rounded-2xl border border-dashed border-gray-light/40 p-6"
-            >
-              <p class="text-lg font-medium text-gray-light">
-                <T en="More to come" zh="敬请期待" />
-              </p>
+        <!-- Card 2 (placeholder, not a link) -->
+        <div class="flex-1">
+          <ScrollReveal client:visible delay={0.15}>
+            <div class="flex flex-col overflow-hidden rounded-[15px] bg-white">
+              <img
+                src={`${base}images/projects/project-2.jpg`}
+                alt="More projects coming soon"
+                loading="lazy"
+                class="h-[352px] w-full object-cover"
+              />
+              <div class="p-[30px]">
+                <h4
+                  class="text-[20px] font-semibold leading-[32px] tracking-[-0.4px] text-black"
+                >
+                  <T en="More to come" zh="敬请期待" />
+                </h4>
+              </div>
             </div>
           </ScrollReveal>
         </div>
