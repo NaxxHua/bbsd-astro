@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServicesList from "../../components/services/ServicesList.tsx";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
@@ -8,136 +9,39 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title="Services - BBSD">
   <main>
     <!-- Hero -->
-    <section class="relative h-screen w-full overflow-hidden">
+    <section
+      class="relative flex flex-col items-center justify-center overflow-hidden px-5 pt-[150px] pb-20 md:px-[30px] lg:h-[900px] lg:pt-[200px] lg:pb-[125px]"
+    >
       <img
         src={`${base}images/services/services-hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/40"></div>
+      <!-- Tiled industrial texture (1200-wide centered band, no dark gradient) -->
       <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        class="absolute inset-y-0 left-1/2 w-full max-w-[1200px] -translate-x-1/2 bg-repeat"
+        style={`background-image: url('${base}images/home/hero-pattern.png'); background-size: 1200px;`}
       >
-        <h1 class="mb-6 text-6xl font-bold text-white/80 md:text-8xl">
+      </div>
+      <div class="relative z-10 flex max-w-[600px] flex-col items-center gap-6 text-center">
+        <h1
+          class="text-[44px] font-semibold leading-[1.05] tracking-[-0.04em] text-white md:text-[56px] lg:text-[70px] lg:leading-[73.5px] lg:tracking-[-2.8px]"
+        >
           <T en="Services" zh="服务" />
         </h1>
-        <p class="max-w-2xl text-base text-white/70 md:text-lg">
+        <p
+          class="text-base font-normal text-blue-light lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+        >
           <T
-            en="Our Expertise in Engineering & Site Support"
-            zh="工程与现场支持领域的专业实力"
+            en="“Our Expertise in Engineering & Site Support”"
+            zh="“工程与现场支持领域的专业实力”"
           />
         </p>
       </div>
     </section>
 
-    <!-- Services List -->
-    <section class="bg-blue-light py-24">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="grid gap-10 md:grid-cols-2">
-          <!-- Engineering Services -->
-          <a
-            href={`${base}services/engineering`}
-            class="group overflow-hidden rounded-2xl bg-white/60 p-6 transition-all hover:shadow-lg"
-          >
-            <div class="mb-4 overflow-hidden rounded-xl">
-              <img src={`${base}images/services/service-1.jpg`} alt="Engineering Services" loading="lazy" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-8 w-8 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <h3 class="mb-2 text-lg font-bold text-dark"><T en="Engineering Services" zh="工程服务" /></h3>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Comprehensive engineering solutions from concept to detailed design."
-                zh="从概念到详细设计的全面工程解决方案。"
-              />
-            </p>
-          </a>
-
-          <!-- Fabrication & Site Support -->
-          <a
-            href={`${base}services/fabrication`}
-            class="group overflow-hidden rounded-2xl bg-white/60 p-6 transition-all hover:shadow-lg"
-          >
-            <div class="mb-4 overflow-hidden rounded-xl">
-              <img src={`${base}images/services/service-2.jpg`} alt="Fabrication & Site Support" loading="lazy" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-8 w-8 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
-            </svg>
-            <h3 class="mb-2 text-lg font-bold text-dark"><T en="Fabrication & Site Support" zh="制造与现场支持" /></h3>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Reliable on-site services ensuring quality, safety, and timely execution."
-                zh="可靠的现场服务，确保质量、安全与按时执行。"
-              />
-            </p>
-          </a>
-
-          <!-- Procurement & Materials Supply -->
-          <a
-            href={`${base}services/procurement`}
-            class="group overflow-hidden rounded-2xl bg-white/60 p-6 transition-all hover:shadow-lg"
-          >
-            <div class="mb-4 overflow-hidden rounded-xl">
-              <img src={`${base}images/services/service-3.jpg`} alt="Procurement & Materials Supply" loading="lazy" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-8 w-8 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-            </svg>
-            <h3 class="mb-2 text-lg font-bold text-dark"><T en="Procurement & Materials Supply" zh="采购与物资供应" /></h3>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Strategic sourcing to optimize cost, quality, and delivery."
-                zh="战略采购，优化成本、质量与交付。"
-              />
-            </p>
-          </a>
-
-          <!-- Commissioning -->
-          <a
-            href={`${base}services/commissioning`}
-            class="group overflow-hidden rounded-2xl bg-white/60 p-6 transition-all hover:shadow-lg"
-          >
-            <div class="mb-4 overflow-hidden rounded-xl">
-              <img src={`${base}images/services/service-4.jpg`} alt="Commissioning" loading="lazy" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-8 w-8 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-            </svg>
-            <h3 class="mb-2 text-lg font-bold text-dark"><T en="Commissioning" zh="调试" /></h3>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Ensuring systems operate safely, efficiently, and ready for handover."
-                zh="确保系统安全、高效运行并具备移交条件。"
-              />
-            </p>
-          </a>
-
-          <!-- Piping Spools Pre-fabrication -->
-          <a
-            href={`${base}services/piping-spools-pre-fabrication`}
-            class="group overflow-hidden rounded-2xl bg-white/60 p-6 transition-all hover:shadow-lg"
-          >
-            <div class="mb-4 overflow-hidden rounded-xl">
-              <img src={`${base}images/services/service-5.jpg`} alt="Piping Spools Pre-fabrication" loading="lazy" class="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-3 h-8 w-8 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.364-3.096a1.53 1.53 0 010-2.649L11.42 6.33a1.526 1.526 0 012.58 1.325v6.19a1.526 1.526 0 01-2.58 1.325z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75" />
-            </svg>
-            <h3 class="mb-2 text-lg font-bold text-dark"><T en="Piping Spools Pre-fabrication" zh="管段预制" /></h3>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Off-site fabrication to ensure quality, efficiency, and faster installation."
-                zh="场外预制，确保质量、效率与更快的安装。"
-              />
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
+    <!-- Services grid -->
+    <ServicesList client:visible />
 
     <GetInTouchBanner client:visible />
   </main>
