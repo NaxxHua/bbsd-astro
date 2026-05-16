@@ -3,17 +3,19 @@ import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 ---
 
-<div class="fixed bottom-4 left-4 z-40 flex items-center gap-2 md:bottom-6 md:left-5">
+<div
+  class="fixed bottom-6 left-4 z-10 flex items-center gap-[10px] md:bottom-[94px] md:left-[20px]"
+>
   <a
     href={`${base}contact`}
-    class="flex items-center gap-1.5 rounded-full bg-dark px-4 py-2 text-xs font-medium text-white shadow-lg transition-transform hover:scale-105 md:gap-2 md:px-5 md:py-2.5 md:text-sm"
+    class="flex items-center gap-1.5 rounded-[10px] bg-black px-[13px] py-[8px] font-instrument text-[15px] font-semibold tracking-[-0.3px] text-white shadow-[0_3px_5px_0_rgba(0,0,0,0.25)] transition-transform hover:scale-105"
   >
-    <span class="text-[10px] md:text-xs">✦</span>
+    <span class="text-xs">✦</span>
     <T en="Contact us" zh="联系我们" />
   </a>
   <a
     href={`${base}careers`}
-    class="flex items-center gap-1.5 rounded-full border border-dark/10 bg-white px-4 py-2 text-xs font-medium text-dark shadow-lg transition-transform hover:scale-105 md:gap-2 md:px-5 md:py-2.5 md:text-sm"
+    class="rounded-[10px] bg-white px-[13px] py-[8px] font-instrument text-[15px] font-semibold tracking-[-0.3px] text-black shadow-[0_3px_5px_0_rgba(0,0,0,0.25)] transition-transform hover:scale-105"
   >
     <T en="Join us" zh="加入我们" />
   </a>
