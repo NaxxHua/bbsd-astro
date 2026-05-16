@@ -65,8 +65,8 @@ export default function NewsPreview() {
                     className="h-[312px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex w-full flex-col items-center gap-5 text-center">
-                  <div className="flex flex-col items-center gap-[5px]">
+                <div className="flex w-full flex-col items-start gap-5 text-left">
+                  <div className="flex w-full flex-col items-start gap-[5px]">
                     <p className="text-[14px] font-normal leading-[22.4px] tracking-[-0.28px] text-[#8c8c8c]">
                       <T en={news.date} zh={news.dateZh} />
                     </p>
