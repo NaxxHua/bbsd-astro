@@ -1,8 +1,17 @@
-import { Gear, Wrench, Truck, PaperPlaneTilt, Pipe, ArrowRight } from '@phosphor-icons/react'
+import { Gear, Wrench, Truck, Pipe, ArrowRight } from '@phosphor-icons/react'
 import TextReveal from '../animations/TextReveal'
 import ScrollReveal from '../animations/ScrollReveal'
 import T from '../../i18n/T'
 import { url } from '../../utils/url'
+
+// Commissioning icon — raw path from the original site (not a Phosphor export)
+function CommissioningIcon({ size = 50 }: { size?: number; weight?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+      <path d="M236.19,134.81l-104,64A8,8,0,0,1,120,192V78.32L28.19,134.81a8,8,0,0,1-8.38-13.62l104-64A8,8,0,0,1,136,64V177.68l91.81-56.49a8,8,0,0,1,8.38,13.62Z" />
+    </svg>
+  )
+}
 
 const services = [
   {
@@ -35,7 +44,7 @@ const services = [
     description: 'Ensuring systems operate safely, efficiently, and ready for handover',
     descriptionZh: '确保系统安全、高效运行并具备移交条件',
     href: '/services/commissioning',
-    Icon: PaperPlaneTilt,
+    Icon: CommissioningIcon,
   },
   {
     title: 'Piping Spools Pre-fabrication',

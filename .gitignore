@@ -22,8 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-# Large media files
-public/videos/*.mp4
 
 # Private working docs (not for version control)
 UIUX_GUIDE.md
