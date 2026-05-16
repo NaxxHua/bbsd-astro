@@ -5,25 +5,62 @@ import TextReveal from "../components/animations/TextReveal.tsx";
 import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
 import T from "../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
+
+const markets = [
+  {
+    image: "market-fpso.jpg",
+    en: "OFFSHORE FPSO Modulars",
+    zh: "海上 FPSO 模块",
+    descEn:
+      "Driving the future of energy with expertise in offshore wind, hydrogen, and oil & gas, delivering safe, efficient, and sustainable solutions.",
+    descZh:
+      "凭借在海上风电、氢能及油气领域的专业能力引领能源未来，提供安全、高效、可持续的解决方案。",
+  },
+  {
+    image: "market-renewable.jpg",
+    en: "Renewable Energy",
+    zh: "可再生能源",
+    descEn:
+      "Building stronger cities through reliable engineering for bridges, pipelines, and essential urban utilities, designed for safety and long-term resilience.",
+    descZh:
+      "通过为桥梁、管道及关键城市基础设施提供可靠工程，打造更坚固的城市，兼顾安全性与长期韧性。",
+  },
+  {
+    image: "market-onshore.jpg",
+    en: "Onshore Plant Modulars",
+    zh: "陆上工厂模块",
+    descEn:
+      "Your trusted partner for cross-border projects, combining local expertise and compliance to ensure seamless execution between China and Europe.",
+    descZh:
+      "作为跨境项目值得信赖的合作伙伴，融合本地专业能力与合规保障，确保中欧之间项目无缝执行。",
+  },
+];
 ---
 
 <BaseLayout title="Our Market - BBSD">
   <main>
     <!-- Hero -->
-    <section class="relative h-screen w-full overflow-hidden">
+    <section
+      class="relative flex flex-col items-center justify-center overflow-hidden px-5 pt-[150px] pb-20 md:px-[30px] lg:h-[900px] lg:pt-[200px] lg:pb-[125px]"
+    >
       <img
         src={`${base}images/market/market-hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/40"></div>
       <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.37),rgba(0,0,0,0.36))]"
       >
-        <h1 class="mb-6 text-5xl font-bold text-white md:text-7xl">
+      </div>
+      <div class="relative z-10 flex max-w-[600px] flex-col items-center gap-6 text-center">
+        <h1
+          class="text-[44px] font-semibold leading-[1.05] tracking-[-0.04em] text-white md:text-[56px] lg:text-[70px] lg:leading-[73.5px] lg:tracking-[-2.8px]"
+        >
           <T en="Our Market" zh="我们的市场" />
         </h1>
-        <p class="max-w-2xl text-base text-white/70 md:text-lg">
+        <p
+          class="text-base font-normal text-[#cccccc] lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+        >
           <T
             en="Our journey has been marked by continuous improvement, expansion of our service offerings and a relentless focus on customer satisfaction."
             zh="我们的发展历程，始终伴随着持续改进、服务范围的拓展，以及对客户满意度始终如一的专注。"
@@ -32,97 +69,59 @@ const base = import.meta.env.BASE_URL;
       </div>
     </section>
 
-    <!-- Market Cards -->
-    <section class="bg-blue-light py-24">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-          <TextReveal
-            client:visible
-            text="Our Market"
-            zh="我们的市场"
-            tag="h2"
-            className="text-3xl font-bold text-blue-dark md:text-5xl"
-          />
-          <p class="text-base text-gray italic md:text-lg">
-            <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
-          </p>
+    <!-- Markets -->
+    <section
+      class="flex flex-col items-center justify-center overflow-hidden bg-blue-light px-5 py-20 md:px-[50px] lg:py-[125px]"
+    >
+      <div class="flex w-full max-w-[1200px] flex-col gap-[75px]">
+        <!-- Title row -->
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-[100px]">
+          <div class="flex-1">
+            <TextReveal
+              client:visible
+              text="Our Market"
+              zh="我们的市场"
+              tag="h2"
+              className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-blue-dark md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+            />
+          </div>
+          <div class="flex-1">
+            <ScrollReveal client:visible>
+              <p
+                class="text-base font-normal tracking-[-0.02em] text-blue-dark lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+              >
+                <T en="Where We Make an Impact." zh="我们创造价值的领域。" />
+              </p>
+            </ScrollReveal>
+          </div>
         </div>
 
-        <div class="grid gap-8 md:grid-cols-3">
-          <!-- FPSO -->
-          <ScrollReveal client:visible>
-            <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  src={`${base}images/home/offshore-crane.jpg`}
-                  alt="FPSO Modulars"
-                  loading="lazy"
-                  class="h-full w-full object-cover"
-                />
+        <!-- Cards row -->
+        <div class="flex flex-col gap-[30px] lg:flex-row">
+          {
+            markets.map((m, i) => (
+              <div class="flex-1">
+                <ScrollReveal client:visible delay={i * 0.15}>
+                  <div class="flex w-full flex-col overflow-hidden rounded-[15px] bg-white lg:h-[611px]">
+                    <img
+                      src={`${base}images/market/${m.image}`}
+                      alt={m.en}
+                      loading="lazy"
+                      class="h-[400px] w-full shrink-0 object-cover"
+                    />
+                    <div class="flex flex-1 flex-col gap-[10px] p-[30px]">
+                      <h4 class="text-[20px] font-semibold leading-[32px] tracking-[-0.4px] text-black">
+                        <T en={m.en} zh={m.zh} />
+                      </h4>
+                      <p class="text-base font-normal leading-[27.2px] tracking-[-0.32px] text-gray">
+                        <T en={m.descEn} zh={m.descZh} />
+                      </p>
+                    </div>
+                  </div>
+                </ScrollReveal>
               </div>
-              <div class="p-6">
-                <h3 class="mb-3 text-lg font-bold text-dark">
-                  <T en="OFFSHORE FPSO Modulars" zh="海上 FPSO 模块" />
-                </h3>
-                <p class="text-sm leading-relaxed text-gray">
-                  <T
-                    en="Driving the future of energy with expertise in offshore wind, hydrogen, and oil & gas, delivering safe, efficient, and sustainable solutions."
-                    zh="凭借在海上风电、氢能及油气领域的专业能力引领能源未来，提供安全、高效、可持续的解决方案。"
-                  />
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <!-- Renewable Energy -->
-          <ScrollReveal client:visible delay={0.1}>
-            <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  src={`${base}images/home/market-renewable.jpg`}
-                  alt="Renewable Energy"
-                  loading="lazy"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="p-6">
-                <h3 class="mb-3 text-lg font-bold text-dark">
-                  <T en="Renewable Energy" zh="可再生能源" />
-                </h3>
-                <p class="text-sm leading-relaxed text-gray">
-                  <T
-                    en="Building stronger cities through reliable engineering for bridges, pipelines, and essential urban utilities, designed for safety and long-term resilience."
-                    zh="通过为桥梁、管道及关键城市基础设施提供可靠工程，打造更坚固的城市，兼顾安全性与长期韧性。"
-                  />
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <!-- Onshore -->
-          <ScrollReveal client:visible delay={0.2}>
-            <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
-              <div class="aspect-[4/3] overflow-hidden">
-                <img
-                  src={`${base}images/home/market-onshore.jpg`}
-                  alt="Onshore Plant Modulars"
-                  loading="lazy"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="p-6">
-                <h3 class="mb-3 text-lg font-bold text-dark">
-                  <T en="Onshore Plant Modulars" zh="陆上工厂模块" />
-                </h3>
-                <p class="text-sm leading-relaxed text-gray">
-                  <T
-                    en="Your trusted partner for cross-border projects, combining local expertise and compliance to ensure seamless execution between China and Europe."
-                    zh="作为跨境项目值得信赖的合作伙伴，融合本地专业能力与合规保障，确保中欧之间项目无缝执行。"
-                  />
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
+            ))
+          }
         </div>
       </div>
     </section>
