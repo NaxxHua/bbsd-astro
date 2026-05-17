@@ -3,146 +3,158 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
+
+const services = [
+  {
+    en: "Project Procurement Services",
+    zh: "项目采购服务",
+  },
+  {
+    en: "Topside Module Details Design Services - Structure/Piping/E&I",
+    zh: "上部模块详细设计服务 —— 结构 / 管道 / 电气仪表",
+  },
+  {
+    en: "Topside Module Construction – Site Supervision Services.",
+    zh: "上部模块建造 —— 现场监理服务。",
+  },
+];
+
+const description = [
+  {
+    en: "The FPSO Abigail Joseph, the facility required for treatment of these hydrocarbons (Oil & Gas), has capacity constraints to handling the expected oil and gas rates. A new NAG (Non-Associated Gas) module is required, and a debottlenecking activity is to be carried out on FPSO AJ to enable her to handle these increased rates for phase 1.",
+    zh: "FPSO Abigail Joseph 是处理这些油气(石油与天然气)所需的设施,但在应对预期的油气产量方面存在产能瓶颈。需要新建一个 NAG(非伴生气)模块,并对 FPSO AJ 进行扩能改造,使其能够处理第一阶段增加的产量。",
+  },
+  {
+    en: "The NAG Upgrade Project includes installation and integration of a new build process module, containing equipment and systems for NAG reception, separation & conditioning, water treatment and gas compression & export metering. The new module shall be designed and installed such that the gas production of the Abigail Joseph FPSO shall increase from the original design capacity.",
+    zh: "NAG 升级项目包括新建工艺模块的安装与集成,该模块包含用于 NAG 接收、分离与调质、水处理以及气体压缩与外输计量的设备和系统。新模块的设计与安装应使 Abigail Joseph FPSO 的天然气产量在原设计产能基础上得以提升。",
+  },
+  {
+    en: "BBSD is awarded orders by Jord Oil & Gas for the tasks as below:",
+    zh: "BBSD 获得 Jord Oil & Gas 授予的以下任务订单:",
+  },
+  {
+    en: "1/support project procurements in China including piping bulk materials, Electrical Cables, and other instruments.",
+    zh: "1 / 支持在中国的项目采购,包括管道散装材料、电缆及其他仪表。",
+  },
+  {
+    en: "2/ Engineering Services to support details design for Structure, E&I, and Piping disciplines.",
+    zh: "2 / 提供工程服务,支持结构、电气仪表与管道专业的详细设计。",
+  },
+  {
+    en: "3/ Supply professional team members for all disciplines to the construction site for site supervision services.",
+    zh: "3 / 为建造现场各专业派驻专业团队成员,提供现场监理服务。",
+  },
+];
 ---
 
 <BaseLayout title="Abigail Joseph – NAG Project - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/projects/nag-project.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <p class="mb-2 text-xs tracking-widest text-white/60 uppercase">
-          <T en="[ PROJECT ]" zh="[ 项目 ]" />
-        </p>
-        <h1 class="text-4xl font-bold text-white md:text-6xl">
-          Abigail Joseph – NAG Project
-        </h1>
-      </div>
-    </section>
-
-    <!-- Project Info -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <!-- Meta -->
-        <div
-          class="mb-12 grid gap-4 border-b border-gray-light/20 pb-8 sm:grid-cols-3"
-        >
-          <div>
-            <p
-              class="text-xs font-semibold tracking-widest text-gray-light uppercase"
-            >
-              <T en="Project" zh="项目" />
-            </p>
-            <p class="mt-1 text-sm font-medium text-dark">
-              Abigail Joseph – NAG Project
-            </p>
-          </div>
-          <div>
-            <p
-              class="text-xs font-semibold tracking-widest text-gray-light uppercase"
-            >
-              <T en="Client" zh="客户" />
-            </p>
-            <p class="mt-1 text-sm font-medium text-dark">
-              Yinson / Jord Oil & Gas
-            </p>
-          </div>
-          <div>
-            <p
-              class="text-xs font-semibold tracking-widest text-gray-light uppercase"
-            >
-              <T en="Year" zh="年份" />
-            </p>
-            <p class="mt-1 text-sm font-medium text-dark">
-              <T en="2024.11 to 2026.4" zh="2024年11月 至 2026年4月" />
-            </p>
-          </div>
-        </div>
-
-        <!-- BBSD Services -->
-        <div class="mb-12">
-          <h2 class="mb-4 text-lg font-bold text-dark">
-            <T en="BBSD Services:" zh="BBSD 服务：" />
-          </h2>
-          <div class="flex flex-wrap gap-3">
-            <a
-              href={`${base}services/procurement`}
-              class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              ><T en="Project Procurement Services" zh="项目采购服务" /></a
-            >
-            <a
-              href={`${base}services/engineering`}
-              class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              ><T en="Topside Module Details Design Services - Structure/Piping/E&I" zh="上部模块详细设计服务 — 结构 / 管道 / 电气仪表" /></a
-            >
-            <a
-              href={`${base}services`}
-              class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark transition-colors hover:bg-blue-dark hover:text-white"
-              ><T en="Topside Module Construction – Site Supervision Services" zh="上部模块施工 — 现场监理服务" /></a
-            >
-          </div>
-        </div>
-
-        <!-- Description -->
-        <div class="max-w-3xl">
-          <h2 class="mb-4 text-lg font-bold text-dark">
-            <T en="Project Description:" zh="项目描述：" />
-          </h2>
-          <div class="space-y-4 text-sm leading-relaxed text-gray">
-            <p>
-              <T
-                en="The FPSO Abigail Joseph, the facility required for treatment of these hydrocarbons (Oil & Gas), has capacity constraints to handling the expected oil and gas rates. A new NAG (Non-Associated Gas) module is required, and a debottlenecking activity is to be carried out on FPSO AJ to enable her to handle these increased rates for phase 1."
-                zh="FPSO Abigail Joseph 是处理这些油气烃类所需的设施，但其产能在应对预期的油气处理量方面存在限制。需要新增一个 NAG（非伴生气）模块，并对 FPSO AJ 进行消除瓶颈改造，使其能够在第一阶段处理增加后的处理量。"
-              />
-            </p>
-            <p>
-              <T
-                en="The NAG Upgrade Project includes installation and integration of a new build process module, containing equipment and systems for NAG reception, separation & conditioning, water treatment and gas compression & export metering. The new module shall be designed and installed such that the gas production of the Abigail Joseph FPSO shall increase from the original design capacity."
-                zh="NAG 升级项目包括新建工艺模块的安装与集成，模块内含用于 NAG 接收、分离与调质、水处理及气体压缩与外输计量的设备和系统。新模块的设计与安装将使 Abigail Joseph FPSO 的天然气产量在原设计产能基础上提升。"
-              />
-            </p>
-            <p>
-              <T
-                en="BBSD is awarded orders by Jord Oil & Gas for the tasks as below:"
-                zh="BBSD 获得 Jord Oil & Gas 授予的以下任务订单："
-              />
-            </p>
-            <ol class="list-inside list-decimal space-y-2 pl-2">
-              <li>
-                <T
-                  en="Support project procurements in China including piping bulk materials, Electrical Cables, and other instruments."
-                  zh="支持在中国的项目采购，包括管道散装材料、电缆及其他仪表。"
-                />
-              </li>
-              <li>
-                <T
-                  en="Engineering Services to support details design for Structure, E&I, and Piping disciplines."
-                  zh="提供工程服务，支持结构、电气仪表与管道专业的详细设计。"
-                />
-              </li>
-              <li>
-                <T
-                  en="Supply professional team members for all disciplines to the construction site for site supervision services."
-                  zh="为施工现场提供各专业的专业团队成员，提供现场监理服务。"
-                />
-              </li>
-            </ol>
-          </div>
-        </div>
-
-        <div class="mt-12">
-          <a
-            href={`${base}projects`}
-            class="inline-flex items-center gap-2 rounded-full bg-dark px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-dark/80"
-            ><T en="MORE PROJECTS" zh="更多项目" /></a
+    <section
+      class="flex flex-col items-center bg-white px-5 pt-[150px] pb-16 md:px-[50px] lg:pt-[200px] lg:pb-[100px]"
+    >
+      <div class="flex w-full max-w-[1200px] flex-col gap-[50px]">
+        <!-- Title -->
+        <div class="flex flex-col gap-[5px]">
+          <p
+            class="font-dm text-[14px] font-medium uppercase tracking-[0.28px] text-[#e8481c]"
           >
+            [ PROJECT ]
+          </p>
+          <h1
+            class="font-instrument text-[34px] font-medium leading-[1.2] text-dark md:text-[44px] lg:text-[54px] lg:leading-[64.8px]"
+          >
+            Abigail Joseph – NAG Project
+          </h1>
+        </div>
+
+        <!-- Image + content -->
+        <div class="flex flex-col gap-10 lg:flex-row lg:gap-[50px]">
+          <!-- Image -->
+          <div class="w-full lg:w-[575px] lg:shrink-0">
+            <img
+              src={`${base}images/projects/projetcs-main.jpg`}
+              alt="Abigail Joseph NAG Project"
+              loading="lazy"
+              class="h-[420px] w-full rounded-[10px] object-cover lg:h-[794px]"
+            />
+          </div>
+
+          <!-- Content -->
+          <div class="flex flex-1 flex-col gap-[30px]">
+            <!-- Meta -->
+            <div class="flex flex-col gap-1 text-[22px] leading-[1.4] text-dark/80 lg:text-[24px] lg:leading-[33.6px]">
+              <p>
+                <strong class="font-bold"><T en="Project:" zh="项目:" /></strong>
+                <T en=" Abigail Joseph – NAG Project" zh=" Abigail Joseph – NAG 项目" />
+              </p>
+              <p>
+                <strong class="font-bold"><T en="Client:" zh="客户:" /></strong>
+                {" Yinson/Jord Oil & Gas"}
+              </p>
+              <p>
+                <strong class="font-bold"><T en="Year:" zh="年份:" /></strong>
+                {" 2024.11 to 2026.4"}
+              </p>
+            </div>
+
+            <!-- Value -->
+            <div class="flex flex-col gap-5">
+              <!-- BBSD Services -->
+              <div class="flex flex-col gap-[10px]">
+                <h2 class="text-[22px] font-medium leading-[1.2] text-dark lg:text-[24px] lg:leading-[28.8px]">
+                  <T en="BBSD Services:" zh="BBSD 服务范围:" />
+                </h2>
+                {
+                  services.map((s) => (
+                    <div class="flex items-start gap-[5px]">
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        class="mt-0.5 shrink-0"
+                        aria-hidden="true"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="4" fill="rgba(0,0,0,0.16)" />
+                        <path
+                          d="M8 12.4 L11 15.4 L16 9"
+                          stroke="#000"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        />
+                      </svg>
+                      <p class="text-[17px] font-normal leading-[1.4] text-dark/80">
+                        <T en={s.en} zh={s.zh} />
+                      </p>
+                    </div>
+                  ))
+                }
+              </div>
+
+              <!-- Project Description -->
+              <div class="flex flex-col gap-[10px]">
+                <h2 class="text-[22px] font-medium leading-[1.2] text-dark lg:text-[24px] lg:leading-[28.8px]">
+                  <T en="Project Description:" zh="项目描述:" />
+                </h2>
+                {
+                  description.map((d) => (
+                    <p class="text-[16px] font-normal leading-[22.4px] text-dark/80">
+                      <T en={d.en} zh={d.zh} />
+                    </p>
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- More projects -->
+            <a
+              href={`${base}projects`}
+              class="w-fit rounded-full bg-dark px-5 py-3 font-dm text-[14px] font-medium text-white"
+            >
+              <T en="More projects" zh="更多项目" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
