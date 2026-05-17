@@ -8,8 +8,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://naxxhua.github.io',
-  base: '/bbsd-astro/',
+  site: 'https://bbsd-cn.com',
+  base: '/',
   integrations: [react(), sitemap()],
 
   vite: {

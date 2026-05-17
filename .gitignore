@@ -23,5 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# claude code agent worktrees
+.claude/worktrees/
+
 # Private working docs (not for version control)
 UIUX_GUIDE.md

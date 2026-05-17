@@ -1,10 +1,10 @@
 /**
  * Prepend Astro's base URL to an absolute path.
- * Handles both development (base="/") and production (base="/bbsd-astro/").
+ * Adapts automatically to the `base` set in astro.config.mjs.
  *
- * Usage:
- *   url('/about-us')        → '/bbsd-astro/about-us'
- *   url('/images/logo.png') → '/bbsd-astro/images/logo.png'
+ * Usage (base="/"):
+ *   url('/about-us')        → '/about-us'
+ *   url('/images/logo.png') → '/images/logo.png'
  */
 export function url(path: string): string {
   const base = import.meta.env.BASE_URL ?? '/'
