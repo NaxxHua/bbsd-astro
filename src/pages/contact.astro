@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactInfo from "../components/contact/ContactInfo.tsx";
+import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
 import T from "../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 
@@ -133,6 +134,8 @@ const mapSrc =
           class="h-[500px] w-full border-0"></iframe>
       </div>
     </section>
+
+    <GetInTouchBanner client:visible />
   </main>
 </BaseLayout>
 
