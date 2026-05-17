@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ScrollReveal from "../components/animations/ScrollReveal.tsx";
+import TextReveal from "../components/animations/TextReveal.tsx";
 import GetInTouchBanner from "../components/common/GetInTouchBanner.tsx";
 import T from "../i18n/T.astro";
 
@@ -11,7 +12,7 @@ const positions = [
     levelZh: "高级",
     title: "Structural Design Engineer",
     titleZh: "结构设计工程师",
-    date: "JAN 2026",
+    date: "Jan 2026",
     dateZh: "2026年1月",
   },
   {
@@ -19,7 +20,7 @@ const positions = [
     levelZh: "高级",
     title: "Piping Design Engineer",
     titleZh: "管道设计工程师",
-    date: "NOVEMBER 2025",
+    date: "November 2025",
     dateZh: "2025年11月",
   },
   {
@@ -27,7 +28,7 @@ const positions = [
     levelZh: "高级",
     title: "Electrical & Instrumentation (E&I) Design Engineer",
     titleZh: "电气与仪表（E&I）设计工程师",
-    date: "JUNE 2025",
+    date: "June 2025",
     dateZh: "2025年6月",
   },
   {
@@ -35,7 +36,7 @@ const positions = [
     levelZh: "初级",
     title: "Procurement Specialist",
     titleZh: "采购专员",
-    date: "AUGUST 2025",
+    date: "August 2025",
     dateZh: "2025年8月",
   },
 ];
@@ -44,98 +45,114 @@ const positions = [
 <BaseLayout title="Careers - BBSD">
   <main>
     <!-- Hero -->
-    <section class="relative h-screen w-full overflow-hidden">
+    <section
+      class="relative flex flex-col items-center justify-center overflow-hidden px-5 pt-[150px] pb-20 md:px-[30px] lg:h-[900px] lg:pt-[200px] lg:pb-[125px]"
+    >
       <img
-        src={`${base}images/careers/hero.jpg`}
+        src={`${base}images/careers/careers-hero.jpg`}
         alt=""
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="text-6xl font-bold text-white/80 md:text-8xl">
-          <T en="Careers" zh="招贤纳士" />
+      <div class="relative z-10 text-center">
+        <h1
+          class="text-[44px] font-semibold leading-[1.05] tracking-[-0.04em] text-white md:text-[56px] lg:text-[70px] lg:leading-[73.5px] lg:tracking-[-2.8px]"
+        >
+          <T en="Careers" zh="加入我们" />
         </h1>
       </div>
     </section>
 
-    <!-- Come Join -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="grid items-center gap-12 md:grid-cols-2">
+    <!-- Come join our team -->
+    <section
+      class="flex flex-col items-center justify-center px-5 pt-20 pb-8 md:px-[30px]"
+    >
+      <div class="flex w-full max-w-[1200px] flex-col items-center gap-10 lg:flex-row lg:gap-[100px]">
+        <!-- Left: image -->
+        <div class="w-full flex-1">
           <ScrollReveal client:visible>
-            <div>
-              <h2 class="mb-6 text-3xl font-bold text-dark md:text-4xl">
-                <T en="Come join our team" zh="加入我们的团队" />
-              </h2>
-              <p class="text-sm leading-relaxed text-gray">
+            <img
+              src={`${base}images/careers/careers-team.jpg`}
+              alt="BBSD team"
+              loading="lazy"
+              class="h-[360px] w-full rounded-[15px] object-cover lg:h-[500px]"
+            />
+          </ScrollReveal>
+        </div>
+        <!-- Right: text -->
+        <div class="flex w-full flex-1 flex-col gap-5">
+          <TextReveal
+            client:visible
+            text="Come join our team"
+            zh="加入我们的团队"
+            tag="h2"
+            className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-black md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+          />
+          <ScrollReveal client:visible delay={0.2}>
+            <div class="flex flex-col gap-5">
+              <p
+                class="text-base font-normal text-gray lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+              >
                 <T
                   en="At BBSD, we design and deliver world-class offshore and marine engineering solutions. Our success is driven by talented professionals who are passionate about engineering excellence, safety, and innovation."
-                  zh="在 BBSD，我们设计并交付世界一流的海洋与船舶工程解决方案。我们的成功源于热衷于卓越工程、安全与创新的优秀专业人才。"
+                  zh="在 BBSD，我们设计并交付世界一流的海洋与船舶工程解决方案。我们的成功源于一支对工程卓越、安全与创新充满热情的优秀团队。"
                 />
               </p>
-              <p class="mt-4 text-sm leading-relaxed text-gray">
+              <p
+                class="text-base font-normal text-gray lg:text-[18px] lg:leading-[30.6px] lg:tracking-[-0.36px]"
+              >
                 <T
                   en="We offer a collaborative working environment, exposure to international offshore projects, and opportunities for long-term career development."
-                  zh="我们提供协作的工作环境、参与国际海洋项目的机会，以及长期的职业发展空间。"
+                  zh="我们提供协作型的工作环境、参与国际海洋工程项目的机会，以及长期的职业发展空间。"
                 />
               </p>
             </div>
-          </ScrollReveal>
-          <ScrollReveal client:visible>
-            <img
-              src={`${base}images/careers/team.jpg`}
-              alt="Team at work"
-              loading="lazy"
-              class="w-full rounded-xl object-cover"
-            />
           </ScrollReveal>
         </div>
       </div>
     </section>
 
     <!-- Open Positions -->
-    <section class="bg-blue-light py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <h2 class="mb-10 text-3xl font-bold text-dark">
-          <T en="Open Positions" zh="招聘职位" />
-        </h2>
+    <section
+      class="flex flex-col items-center justify-center px-5 pt-20 pb-24 md:px-[50px] lg:pb-[120px]"
+    >
+      <div class="flex w-full max-w-[1200px] flex-col gap-[50px]">
+        <TextReveal
+          client:visible
+          text="Open Positions"
+          zh="招聘职位"
+          tag="h2"
+          className="text-[36px] font-semibold leading-[1.15] tracking-[-0.04em] text-black md:text-[44px] lg:text-[55px] lg:leading-[63.25px] lg:tracking-[-2.2px]"
+        />
 
-        <!-- Table Header -->
-        <div class="mb-4 hidden grid-cols-3 gap-4 px-6 md:grid">
-          <p
-            class="text-xs font-semibold tracking-widest text-gray-light uppercase"
+        <div class="flex flex-col">
+          <!-- Header row -->
+          <div
+            class="hidden border-b border-dark/20 py-5 lg:grid lg:grid-cols-[250px_600px_250px] lg:gap-[50px]"
           >
-            <T en="Level" zh="级别" />
-          </p>
-          <p
-            class="text-xs font-semibold tracking-widest text-gray-light uppercase"
-          >
-            <T en="Title" zh="职位" />
-          </p>
-          <p
-            class="text-xs font-semibold tracking-widest text-gray-light uppercase"
-          >
-            <T en="Date" zh="发布日期" />
-          </p>
-        </div>
+            <span class="text-[14px] font-medium uppercase tracking-[0.28px] text-dark">
+              <T en="Level" zh="级别" />
+            </span>
+            <span class="text-[14px] font-medium uppercase tracking-[0.28px] text-dark">
+              <T en="Title" zh="职位" />
+            </span>
+            <span class="text-[14px] font-medium uppercase tracking-[0.28px] text-dark">
+              <T en="Date" zh="发布时间" />
+            </span>
+          </div>
 
-        <div class="space-y-3">
+          <!-- Data rows -->
           {
-            positions.map((pos) => (
-              <ScrollReveal client:visible>
-                <div class="grid items-center gap-4 rounded-xl bg-white p-6 md:grid-cols-3">
-                  <div>
-                    <span class="inline-block rounded-full bg-blue-light px-3 py-1 text-xs font-medium text-blue-dark">
-                      <T en={pos.level} zh={pos.levelZh} />
-                    </span>
-                  </div>
-                  <h3 class="text-sm font-bold text-dark">
-                    <T en={pos.title} zh={pos.titleZh} />
-                  </h3>
-                  <p class="text-sm text-gray-light">
-                    <T en={pos.date} zh={pos.dateZh} />
+            positions.map((p, i) => (
+              <ScrollReveal client:visible delay={i * 0.08}>
+                <div class="flex flex-col gap-2 border-b border-dark/20 py-5 lg:grid lg:grid-cols-[250px_600px_250px] lg:items-center lg:gap-[50px]">
+                  <p class="text-[16px] font-normal text-dark">
+                    <T en={p.level} zh={p.levelZh} />
+                  </p>
+                  <h5 class="text-[22px] font-medium leading-[1.2] text-dark lg:text-[28px] lg:leading-[33.6px]">
+                    <T en={p.title} zh={p.titleZh} />
+                  </h5>
+                  <p class="text-[14px] font-medium uppercase tracking-[0.28px] text-dark">
+                    <T en={p.date} zh={p.dateZh} />
                   </p>
                 </div>
               </ScrollReveal>
