@@ -1,144 +1,129 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
+
+const cards = [
+  {
+    en: "Structural Engineering",
+    zh: "结构工程",
+    image: "eng-structural.jpg",
+    href: "engineering-services/structural-engineering",
+  },
+  {
+    en: "Piping Engineering",
+    zh: "管道工程",
+    image: "eng-piping.jpg",
+    href: "engineering-services/piping-engineering",
+  },
+  {
+    en: "Mechanical Engineering",
+    zh: "机械工程",
+    image: "eng-mechanical.jpg",
+    href: "engineering-services/mechanical-engineering",
+  },
+  {
+    en: "Electrical & Instrumentation",
+    zh: "电气与仪表",
+    image: "eng-ei.jpg",
+    href: "engineering-services/e-i-engineering",
+  },
+];
+
+const blocks = [
+  {
+    h3En: "Structural Engineering",
+    h3Zh: "结构工程",
+    pEn: "BBSD provides structural design and analysis for offshore, onshore, and utility projects. We specialize in steel and structures, seismic analysis, and load-bearing assessments. Our approach emphasizes safety, durability, and compliance with global engineering standards.",
+    pZh: "BBSD 为海上、陆上及公用工程项目提供结构设计与分析,专长于钢结构、抗震分析与承载评估。我们的方案注重安全性、耐久性,并遵循全球工程标准。",
+  },
+  {
+    h3En: "Piping Design & Routing",
+    h3Zh: "管道设计与走向",
+    pEn: "Our piping design services cover concept to detailed engineering, including routing optimization, stress analysis, and 3D modeling. We ensure compliance with international codes (ASME, ISO) and deliver cost-effective, safe, and maintainable piping systems for energy and infrastructure projects.",
+    pZh: "我们的管道设计服务涵盖从概念到详细工程,包括走向优化、应力分析与三维建模。我们确保符合国际规范(ASME、ISO),为能源与基础设施项目交付经济、安全、易维护的管道系统。",
+  },
+  {
+    h3En: "Mechanical Engineering",
+    h3Zh: "机械工程",
+    pEn: "Our mechanical engineering services cover equipment selection, design, and integration for process industries. We support rotating and static equipment, pressure vessels, and HVAC systems, ensuring reliable performance across project lifecycles.",
+    pZh: "我们的机械工程服务涵盖流程工业的设备选型、设计与集成,支持动设备与静设备、压力容器及暖通空调系统,确保项目全生命周期的可靠运行。",
+  },
+  {
+    h3En: "E&I Engineering",
+    h3Zh: "电气与仪表工程",
+    pEn: "BBSD offers Electrical and Instrumentation (E&I) engineering services covers power generation and distribution, lighting, instrumentation, automation, and control systems, with a focus on safety, redundancy, and compliance with industry standards and regulations such as IEC, IEEE, API, and DNV.",
+    pZh: "BBSD 提供电气与仪表(E&I)工程服务,涵盖发电与配电、照明、仪表、自动化及控制系统,注重安全性、冗余性,并遵循 IEC、IEEE、API、DNV 等行业标准与规范。",
+  },
+];
 ---
 
 <BaseLayout title="Engineering Services - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-1.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Engineering Services" zh="工程服务" />
-        </h1>
-        <p class="max-w-2xl text-lg text-white/80">
-          <T
-            en="Comprehensive engineering solutions from concept to detailed design."
-            zh="从概念到详细设计的全面工程解决方案。"
+    <ServiceHero
+      title="Engineering Services"
+      titleZh="工程服务"
+      subtitle="Comprehensive engineering solutions from concept to detailed design."
+      subtitleZh="从概念到详细设计的全面工程解决方案。"
+      image="hero-engineering.jpg"
+    />
+
+    <!-- Discipline cards -->
+    <section class="flex flex-col items-center bg-white px-5 py-10 md:px-[30px]">
+      <div class="grid w-full max-w-[960px] grid-cols-2 gap-5 lg:grid-cols-4">
+        {
+          cards.map((card) => (
+            <a
+              href={`${base}${card.href}`}
+              class="group relative h-[250px] overflow-hidden rounded-[20px]"
+            >
+              <img
+                src={`${base}images/services/${card.image}`}
+                alt={card.en}
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_40%,rgba(0,0,0,0.55)_100%)]" />
+              <h3 class="absolute top-5 left-5 right-5 font-inter text-[22px] font-normal leading-[1.1] tracking-[-0.44px] text-white">
+                <T en={card.en} zh={card.zh} />
+              </h3>
+              <span class="absolute right-4 bottom-4 text-white">
+                <svg width="40" height="40" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+                  <path d="M128,80a48,48,0,1,0,48,48A48.06,48.06,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm95.68-93.85L135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17h0a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,224,40,175.82V80.18L128,32l88,48.17v95.64Z" />
+                </svg>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Detail: image + text blocks -->
+    <section class="flex flex-col items-center bg-white px-5 py-10 md:px-[30px]">
+      <div class="flex w-full max-w-[1200px] flex-col gap-10 lg:flex-row lg:gap-[75px]">
+        <div class="w-full lg:w-[346px] lg:shrink-0">
+          <img
+            src={`${base}images/services/eng-detail.jpg`}
+            alt="BBSD engineering"
+            loading="lazy"
+            class="h-[300px] w-full object-cover lg:h-[500px]"
           />
-        </p>
-      </div>
-    </section>
-
-    <!-- Quick Nav -->
-    <section class="border-b border-gray-light/20 bg-white">
-      <div class="mx-auto flex max-w-[1200px] flex-wrap gap-4 px-6 py-4">
-        <a
-          href={`${base}engineering-services/structural-engineering`}
-          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
-          ><T en="Structural Engineering" zh="结构工程" /></a
-        >
-        <a
-          href={`${base}engineering-services/piping-engineering`}
-          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
-          ><T en="Piping Engineering" zh="管道工程" /></a
-        >
-        <a
-          href={`${base}engineering-services/mechanical-engineering`}
-          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
-          ><T en="Mechanical Engineering" zh="机械工程" /></a
-        >
-        <a
-          href={`${base}engineering-services/e-i-engineering`}
-          class="rounded-full bg-blue-light px-4 py-2 text-sm font-medium text-blue-dark hover:bg-blue-dark hover:text-white transition-colors"
-          ><T en="Electrical & Instrumentation" zh="电气与仪表" /></a
-        >
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="grid gap-16">
-          <div class="grid items-start gap-8 md:grid-cols-2">
-            <div>
-              <h2 class="mb-4 text-2xl font-bold text-dark">
-                <T en="Structural Engineering" zh="结构工程" />
-              </h2>
-              <p class="text-sm leading-relaxed text-gray">
-                <T
-                  en="BBSD provides structural design and analysis for offshore, onshore, and utility projects. We specialize in steel and structures, seismic analysis, and load-bearing assessments. Our approach emphasizes safety, durability, and compliance with global engineering standards."
-                  zh="BBSD 为海上、陆上及公用工程项目提供结构设计与分析服务。我们专注于钢结构、抗震分析与承载能力评估，注重安全性、耐久性，并符合全球工程标准。"
-                />
-              </p>
-            </div>
-            <img
-              src={`${base}images/services/service-2.jpg`}
-              alt="Structural Engineering"
-              loading="lazy"
-              class="w-full rounded-xl object-cover"
-            />
-          </div>
-
-          <div class="grid items-start gap-8 md:grid-cols-2">
-            <img
-              src={`${base}images/services/service-3.jpg`}
-              alt="Piping Design"
-              loading="lazy"
-              class="order-2 w-full rounded-xl object-cover md:order-1"
-            />
-            <div class="order-1 md:order-2">
-              <h2 class="mb-4 text-2xl font-bold text-dark">
-                <T en="Piping Design & Routing" zh="管道设计与布管" />
-              </h2>
-              <p class="text-sm leading-relaxed text-gray">
-                <T
-                  en="Our piping design services cover concept to detailed engineering, including routing optimization, stress analysis, and 3D modeling. We ensure compliance with international codes (ASME, ISO) and deliver cost-effective, safe, and maintainable piping systems for energy and infrastructure projects."
-                  zh="我们的管道设计服务涵盖从概念到详细设计，包括布管优化、应力分析与三维建模。我们确保符合 ASME、ISO 等国际规范，为能源与基础设施项目交付经济、安全、易维护的管道系统。"
-                />
-              </p>
-            </div>
-          </div>
-
-          <div class="grid items-start gap-8 md:grid-cols-2">
-            <div>
-              <h2 class="mb-4 text-2xl font-bold text-dark">
-                <T en="Mechanical Engineering" zh="机械工程" />
-              </h2>
-              <p class="text-sm leading-relaxed text-gray">
-                <T
-                  en="Our mechanical engineering services cover equipment selection, design, and integration for process industries. We support rotating and static equipment, pressure vessels, and HVAC systems, ensuring reliable performance across project lifecycles."
-                  zh="我们的机械工程服务涵盖流程工业的设备选型、设计与集成。我们支持动设备与静设备、压力容器及暖通空调系统，确保在项目全生命周期内稳定可靠的性能。"
-                />
-              </p>
-            </div>
-            <img
-              src={`${base}images/services/service-4.jpg`}
-              alt="Mechanical Engineering"
-              loading="lazy"
-              class="w-full rounded-xl object-cover"
-            />
-          </div>
-
-          <div class="grid items-start gap-8 md:grid-cols-2">
-            <img
-              src={`${base}images/services/service-5.jpg`}
-              alt="E&I Engineering"
-              loading="lazy"
-              class="order-2 w-full rounded-xl object-cover md:order-1"
-            />
-            <div class="order-1 md:order-2">
-              <h2 class="mb-4 text-2xl font-bold text-dark">
-                <T en="E&I Engineering" zh="电气与仪表工程" />
-              </h2>
-              <p class="text-sm leading-relaxed text-gray">
-                <T
-                  en="BBSD offers Electrical and Instrumentation (E&I) engineering services covering power generation and distribution, lighting, instrumentation, automation, and control systems, with a focus on safety, redundancy, and compliance with industry standards and regulations such as IEC, IEEE, API, and DNV."
-                  zh="BBSD 提供电气与仪表（E&I）工程服务，涵盖发电与配电、照明、仪表、自动化与控制系统，注重安全性、冗余设计，并符合 IEC、IEEE、API、DNV 等行业标准与规范。"
-                />
-              </p>
-            </div>
-          </div>
+        </div>
+        <div class="service-body flex flex-1 flex-col gap-7">
+          {
+            blocks.map((b) => (
+              <div class="flex flex-col gap-2">
+                <h3>
+                  <T en={b.h3En} zh={b.h3Zh} />
+                </h3>
+                <p>
+                  <T en={b.pEn} zh={b.pZh} />
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>

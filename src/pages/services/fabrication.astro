@@ -1,77 +1,65 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
+
+const blocks = [
+  {
+    h3En: "Project Management",
+    h3Zh: "项目管理",
+    pEn: "BBSD oversees fabrication processes from vendor qualification to workshop inspections. We ensure adherence to design specifications, welding standards, and project timelines, helping clients achieve seamless delivery from shop to site.",
+    pZh: "BBSD 全程把控从供应商资质审核到车间检验的制造流程,确保符合设计规范、焊接标准与项目工期,助力客户实现从车间到现场的无缝交付。",
+  },
+  {
+    h3En: "Site Supervision",
+    h3Zh: "现场监理",
+    pEn: "Our site engineers provide daily supervision and coordination with contractors, ensuring safety, compliance, and timely progress. We support multi-disciplinary construction, monitoring quality and resolving issues promptly.",
+    pZh: "我们的现场工程师提供日常监理并与承包商协调,确保安全、合规与按期推进。我们支持多专业施工,监控质量并及时解决问题。",
+  },
+  {
+    h3En: "Inspection Services (NDT, Welding, QC)",
+    h3Zh: "检验服务(无损检测、焊接、质量控制)",
+    pEn: "We deliver Non-Destructive Testing (NDT), welding inspection, and quality control services. Our certified inspectors ensure compliance with codes (AWS, ISO, EN) and provide transparent reporting for clients.",
+    pZh: "我们提供无损检测(NDT)、焊接检验与质量控制服务。我们持证的检验人员确保符合规范(AWS、ISO、EN),并为客户提供透明的检验报告。",
+  },
+];
 ---
 
 <BaseLayout title="Fabrication & Site Support - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-2.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Fabrication & Site Support" zh="制造与现场支持" />
-        </h1>
-        <p class="max-w-2xl text-lg text-white/80">
-          <T
-            en="Reliable on-site services ensuring quality, safety, and timely execution."
-            zh="可靠的现场服务，确保质量、安全与按时执行。"
+    <ServiceHero
+      title="Fabrication & Site Support"
+      titleZh="制造与现场支持"
+      subtitle="Reliable on-site services ensuring quality, safety, and timely execution."
+      subtitleZh="可靠的现场服务,确保质量、安全与按时执行。"
+      image="hero-fabrication.jpg"
+    />
+
+    <section class="flex flex-col items-center bg-white px-5 py-14 md:px-[30px] lg:py-[60px]">
+      <div class="flex w-full max-w-[1200px] flex-col gap-10 lg:flex-row lg:gap-[75px]">
+        <div class="w-full lg:w-[346px] lg:shrink-0">
+          <img
+            src={`${base}images/services/fab-detail.jpg`}
+            alt="BBSD fabrication and site support"
+            loading="lazy"
+            class="h-[300px] w-full object-cover lg:h-[500px]"
           />
-        </p>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="grid gap-16">
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Project Management" zh="项目管理" />
-            </h2>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="BBSD oversees fabrication processes from vendor qualification to workshop inspections. We ensure adherence to design specifications, welding standards, and project timelines, helping clients achieve seamless delivery from shop to site."
-                zh="BBSD 全程监管制造流程，从供应商资格审核到车间检验。我们确保严格遵守设计规范、焊接标准与项目工期，助力客户实现从车间到现场的无缝交付。"
-              />
-            </p>
-          </div>
-
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Site Supervision" zh="现场监理" />
-            </h2>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="Our site engineers provide daily supervision and coordination with contractors, ensuring safety, compliance, and timely progress. We support multi-disciplinary construction, monitoring quality and resolving issues promptly."
-                zh="我们的现场工程师提供日常监理并与承包商协调，确保安全、合规与进度。我们支持多专业施工，监控质量并及时解决问题。"
-              />
-            </p>
-          </div>
-
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T
-                en="Inspection Services (NDT, Welding, QC)"
-                zh="检验服务（无损检测、焊接、质量控制）"
-              />
-            </h2>
-            <p class="text-sm leading-relaxed text-gray">
-              <T
-                en="We deliver Non-Destructive Testing (NDT), welding inspection, and quality control services. Our certified inspectors ensure compliance with codes (AWS, ISO, EN) and provide transparent reporting for clients."
-                zh="我们提供无损检测（NDT）、焊接检验与质量控制服务。我们的持证检验员确保符合 AWS、ISO、EN 等规范，并为客户提供透明的报告。"
-              />
-            </p>
-          </div>
+        </div>
+        <div class="service-body flex flex-1 flex-col gap-7">
+          {
+            blocks.map((b) => (
+              <div class="flex flex-col gap-2">
+                <h3>
+                  <T en={b.h3En} zh={b.h3Zh} />
+                </h3>
+                <p>
+                  <T en={b.pEn} zh={b.pZh} />
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>

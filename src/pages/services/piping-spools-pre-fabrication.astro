@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
@@ -7,46 +8,32 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Piping Spools Pre-fabrication - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-5.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Piping Spools Pre-fabrication" zh="管段预制" />
-        </h1>
-        <p class="max-w-2xl text-lg text-white/80">
-          <T
-            en="Off-site fabrication to ensure quality, efficiency, and faster installation."
-            zh="场外预制，确保质量、效率与更快的安装。"
-          />
-        </p>
-      </div>
-    </section>
+    <ServiceHero
+      title="Piping Spools Pre-fabrication"
+      titleZh="管段预制"
+      subtitle="Off-site fabrication to ensure quality, efficiency, and faster installation."
+      subtitleZh="场外预制,确保质量、效率与更快的安装。"
+      image="hero-piping.jpg"
+    />
 
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <div class="max-w-3xl">
-          <h2 class="mb-6 text-2xl font-bold text-dark">
+    <section class="flex flex-col items-center bg-white px-5 py-14 md:px-[30px] lg:py-[60px]">
+      <div class="flex w-full max-w-[1200px] flex-col gap-10 lg:flex-row lg:gap-[75px]">
+        <div class="w-full lg:w-[346px] lg:shrink-0">
+          <img
+            src={`${base}images/services/piping-detail.jpg`}
+            alt="BBSD piping spools pre-fabrication"
+            loading="lazy"
+            class="h-[300px] w-full object-cover lg:h-[500px]"
+          />
+        </div>
+        <div class="service-body flex flex-1 flex-col gap-2">
+          <h3>
             <T en="Piping Spools Pre-fabrication" zh="管段预制" />
-          </h2>
-          <p class="text-sm leading-relaxed text-gray">
+          </h3>
+          <p>
             <T
-              en="Piping spools pre-fabrication involves the off-site fabrication of piping sections under controlled workshop conditions before delivery to site. This process includes cutting, welding, fitting, inspection, and surface treatment in accordance with approved drawings and international standards."
-              zh="管段预制是指在受控的车间条件下，于场外完成管道分段的制造，再运送至现场。该流程包括切割、焊接、组对、检验与表面处理，全程依据批准图纸与国际标准执行。"
-            />
-          </p>
-          <p class="mt-4 text-sm leading-relaxed text-gray">
-            <T
-              en="Pre-fabrication improves installation efficiency, reduces on-site work and safety risks, enhances quality control, and shortens overall project schedules, making it especially suitable for offshore, modular, and large-scale industrial projects."
-              zh="预制能够提升安装效率、减少现场作业与安全风险、加强质量控制并缩短整体项目工期，尤其适用于海上、模块化及大型工业项目。"
+              en="Piping spools pre-fabrication involves the off-site fabrication of piping sections under controlled workshop conditions before delivery to site. This process includes cutting, welding, fitting, inspection, and surface treatment in accordance with approved drawings and international standards. Pre-fabrication improves installation efficiency, reduces on-site work and safety risks, enhances quality control, and shortens overall project schedules, making it especially suitable for offshore, modular, and large-scale industrial projects."
+              zh="管段预制是指在受控的车间条件下对管道段进行场外预制,然后再运送至现场。该流程包括按照批准的图纸与国际标准进行切割、焊接、组对、检验与表面处理。预制可提升安装效率,减少现场作业与安全风险,加强质量控制,并缩短整体项目工期,尤其适用于海洋、模块化及大型工业项目。"
             />
           </p>
         </div>

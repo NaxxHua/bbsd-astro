@@ -1,65 +1,54 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
 
-const materials = [
-  { en: "Carbon Steel Pipes", zh: "碳钢管" },
-  { en: "Stainless Steel Pipes", zh: "不锈钢管" },
-  { en: "Copper-Nickel Pipes", zh: "铜镍合金管" },
-  { en: "Glass Reinforced Epoxy Piping", zh: "玻璃钢环氧管道" },
-  { en: "Hose", zh: "软管" },
-  { en: "CS Pipe Fittings", zh: "碳钢管件" },
-  { en: "SS Pipe Fittings", zh: "不锈钢管件" },
-  { en: "Fasteners", zh: "紧固件" },
-  { en: "Electrical Cables", zh: "电缆" },
-  { en: "Valves", zh: "阀门" },
-  { en: "Spectacle Blinds", zh: "8 字盲板" },
-  { en: "Insulation", zh: "保温材料" },
+const items = [
+  { en: "Carbon Steel Pipes", zh: "碳钢管", image: "proc-1.jpg" },
+  { en: "Stainless Steel Pipes", zh: "不锈钢管", image: "proc-2.jpg" },
+  { en: "Copper-Nickel Pipes", zh: "铜镍合金管", image: "proc-3.jpg" },
+  { en: "Glass Reinforced Epoxy Piping", zh: "玻璃钢环氧管道", image: "proc-4.jpg" },
+  { en: "Hose", zh: "软管", image: "proc-5.jpg" },
+  { en: "CS Pipe Fittings", zh: "碳钢管件", image: "proc-6.jpg" },
+  { en: "SS Pipe Fittings", zh: "不锈钢管件", image: "proc-7.jpg" },
+  { en: "Fasteners", zh: "紧固件", image: "proc-8.jpg" },
+  { en: "Electrical Cables", zh: "电缆", image: "proc-9.jpg" },
+  { en: "Valves", zh: "阀门", image: "proc-10.jpg" },
+  { en: "Spectacle Blinds", zh: "8 字盲板", image: "proc-11.jpg" },
+  { en: "Insulation", zh: "保温材料", image: "proc-12.jpg" },
 ];
 ---
 
-<BaseLayout title="Procurement & Materials Supply - BBSD">
+<BaseLayout title="Procurement - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-3.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Procurement & Materials Supply" zh="采购与物资供应" />
-        </h1>
-        <p class="max-w-2xl text-lg text-white/80">
-          <T
-            en="Strategic sourcing to optimize cost, quality, and delivery."
-            zh="战略采购，优化成本、质量与交付。"
-          />
-        </p>
-      </div>
-    </section>
+    <ServiceHero
+      title="Procurement"
+      titleZh="采购"
+      image="hero-procurement.jpg"
+    />
 
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <h2 class="mb-8 text-2xl font-bold text-dark">
-          <T en="Materials We Supply" zh="我们供应的物资" />
-        </h2>
-        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {
-            materials.map((item) => (
-              <div class="rounded-xl border border-gray-light/20 bg-blue-light p-5 text-center">
-                <p class="text-sm font-medium text-dark"><T en={item.en} zh={item.zh} /></p>
+    <section class="flex flex-col items-center bg-white px-5 py-20 md:px-[30px] lg:py-[125px]">
+      <div class="grid w-full max-w-[1200px] grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
+        {
+          items.map((item) => (
+            <div class="relative h-[350px] overflow-hidden rounded-[15px]">
+              <img
+                src={`${base}images/services/${item.image}`}
+                alt={item.en}
+                loading="lazy"
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0)_0%,rgba(0,0,0,0.46)_100%)]" />
+              <div class="absolute inset-x-0 bottom-0 flex h-[73px] items-center bg-white/[0.16] px-6 backdrop-blur-[2px]">
+                <h3 class="text-[22px] font-semibold tracking-[-0.44px] text-white">
+                  <T en={item.en} zh={item.zh} />
+                </h3>
               </div>
-            ))
-          }
-        </div>
+            </div>
+          ))
+        }
       </div>
     </section>
 
