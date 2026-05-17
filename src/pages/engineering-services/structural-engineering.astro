@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EngServiceLayout from "../../components/services/EngServiceLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
@@ -7,130 +8,113 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Structural Engineering - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-2.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Structural Engineering" zh="结构工程" />
-        </h1>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
+    <EngServiceLayout
+      title="Structural Engineering"
+      titleZh="结构工程"
+      prev={{
+        label: "Piping Engineering",
+        labelZh: "管道工程",
+        href: "engineering-services/piping-engineering",
+      }}
+    >
+      <h5>
+        <T
+          en="BBSD offers structural engineering services for both onshore and offshore complex structures. The structural engineering services includes but not limited to:"
+          zh="BBSD 为陆上及海上复杂结构提供结构工程服务。结构工程服务包括但不限于:"
+        />
+      </h5>
+      <ul>
+        <li><T en="Analysis / Calculations" zh="分析 / 计算" /></li>
+        <li>
           <T
-            en="BBSD offers structural engineering services for both onshore and offshore complex structures. The structural engineering services includes but not limited to:"
-            zh="BBSD 为陆上与海上复杂结构提供结构工程服务。结构工程服务包括但不限于："
+            en="Design in 3D modelling with cutting edge BIM tools"
+            zh="使用前沿 BIM 工具进行三维建模设计"
           />
-        </p>
-
-        <div class="grid gap-16">
-          <!-- Analysis -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Analysis / Calculations" zh="分析 / 计算" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Analysis & Calculations for large scale structures and complex detail joints are performed by our experienced engineers using Finite Element Analysis Software. Our structural engineers are familiar with most industry standards and practices, for instance DNV rules, API RP 2A, ISO 19901/19902, Eurocode 1993."
-                zh="我们经验丰富的工程师使用有限元分析软件，对大型结构与复杂节点进行分析与计算。我们的结构工程师熟悉大多数行业标准与规范，如 DNV 规范、API RP 2A、ISO 19901/19902、Eurocode 1993。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Static and Dynamic analysis" zh="静力与动力分析" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Fatigue Analysis for welded joints at offshore structures" zh="海上结构焊接节点的疲劳分析" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Vibration Analysis for Rotating Machines mounted on structure" zh="结构上旋转机械的振动分析" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Complex Analysis for Blast Loading, Earthquake Loading, Stochastic wave Loading" zh="爆炸荷载、地震荷载、随机波浪荷载的复杂分析" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- 3D Modelling -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Design in 3D Modelling with Cutting Edge BIM Tools" zh="采用前沿 BIM 工具的三维建模设计" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="3D Modelling for various types of structures with large and small scales are realized by our experienced designers using cutting edge BIM Software. With in-house developed algorithm and customized scripted macros, we can automize the design workflow in a flawless way."
-                zh="我们经验丰富的设计师使用前沿 BIM 软件，为各类大小规模的结构实现三维建模。借助自主研发的算法与定制脚本宏，我们能够将设计流程完美自动化。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Offshore Topside Modules and Skids" zh="海上上部模块与撬块" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Onshore Plants and Technical buildings" zh="陆上工厂与技术建筑" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Civil and Architectural Structures" zh="土建与建筑结构" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Drawings -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Drawings (Design Drawings & Shop Drawings)" zh="图纸（设计图与施工图）" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Drawings are produced accurately from the 3D BIM model. The drawings are closely monitored and updated according to the latest design status with other disciplines like E&I, Piping and Mechanical."
-                zh="图纸由三维 BIM 模型精确生成。图纸会与电气仪表、管道、机械等其他专业紧密协同，并依据最新设计状态持续更新。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Structural GA Drawing" zh="结构总布置图" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Detailed Drawings for Joints and Connections" zh="节点与连接详图" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Fabrication Shop Drawings" zh="制造施工图" />
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="mt-16 flex justify-start">
-          <a
-            href={`${base}engineering-services/piping-engineering`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="‹ Piping Engineering" zh="‹ 管道工程" /></a
-          >
-        </div>
-      </div>
-    </section>
+        </li>
+        <li>
+          <T
+            en="Drawings (Design Drawings & Shop Drawings)"
+            zh="图纸(设计图与施工图)"
+          />
+        </li>
+      </ul>
+      <p>
+        <T
+          en="Analysis & Calculations for large scale structures and complex detail joints are performed by our experienced engineers using Finite Element Analysis Software. Our structural engineers are familiar with most industry standards and practices, for instance DNV rules, API RP 2A, ISO 19901/19902, Eurocode 1993. Our analysis competences includes:"
+          zh="大型结构及复杂节点的分析与计算,由我们经验丰富的工程师使用有限元分析软件完成。我们的结构工程师熟悉大多数行业标准与规范,例如 DNV 规范、API RP 2A、ISO 19901/19902、Eurocode 1993。我们的分析能力包括:"
+        />
+      </p>
+      <ul>
+        <li><T en="Static and Dynamic analysis" zh="静力与动力分析" /></li>
+        <li>
+          <T
+            en="Fatigue Analysis for welded joints at offshore structures"
+            zh="海上结构焊接节点的疲劳分析"
+          />
+        </li>
+        <li>
+          <T
+            en="Vibration Analysis for Rotating Machines mounted on structure"
+            zh="结构上安装的旋转机械的振动分析"
+          />
+        </li>
+        <li>
+          <T
+            en="Complex Analysis for Blast Loading, Earthquake Loading, Stochastic wave Loading"
+            zh="爆炸荷载、地震荷载、随机波浪荷载的复杂分析"
+          />
+        </li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/structural-1.png`}
+        alt="Structural analysis"
+        loading="lazy"
+      />
+      <p>
+        <T
+          en="3D Modelling for various types of structures with large and small scales are realized by our experienced designers using cutting edge BIM Software. With in-house developed algorithm and customized scripted macros, we can automize the design workflow in a flawless way. The design services we offer typical in following fields:"
+          zh="各类大小规模结构的三维建模,由我们经验丰富的设计师使用前沿 BIM 软件完成。借助自主研发的算法与定制化脚本宏,我们能够流畅地实现设计流程自动化。我们提供的设计服务通常涵盖以下领域:"
+        />
+      </p>
+      <ul>
+        <li>
+          <T en="Offshore Topside Modules and Skids" zh="海上上部模块与撬装设备" />
+        </li>
+        <li>
+          <T
+            en="Onshore Plants and Technical buildings"
+            zh="陆上工厂与技术建筑"
+          />
+        </li>
+        <li>
+          <T
+            en="Civil and Architectural Structures"
+            zh="土建与建筑结构"
+          />
+        </li>
+      </ul>
+      <p>
+        <T
+          en="Drawings are produced accurately from the 3D BIM model. The drawings are closely monitored and updated according to the latest design status with other disciplines like E&I, Piping and Mechanical. High standard QC procedures are always in place before the drawings are officially issued for design and fabrication in applications like:"
+          zh="图纸由三维 BIM 模型精确生成。图纸会根据电气仪表、管道、机械等其他专业的最新设计状态进行严密跟踪与更新。在图纸正式用于设计与制造之前,始终执行高标准的质量控制流程,应用场景包括:"
+        />
+      </p>
+      <ul>
+        <li><T en="Structural GA Drawing" zh="结构总布置图" /></li>
+        <li>
+          <T
+            en="Detailed Drawings for Joints and Connections"
+            zh="节点与连接详图"
+          />
+        </li>
+        <li><T en="Fabrication Shop Drawings" zh="制造施工图" /></li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/structural-2.jpg`}
+        alt="Structural drawings"
+        loading="lazy"
+      />
+    </EngServiceLayout>
 
     <GetInTouchBanner client:visible />
   </main>

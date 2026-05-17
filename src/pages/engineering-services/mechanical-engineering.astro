@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EngServiceLayout from "../../components/services/EngServiceLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
@@ -7,135 +8,141 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Mechanical Engineering - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-4.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Mechanical Engineering" zh="机械工程" />
-        </h1>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
+    <EngServiceLayout
+      title="Mechanical Engineering"
+      titleZh="机械工程"
+      prev={{
+        label: "E&I Engineering",
+        labelZh: "电气与仪表工程",
+        href: "engineering-services/e-i-engineering",
+      }}
+      next={{
+        label: "Piping Engineering",
+        labelZh: "管道工程",
+        href: "engineering-services/piping-engineering",
+      }}
+    >
+      <h5>
+        <T
+          en="BBSD offers mechanical engineering services for both onshore and offshore plants. The mechanical engineering focuses on the specification, design, selection, and integration of static and rotating equipment to ensure safe, reliable, and efficient operation in harsh offshore environments. Our main services include:"
+          zh="BBSD 为陆上及海上工厂提供机械工程服务。机械工程专注于静设备与动设备的规格制定、设计、选型与集成,确保在严苛的海上环境中安全、可靠、高效地运行。我们的主要服务包括:"
+        />
+      </h5>
+      <ul>
+        <li>
           <T
-            en="BBSD offers mechanical engineering services for both onshore and offshore plants. The mechanical engineering focuses on the specification, design, selection, and integration of static and rotating equipment to ensure safe, reliable, and efficient operation in harsh offshore environments."
-            zh="BBSD 为陆上与海上工厂提供机械工程服务。机械工程专注于静设备与动设备的规格制定、设计、选型与集成，确保在恶劣海上环境中安全、可靠、高效运行。"
+            en="Equipment Design and Specification"
+            zh="设备设计与规格"
           />
-        </p>
-
-        <div class="grid gap-16">
-          <!-- Equipment Design -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Equipment Design and Specification" zh="设备设计与规格" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Equipment Design collects design inputs from Process data sheets and P&ID's and define design criteria for equipment selection and sizing. The design ensure compliance with standards like ASME Section VIII, API 617, API 650, API 660, API 680, TEMA."
-                zh="设备设计从工艺数据表与 P&ID 中收集设计输入，并为设备选型与尺寸确定设计准则。设计确保符合 ASME 第 VIII 卷、API 617、API 650、API 660、API 680、TEMA 等标准。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Static Equipment: Pressure vessels, storage tanks, filters and heat exchangers" zh="静设备：压力容器、储罐、过滤器与换热器" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Rotating Equipment: Pumps, Compressors, Turbines" zh="动设备：泵、压缩机、透平" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Skid-mounted and packaged units: WHRU & HRSG" zh="撬装与成套装置：余热回收装置（WHRU）与余热锅炉（HRSG）" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Vendor Engagement -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Vendor Engagement and Procurement Support" zh="供应商对接与采购支持" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Vendor Engagement and Procurement Support with our hands-on dedicated mechanical engineers is the key success for on-time delivery of various equipment."
-                zh="由我们亲力亲为的专职机械工程师提供供应商对接与采购支持，是各类设备按期交付的成功关键。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Prepare Material Requisitions (MRs) for procurement and conduct technical bid evaluations (TBEs)" zh="编制采购用材料申请单（MR）并开展技术标书评估（TBE）" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Review and approve vendor drawings, datasheets, and calculations" zh="审查并批准供应商图纸、数据表与计算书" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Coordinate Factory Acceptance Tests (FATs) and witness critical inspections" zh="协调工厂验收测试（FAT）并见证关键检验" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Integration -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Integration with Plant Layout Design" zh="与工厂布置设计的集成" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Integration with Layout is the key for offshore plant design which requires complicated multiciliary coordination with piping layout design, E&I design and Structural Design."
-                zh="与布置设计的集成是海上工厂设计的关键，需要与管道布置设计、电气仪表设计及结构设计进行复杂的多专业协调。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Provide equipment layout guidance to ensure optimized operations and efficient installation" zh="提供设备布置指导，确保运营优化与高效安装" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Work with structural engineers to confirm foundation, skid, and support design" zh="与结构工程师协作，确认基础、撬块与支架设计" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Collaborate with piping teams to verify nozzle loads and thermal expansion allowances" zh="与管道团队协作，核实接管口荷载与热膨胀裕量" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Produce mechanical handling report and layout for plant maintenance and operations" zh="编制机械搬运报告与布置图，用于工厂维护与运营" />
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="mt-16 flex justify-between">
-          <a
-            href={`${base}engineering-services/e-i-engineering`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="‹ E&I Engineering" zh="‹ 电气与仪表工程" /></a
-          >
-          <a
-            href={`${base}engineering-services/piping-engineering`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="Piping Engineering ›" zh="管道工程 ›" /></a
-          >
-        </div>
-      </div>
-    </section>
+        </li>
+        <li>
+          <T
+            en="Vendor Engagement and Procurement Support"
+            zh="供应商对接与采购支持"
+          />
+        </li>
+        <li>
+          <T
+            en="Integration with Plant Layout Design"
+            zh="与工厂布置设计的集成"
+          />
+        </li>
+      </ul>
+      <p>
+        <T
+          en="Equipment Design collects design inputs from Process data sheets and P&ID's and define design criteria for equipment selection and sizing. The design ensure compliance with standards like ASME Section VIII, API 617, API 650, API 660, API 680, TEMA. BBSD has experiences with following equipment systems:"
+          zh="设备设计从工艺数据表与 P&ID 收集设计输入,并为设备选型与尺寸确定制定设计准则。设计确保符合 ASME Section VIII、API 617、API 650、API 660、API 680、TEMA 等标准。BBSD 在以下设备系统方面拥有经验:"
+        />
+      </p>
+      <ul>
+        <li>
+          <T
+            en="Static Equipment: Pressure vessels, storage tanks, filters and heat exchangers"
+            zh="静设备:压力容器、储罐、过滤器与换热器"
+          />
+        </li>
+        <li>
+          <T
+            en="Rotating Equipment: Pumps, Compressors, Turbines"
+            zh="动设备:泵、压缩机、透平"
+          />
+        </li>
+        <li>
+          <T
+            en="Skid-mounted and packaged units: WHRU & HRSG"
+            zh="撬装与成套机组:余热回收装置(WHRU)与余热锅炉(HRSG)"
+          />
+        </li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/mechanical-1.jpg`}
+        alt="Mechanical equipment"
+        loading="lazy"
+      />
+      <p>
+        <T
+          en="Vendor Engagement and Procurement Support with our hands-on dedicated mechanical engineers is the key success for on-time delivery of various equipment. During both project preparation and the execution phase, our engineers will:"
+          zh="由我们亲力亲为的专职机械工程师提供供应商对接与采购支持,是各类设备按期交付的关键。在项目筹备与执行阶段,我们的工程师将:"
+        />
+      </p>
+      <ul>
+        <li>
+          <T
+            en="Prepare Material Requisitions (MRs) for procurement and conduct technical bid evaluations (TBEs) to select the most suitable vendor"
+            zh="编制采购用的材料请购单(MR),并进行技术标评估(TBE)以选择最合适的供应商"
+          />
+        </li>
+        <li>
+          <T
+            en="Review and approve vendor drawings, datasheets, and calculations"
+            zh="审查并批准供应商的图纸、数据表与计算书"
+          />
+        </li>
+        <li>
+          <T
+            en="Coordinate Factory Acceptance Tests (FATs) and witness critical inspections"
+            zh="协调工厂验收测试(FAT)并见证关键检验"
+          />
+        </li>
+      </ul>
+      <p>
+        <T
+          en="Integration with Layout is the key for offshore plant design which requires complicated multidisciplinary coordination with piping layout design, E&I design and Structural Design:"
+          zh="与布置的集成是海上工厂设计的关键,需要与管道布置设计、电气仪表设计及结构设计进行复杂的多专业协调:"
+        />
+      </p>
+      <ul>
+        <li>
+          <T
+            en="Provide equipment layout guidance to ensure optimized operations and efficient installation."
+            zh="提供设备布置指导,确保运行优化与高效安装。"
+          />
+        </li>
+        <li>
+          <T
+            en="Work with structural engineers to confirm foundation, skid, and support design"
+            zh="与结构工程师协作,确认基础、撬座与支架设计"
+          />
+        </li>
+        <li>
+          <T
+            en="Collaborate with piping teams to verify nozzle loads and thermal expansion allowances"
+            zh="与管道团队协作,核实管嘴荷载与热膨胀余量"
+          />
+        </li>
+        <li>
+          <T
+            en="Produce mechanical handling report and layout for plant maintenance and operations"
+            zh="编制机械搬运报告与布置图,用于工厂维护与运营"
+          />
+        </li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/mechanical-2.png`}
+        alt="Mechanical layout integration"
+        loading="lazy"
+      />
+    </EngServiceLayout>
 
     <GetInTouchBanner client:visible />
   </main>

@@ -1,0 +1,98 @@
+---
+import T from "../../i18n/T.astro";
+
+interface NavLink {
+  label: string;
+  labelZh: string;
+  href: string;
+}
+interface Props {
+  title: string;
+  titleZh: string;
+  prev?: NavLink;
+  next?: NavLink;
+}
+const { title, titleZh, prev, next } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div
+  class="flex flex-col items-center bg-white px-5 pt-[140px] pb-20 md:px-[20px] lg:gap-[100px] lg:pt-[179px] lg:pb-[179px]"
+>
+  <!-- Title -->
+  <h1
+    class="mb-10 text-center text-[28px] font-semibold leading-[36.4px] tracking-[-0.56px] text-black lg:mb-0"
+  >
+    <T en={title} zh={titleZh} />
+  </h1>
+
+  <!-- Content -->
+  <div class="eng-body w-full max-w-[751px]">
+    <slot />
+  </div>
+
+  <!-- Prev / Next -->
+  {
+    (prev || next) && (
+      <nav class="mt-12 flex justify-center gap-6 lg:mt-0">
+        {prev && (
+          <a
+            href={`${base}${prev.href}`}
+            class="text-[16px] font-normal text-gray transition-colors hover:text-dark"
+          >
+            {"‹ "}
+            <T en={prev.label} zh={prev.labelZh} />
+          </a>
+        )}
+        {next && (
+          <a
+            href={`${base}${next.href}`}
+            class="text-[16px] font-normal text-gray transition-colors hover:text-dark"
+          >
+            <T en={next.label} zh={next.labelZh} />
+            {" ›"}
+          </a>
+        )}
+      </nav>
+    )
+  }
+</div>
+
+<style is:global>
+  .eng-body > * + * {
+    margin-top: 24px;
+  }
+  .eng-body h5 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30.6px;
+    letter-spacing: -0.36px;
+    color: #000;
+  }
+  .eng-body p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    letter-spacing: -0.32px;
+    color: var(--color-gray);
+  }
+  .eng-body ul {
+    list-style: disc;
+    padding-left: 1.5em;
+  }
+  .eng-body li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.32px;
+    color: var(--color-gray);
+  }
+  .eng-body li + li {
+    margin-top: 6px;
+  }
+  .eng-body img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>

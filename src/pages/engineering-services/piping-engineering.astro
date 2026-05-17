@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import EngServiceLayout from "../../components/services/EngServiceLayout.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
 const base = import.meta.env.BASE_URL;
@@ -7,139 +8,117 @@ const base = import.meta.env.BASE_URL;
 
 <BaseLayout title="Piping Engineering - BBSD">
   <main>
-    <!-- Hero -->
-    <section class="relative h-[60vh] min-h-[400px] w-full overflow-hidden">
-      <img
-        src={`${base}images/services/service-3.jpg`}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/50"></div>
-      <div
-        class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
-      >
-        <h1 class="mb-4 text-4xl font-bold text-white md:text-6xl">
-          <T en="Piping Engineering" zh="管道工程" />
-        </h1>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="bg-white py-20">
-      <div class="mx-auto max-w-[1200px] px-6">
-        <p class="mb-12 max-w-3xl text-sm leading-relaxed text-gray">
+    <EngServiceLayout
+      title="Piping Engineering"
+      titleZh="管道工程"
+      prev={{
+        label: "Mechanical Engineering",
+        labelZh: "机械工程",
+        href: "engineering-services/mechanical-engineering",
+      }}
+      next={{
+        label: "Structural Engineering",
+        labelZh: "结构工程",
+        href: "engineering-services/structural-engineering",
+      }}
+    >
+      <h5>
+        <T
+          en="BBSD offers piping engineering services for both onshore and offshore plants. The piping engineering services includes but not limited to:"
+          zh="BBSD 为陆上及海上工厂提供管道工程服务。管道工程服务包括但不限于:"
+        />
+      </h5>
+      <ul>
+        <li><T en="Piping Materials Specification" zh="管道材料规格" /></li>
+        <li>
           <T
-            en="BBSD offers piping engineering services for both onshore and offshore plants. The piping engineering services includes but not limited to:"
-            zh="BBSD 为陆上与海上工厂提供管道工程服务。管道工程服务包括但不限于："
+            en="Plant Layout Design & Piping Routing"
+            zh="工厂布置设计与管道走向"
           />
-        </p>
-
-        <div class="grid gap-16">
-          <!-- Materials Specification -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Piping Materials Specification" zh="管道材料规格" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Piping Materials includes defining material classes, corrosion control strategies, and specifications for pipes, fittings, flanges, valves, and gaskets. For offshore projects, our engineers are familiar with harsh marine environments, high pressures, extreme temperatures, and weight optimization while adhering to codes like ASME, API, and ISO."
-                zh="管道材料工作包括定义材料等级、防腐策略，以及管道、管件、法兰、阀门与垫片的规格。对于海上项目，我们的工程师熟悉恶劣海洋环境、高压、极端温度与减重优化，并遵循 ASME、API、ISO 等规范。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Material Selection & Specification for pipes, fittings, flanges, gaskets, valves, and special items" zh="管道、管件、法兰、垫片、阀门及特殊件的材料选型与规格制定" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Documentation and Specification Development (PMS, MSD, MRs and Valve Datasheets)" zh="文档与规格编制（PMS、MSD、MR 及阀门数据表）" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Procurement Support" zh="采购支持" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Coordination & Interface Management" zh="协调与接口管理" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Layout & Routing -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Plant Layout Design & Piping Routing" zh="工厂布置设计与管道布管" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Piping Routing is the pivot discipline for offshore plant design. The piping design focuses on developing efficient, safe, and maintainable piping systems within the limited space of offshore facilities. BBSD offers design activities from Single Function Module to Entire Plant like Full FPSO Topside."
-                zh="管道布管是海上工厂设计的核心专业。管道设计专注于在海上设施有限的空间内，打造高效、安全、易维护的管道系统。BBSD 提供从单功能模块到整厂（如完整 FPSO 上部模块）的设计服务。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Plant Layout Development" zh="工厂布置开发" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Pipe Routing Design" zh="管道走向设计" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="3D Modelling using cutting edge tools like E3D and PDMS" zh="使用 E3D、PDMS 等前沿工具进行三维建模" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Interface and Coordination (Design Review and Clash Check)" zh="接口与协调（设计审查与碰撞检查）" />
-              </li>
-            </ul>
-          </div>
-
-          <!-- Stress Analysis -->
-          <div>
-            <h2 class="mb-4 text-2xl font-bold text-dark">
-              <T en="Piping Stress Analysis" zh="管道应力分析" />
-            </h2>
-            <p class="mb-4 text-sm leading-relaxed text-gray">
-              <T
-                en="Piping Stress discipline ensure that piping systems can safely withstand internal pressures, thermal expansion, dynamic loads, and external forces while meeting code and project requirements. This discipline involves analyzing piping flexibility, support design, and load transfer to equipment and structures using tools like CAESAR II or AutoPIPE."
-                zh="管道应力专业确保管道系统能够安全承受内压、热膨胀、动荷载与外力，同时满足规范与项目要求。该专业使用 CAESAR II、AutoPIPE 等工具，分析管道柔性、支架设计，以及向设备与结构的荷载传递。"
-              />
-            </p>
-            <ul class="space-y-2 text-sm text-gray">
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Piping Stress Analysis" zh="管道应力分析" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Support Design and Optimization" zh="支架设计与优化" />
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="mt-1 text-orange-primary">•</span>
-                <T en="Equipment Nozzle Load Evaluation" zh="设备接管口荷载评估" />
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="mt-16 flex justify-between">
-          <a
-            href={`${base}engineering-services/mechanical-engineering`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="‹ Mechanical Engineering" zh="‹ 机械工程" /></a
-          >
-          <a
-            href={`${base}engineering-services/structural-engineering`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="Structural Engineering ›" zh="结构工程 ›" /></a
-          >
-        </div>
-      </div>
-    </section>
+        </li>
+        <li><T en="Piping Stress Analysis" zh="管道应力分析" /></li>
+      </ul>
+      <p>
+        <T
+          en="Piping Materials includes defining material classes, corrosion control strategies, and specifications for pipes, fittings, flanges, valves, and gaskets. For offshore projects, our engineers are familiar with harsh marine environments, high pressures, extreme temperatures, and weight optimization while adhering to codes like ASME, API, and ISO."
+          zh="管道材料包括定义材料等级、腐蚀控制策略,以及管道、管件、法兰、阀门与垫片的规格。对于海上项目,我们的工程师熟悉严苛的海洋环境、高压、极端温度与重量优化,并遵循 ASME、API、ISO 等规范。"
+        />
+      </p>
+      <ul>
+        <li>
+          <T
+            en="Material Selection & Specification for pipes, fittings, flanges, gaskets, valves, and special items"
+            zh="管道、管件、法兰、垫片、阀门及特殊件的材料选型与规格"
+          />
+        </li>
+        <li>
+          <T
+            en="Documentation and Specification Development (PMS, MSD, MRs and Valve Datasheets)"
+            zh="文件与规格编制(PMS、MSD、MR 及阀门数据表)"
+          />
+        </li>
+        <li><T en="Procurement Support" zh="采购支持" /></li>
+        <li>
+          <T
+            en="Coordination & Interface Management"
+            zh="协调与接口管理"
+          />
+        </li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/piping-1.jpg`}
+        alt="Piping materials"
+        loading="lazy"
+      />
+      <p>
+        <T
+          en="Piping Routing is the pivot discipline for offshore plant design. The piping design focuses on developing efficient, safe, and maintainable piping systems within the limited space of offshore facilities. It involves creating optimized layouts that balance process requirements, safety regulations, structural constraints, and accessibility. BBSD offers design activities from Single Function Module to Entire Plant like Full FPSO Topside."
+          zh="管道走向是海上工厂设计的核心专业。管道设计致力于在海上设施有限的空间内开发高效、安全、易维护的管道系统,需要在工艺要求、安全规范、结构约束与可达性之间取得平衡,创建优化的布置方案。BBSD 提供从单功能模块到整厂(如完整 FPSO 上部模块)的设计服务。"
+        />
+      </p>
+      <ul>
+        <li><T en="Plant Layout Development" zh="工厂布置开发" /></li>
+        <li><T en="Pipe Routing Design" zh="管道走向设计" /></li>
+        <li>
+          <T
+            en="3D Modelling using cutting edge tools like E3D and PDMS"
+            zh="使用 E3D、PDMS 等前沿工具进行三维建模"
+          />
+        </li>
+        <li>
+          <T
+            en="Interface and Coordination (Design Review and Clash Check)"
+            zh="接口与协调(设计评审与碰撞检查)"
+          />
+        </li>
+      </ul>
+      <p>
+        <T
+          en="Piping Stress discipline ensure that piping systems can safely withstand internal pressures, thermal expansion, dynamic loads, and external forces while meeting code and project requirements. This discipline involves analyzing piping flexibility, support design, and load transfer to equipment and structures using tools like CAESAR II or AutoPIPE. Piping Stress Analysis services includes following but not limited to:"
+          zh="管道应力专业确保管道系统能够安全承受内压、热膨胀、动荷载与外力,同时满足规范与项目要求。该专业使用 CAESAR II、AutoPIPE 等工具分析管道柔性、支吊架设计以及对设备与结构的荷载传递。管道应力分析服务包括但不限于:"
+        />
+      </p>
+      <ul>
+        <li><T en="Piping Stress Analysis" zh="管道应力分析" /></li>
+        <li>
+          <T
+            en="Support Design and Optimization"
+            zh="支吊架设计与优化"
+          />
+        </li>
+        <li>
+          <T
+            en="Equipment Nozzle Load Evaluation"
+            zh="设备管嘴荷载评估"
+          />
+        </li>
+      </ul>
+      <img
+        src={`${base}images/engineering-services/piping-2.png`}
+        alt="Piping stress analysis"
+        loading="lazy"
+      />
+    </EngServiceLayout>
 
     <GetInTouchBanner client:visible />
   </main>
