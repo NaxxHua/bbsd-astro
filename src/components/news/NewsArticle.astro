@@ -1,0 +1,79 @@
+---
+import T from "../../i18n/T.astro";
+
+interface Props {
+  date: string;
+  dateZh: string;
+  title: string;
+  titleZh: string;
+  cover: string;
+}
+const { date, dateZh, title, titleZh, cover } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!-- Hero: blue radial gradient + date + title + cover image -->
+<section
+  class="relative flex flex-col items-center overflow-hidden px-5 pt-[150px] pb-16 md:px-[30px] lg:pt-[200px] lg:pb-[125px]"
+>
+  <div
+    class="absolute inset-x-0 top-0 h-[540px] bg-[radial-gradient(50%_50%_at_50%_50%,#1d65d1_0%,#0c4589_100%)] lg:h-[680px]"
+  >
+  </div>
+  <div
+    class="relative z-10 flex w-full max-w-[900px] flex-col items-center gap-10 lg:gap-[75px]"
+  >
+    <div class="flex flex-col items-center gap-[10px]">
+      <p
+        class="text-[16px] font-normal leading-[27.2px] tracking-[-0.32px] text-[#cccccc]"
+      >
+        <T en={date} zh={dateZh} />
+      </p>
+      <h1
+        class="text-center text-[34px] font-semibold leading-[1.12] tracking-[-0.04em] text-white md:text-[50px] lg:text-[70px] lg:leading-[73.5px] lg:tracking-[-2.8px]"
+      >
+        <T en={title} zh={titleZh} />
+      </h1>
+    </div>
+    <img
+      src={`${base}images/news/${cover}`}
+      alt={title}
+      class="h-[240px] w-full rounded-[15px] object-cover md:h-[400px] lg:h-[500px]"
+    />
+  </div>
+</section>
+
+<!-- Body -->
+<section
+  class="flex flex-col items-center bg-white px-5 pb-20 md:px-[30px] lg:pb-[125px]"
+>
+  <div class="news-body flex w-full max-w-[900px] flex-col gap-5">
+    <slot />
+  </div>
+</section>
+
+<style is:global>
+  .news-body p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    letter-spacing: -0.32px;
+    color: var(--color-gray);
+  }
+  .news-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.44px;
+    color: #000;
+  }
+  .news-body strong {
+    font-weight: 700;
+  }
+  @media (min-width: 1200px) {
+    .news-body h3 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+</style>

@@ -1,110 +1,92 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import NewsArticle from "../../components/news/NewsArticle.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="ISO 9000 Quality Management System Certification - BBSD">
   <main>
-    <article class="bg-white py-20">
-      <div class="mx-auto max-w-[800px] px-6">
-        <p class="mb-4 text-sm text-gray-light">
-          <T en="Jun 4, 2025" zh="2025年6月4日" />
-        </p>
-        <h1 class="mb-8 text-3xl font-bold text-dark md:text-5xl">
-          <T
-            en="BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Officially Launches ISO 9000 Quality Management System Certification"
-            zh="BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证"
-          />
-        </h1>
-
-        <img
-          src={`${base}images/news/iso-article.jpg`}
-          alt="ISO 9000 Certification"
-          loading="lazy"
-          class="mb-10 w-full rounded-xl object-cover"
+    <NewsArticle
+      date="Jun 4, 2025"
+      dateZh="2025年6月4日"
+      title="BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. Officially Launches ISO 9000 Quality Management System Certification"
+      titleZh="BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证"
+      cover="news-3.jpg"
+    >
+      <h3>
+        <T
+          en="Deepening Quality System Construction to Empower High-Quality Development of the Marine Engineering Industry"
+          zh="深化质量体系建设，赋能海洋工程行业高质量发展"
         />
-
-        <div
-          class="prose max-w-none space-y-4 text-sm leading-relaxed text-gray"
-        >
-          <h2 class="text-lg font-bold text-dark">
-            <T
-              en="Deepening Quality System Construction to Empower High-Quality Development of the Marine Engineering Industry"
-              zh="深化质量体系建设，赋能海洋工程行业高质量发展"
-            />
-          </h2>
-
-          <p>
-            <T
-              en="Recently, BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. has officially launched the application for ISO 9000 Quality Management System Certification. This marks a new stage in the standardization and regularization of the Company's quality management in the marine engineering field."
-              zh="近日，BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证申请工作。这标志着公司在海洋工程领域的质量管理迈入标准化、规范化的新阶段。"
-            />
-          </p>
-
-          <p>
-            <T
-              en={'As a professional enterprise with years of experience in the marine engineering sector, the Company has always adhered to the core concept that "quality is the lifeline of marine engineering equipment". It focuses on the design, procurement and construction of topside modules for Floating Production, Storage and Offloading (FPSO) units, serving customers at home and abroad.'}
-              zh="作为在海洋工程领域拥有多年经验的专业企业，公司始终坚持「质量是海洋工程装备生命线」的核心理念。公司专注于浮式生产储卸油装置（FPSO）上部模块的设计、采购与建造，服务国内外客户。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="For the launch of this ISO 9000 certification, the Company will strictly comply with the requirements of the ISO 9001:2015 standard, promoting the establishment and optimization of the quality management system from multiple dimensions:"
-              zh="围绕此次 ISO 9000 认证的启动，公司将严格遵循 ISO 9001:2015 标准的要求，从多个维度推动质量管理体系的建立与优化："
-            />
-          </p>
-
-          <p>
-            <strong><T en="Building a full-process quality control system:" zh="构建全流程质量控制体系：" /></strong>
-            <T
-              en={'Centering on the entire life cycle of "design-procurement-construction" of marine engineering products, the Company will identify key quality control points, formulate standardized operating procedures, and clarify the quality responsibilities of various departments and positions.'}
-              zh="公司将围绕海洋工程产品「设计—采购—建造」的全生命周期，识别关键质量控制点，制定标准化作业流程，明确各部门与岗位的质量职责。"
-            />
-          </p>
-
-          <p>
-            <strong><T en="Strengthening quality awareness and building capability:" zh="强化质量意识，建设能力体系：" /></strong>
-            <T
-              en="The Company has organized comprehensive quality management training for all employees, covering management personnel, R&D teams and on-site staff. Meanwhile, the Company will introduce an internal audit mechanism, conduct regular inspections on the operation of the quality management system."
-              zh="公司已面向全体员工组织全面的质量管理培训，覆盖管理人员、研发团队与现场员工。同时，公司将引入内部审核机制，定期检查质量管理体系的运行情况。"
-            />
-          </p>
-
-          <p>
-            <strong><T en="Optimizing services based on customer needs:" zh="以客户需求为本，优化服务：" /></strong>
-            <T
-              en="Taking the certification work as an opportunity, the Company will further improve the mechanism for customer demand research and feedback, establishing a customer satisfaction evaluation system to accurately capture customers' needs."
-              zh="公司将以认证工作为契机，进一步完善客户需求调研与反馈机制，建立客户满意度评价体系，精准把握客户需求。"
-            />
-          </p>
-
-          <p>
-            <T
-              en={"Lu Liangjun, General Manager of the Company, stated: \"The development of the marine engineering industry is inseparable from solid quality assurance. Launching the ISO 9000 Quality Management System Certification is not only the foundation for the Company to meet industry compliance requirements and connect with the international market, but also a practice of our commitment to customers of 'providing safe and reliable marine engineering solutions'.\""}
-              zh="公司总经理 Lu Liangjun 表示：「海洋工程行业的发展离不开坚实的质量保障。启动 ISO 9000 质量管理体系认证，既是公司满足行业合规要求、对接国际市场的基础，也是我们对客户『提供安全可靠的海洋工程解决方案』承诺的践行。」"
-            />
-          </p>
-
-          <p>
-            <T
-              en="At present, the Company has established a special working group and is collaborating with professional certification consulting institutions to carry out preliminary work. It is expected to complete the certification audit and strive to obtain the certificate by October 2025."
-              zh="目前，公司已成立专项工作组，正与专业认证咨询机构协作开展前期工作。预计将于 2025 年 10 月前完成认证审核并力争取得证书。"
-            />
-          </p>
-        </div>
-
-        <div class="mt-12">
-          <a
-            href={`${base}news`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="← Back to News" zh="← 返回新闻列表" /></a
-          >
-        </div>
-      </div>
-    </article>
+      </h3>
+      <p>
+        <T
+          en="Recently, BBSD (Jiangsu Nantong) Engineering Technology Co., Ltd. has officially launched the application for ISO 9000 Quality Management System Certification. This marks a new stage in the standardization and regularization of the Company's quality management in the marine engineering field."
+          zh="近日，BBSD（江苏南通）工程技术有限公司正式启动 ISO 9000 质量管理体系认证申请工作。这标志着公司在海洋工程领域的质量管理迈入标准化、规范化的新阶段。"
+        />
+      </p>
+      <p>
+        <T
+          en={'As a professional enterprise with years of experience in the marine engineering sector, the Company has always adhered to the core concept that "quality is the lifeline of marine engineering equipment". It focuses on the design, procurement and construction of topside modules for Floating Production, Storage and Offloading (FPSO) units, serving customers at home and abroad.'}
+          zh="作为在海洋工程领域拥有多年经验的专业企业，公司始终坚持「质量是海洋工程装备生命线」的核心理念。公司专注于浮式生产储卸油装置（FPSO）上部模块的设计、采购与建造，服务国内外客户。"
+        />
+      </p>
+      <p>
+        <T
+          en="For the launch of this ISO 9000 certification, the Company will strictly comply with the requirements of the ISO 9001:2015 standard, promoting the establishment and optimization of the quality management system from multiple dimensions:"
+          zh="围绕此次 ISO 9000 认证的启动，公司将严格遵循 ISO 9001:2015 标准的要求，从多个维度推动质量管理体系的建立与优化："
+        />
+      </p>
+      <p>
+        <strong>
+          <T
+            en="Building a full-process quality control system: "
+            zh="构建全流程质量控制体系："
+          />
+        </strong>
+        <T
+          en={'Centering on the entire life cycle of "design-procurement-construction" of marine engineering products, the Company will identify key quality control points, formulate standardized operating procedures, and clarify the quality responsibilities of various departments and positions.'}
+          zh="公司将围绕海洋工程产品「设计—采购—建造」的全生命周期，识别关键质量控制点，制定标准化作业流程，明确各部门与岗位的质量职责。"
+        />
+      </p>
+      <p>
+        <strong>
+          <T
+            en="Strengthening quality awareness and building capability: "
+            zh="强化质量意识，建设能力体系："
+          />
+        </strong>
+        <T
+          en="The Company has organized comprehensive quality management training for all employees, covering management personnel, R&D teams and on-site staff. Meanwhile, the Company will introduce an internal audit mechanism, conduct regular inspections on the operation of the quality management system."
+          zh="公司已面向全体员工组织全面的质量管理培训，覆盖管理人员、研发团队与现场员工。同时，公司将引入内部审核机制，定期检查质量管理体系的运行情况。"
+        />
+      </p>
+      <p>
+        <strong>
+          <T
+            en="Optimizing services based on customer needs: "
+            zh="以客户需求为本，优化服务："
+          />
+        </strong>
+        <T
+          en="Taking the certification work as an opportunity, the Company will further improve the mechanism for customer demand research and feedback, establishing a customer satisfaction evaluation system to accurately capture customers' needs."
+          zh="公司将以认证工作为契机，进一步完善客户需求调研与反馈机制，建立客户满意度评价体系，精准把握客户需求。"
+        />
+      </p>
+      <p>
+        <T
+          en={"Lu Liangjun, General Manager of the Company, stated: \"The development of the marine engineering industry is inseparable from solid quality assurance. Launching the ISO 9000 Quality Management System Certification is not only the foundation for the Company to meet industry compliance requirements and connect with the international market, but also a practice of our commitment to customers of 'providing safe and reliable marine engineering solutions'.\""}
+          zh="公司总经理 Lu Liangjun 表示：「海洋工程行业的发展离不开坚实的质量保障。启动 ISO 9000 质量管理体系认证，既是公司满足行业合规要求、对接国际市场的基础，也是我们对客户『提供安全可靠的海洋工程解决方案』承诺的践行。」"
+        />
+      </p>
+      <p>
+        <T
+          en="At present, the Company has established a special working group and is collaborating with professional certification consulting institutions to carry out preliminary work. It is expected to complete the certification audit and strive to obtain the certificate by October 2025."
+          zh="目前，公司已成立专项工作组，正与专业认证咨询机构协作开展前期工作。预计将于 2025 年 10 月前完成认证审核并力争取得证书。"
+        />
+      </p>
+    </NewsArticle>
 
     <GetInTouchBanner client:visible />
   </main>

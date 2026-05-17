@@ -1,86 +1,56 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import NewsArticle from "../../components/news/NewsArticle.astro";
 import GetInTouchBanner from "../../components/common/GetInTouchBanner.tsx";
 import T from "../../i18n/T.astro";
-const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Industry-University-Research Cooperation Agreement - BBSD">
   <main>
-    <article class="bg-white py-20">
-      <div class="mx-auto max-w-[800px] px-6">
-        <p class="mb-4 text-sm text-gray-light">
-          <T en="Apr 18, 2025" zh="2025年4月18日" />
-        </p>
-        <h1 class="mb-8 text-3xl font-bold text-dark md:text-5xl">
-          <T
-            en="Our Company Signs Industry-University-Research Strategic Cooperation Agreement with Nantong University"
-            zh="我司与南通大学签署产学研战略合作协议"
-          />
-        </h1>
-
-        <img
-          src={`${base}images/news/signing.jpg`}
-          alt="Signing Ceremony"
-          loading="lazy"
-          class="mb-10 w-full rounded-xl object-cover"
+    <NewsArticle
+      date="Apr 18, 2025"
+      dateZh="2025年4月18日"
+      title="Our Company Signs Industry-University-Research Strategic Cooperation Agreement with Nantong University"
+      titleZh="我司与南通大学签署产学研战略合作协议"
+      cover="news-2.jpg"
+    >
+      <p>
+        <T
+          en="On the morning of April 18, our company signed an Industry-University-Research Strategic Cooperation Agreement with Nantong University. Hua Liang, Member of the Standing Committee of the Party Committee and Vice President of Nantong University, and Shi Haowen, Vice President of BBSD Holding B.V., attended the event."
+          zh="4 月 18 日上午，我司与南通大学签署产学研战略合作协议。南通大学党委常委、副校长 Hua Liang，BBSD Holding B.V. 副总裁 Shi Haowen 出席了本次活动。"
         />
-
-        <div
-          class="prose max-w-none space-y-4 text-sm leading-relaxed text-gray"
-        >
-          <p>
-            <T
-              en="On the morning of April 18, our company signed an Industry-University-Research Strategic Cooperation Agreement with Nantong University. Hua Liang, Member of the Standing Committee of the Party Committee and Vice President of Nantong University, and Shi Haowen, Vice President of BBSD Holding B.V., attended the event."
-              zh="4 月 18 日上午，我司与南通大学签署产学研战略合作协议。南通大学党委常委、副校长 Hua Liang，BBSD Holding B.V. 副总裁 Shi Haowen 出席了本次活动。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="On behalf of Nantong University, Hua Liang extended a warm welcome to Shi Haowen and his delegation, and introduced the university's development history, school-running philosophy, school-running characteristics and achievements made in recent years. He stated that Nantong University has always regarded serving the local economic and social development as an important mission, actively providing talent and intellectual support as well as scientific and technological innovation support for local development."
-              zh="Hua Liang 代表南通大学对 Shi Haowen 一行表示热烈欢迎，并介绍了学校的发展历程、办学理念、办学特色以及近年来取得的成果。他表示，南通大学始终将服务地方经济社会发展作为重要使命，积极为地方发展提供人才与智力支持以及科技创新支持。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="He expressed the expectation that both the university and the enterprise will further deepen cooperation, continuously expand the scope of cooperation, and work together to create a sound situation of win-win cooperation."
-              zh="他期望校企双方进一步深化合作，不断拓展合作领域，携手共创合作共赢的良好局面。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="Shi Haowen introduced the company's situation, noting that as a wholly owned subsidiary of Jord Oil & Gas Systems B.V., a Dutch marine engineering equipment enterprise, the company has developed into a world-leading provider of design, procurement and construction services for floating production, storage and offloading (FPSO) topside modules, with customers in nearly 100 countries around the world."
-              zh="Shi Haowen 介绍了公司情况，指出公司作为荷兰海洋工程装备企业 Jord Oil & Gas Systems B.V. 的全资子公司，已发展成为浮式生产储卸油装置（FPSO）上部模块设计、采购与建造服务的全球领先供应商，客户遍及全球近 100 个国家。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="He expressed the expectation that both parties will focus on the fields of marine equipment manufacturing and new energy and carry out comprehensive industry-university-research cooperation in terms of talent exchange and interaction, joint research projects, transformation of scientific and technological achievements, and co-construction of innovation platforms."
-              zh="他期望双方聚焦海洋装备制造与新能源领域，在人才交流互动、联合科研项目、科技成果转化以及创新平台共建等方面开展全面的产学研合作。"
-            />
-          </p>
-
-          <p>
-            <T
-              en="At the meeting, Xu Yiming, Dean of the School of Electrical Engineering and Automation, and Lu Liangjun, General Manager of our company, signed the Industry-University-Research Strategic Cooperation Agreement on behalf of both the university and the enterprise. Jorik Bik, Vice President, introduced the company's FPSO projects in the United Kingdom, the United Arab Emirates and other countries. Dr. Li Zhen from the School of Electrical Engineering and Automation presented the achievements of Nantong University in the fields of ship and marine engineering, new energy, etc."
-              zh="会上，电气工程与自动化学院院长 Xu Yiming 与我司总经理 Lu Liangjun 代表校企双方签署了产学研战略合作协议。副总裁 Jorik Bik 介绍了公司在英国、阿联酋等国家的 FPSO 项目。电气工程与自动化学院的 Li Zhen 博士介绍了南通大学在船舶与海洋工程、新能源等领域取得的成果。"
-            />
-          </p>
-        </div>
-
-        <div class="mt-12">
-          <a
-            href={`${base}news`}
-            class="text-sm font-medium text-blue-link hover:underline"
-            ><T en="← Back to News" zh="← 返回新闻列表" /></a
-          >
-        </div>
-      </div>
-    </article>
+      </p>
+      <p>
+        <T
+          en="On behalf of Nantong University, Hua Liang extended a warm welcome to Shi Haowen and his delegation, and introduced the university's development history, school-running philosophy, school-running characteristics and achievements made in recent years. He stated that Nantong University has always regarded serving the local economic and social development as an important mission, actively providing talent and intellectual support as well as scientific and technological innovation support for local development."
+          zh="Hua Liang 代表南通大学对 Shi Haowen 一行表示热烈欢迎，并介绍了学校的发展历程、办学理念、办学特色以及近年来取得的成果。他表示，南通大学始终将服务地方经济社会发展作为重要使命，积极为地方发展提供人才与智力支持以及科技创新支持。"
+        />
+      </p>
+      <p>
+        <T
+          en="He expressed the expectation that both the university and the enterprise will further deepen cooperation, continuously expand the scope of cooperation, and work together to create a sound situation of win-win cooperation."
+          zh="他期望校企双方进一步深化合作，不断拓展合作领域，携手共创合作共赢的良好局面。"
+        />
+      </p>
+      <p>
+        <T
+          en="Shi Haowen introduced the company's situation, noting that as a wholly owned subsidiary of Jord Oil & Gas Systems B.V., a Dutch marine engineering equipment enterprise, the company has developed into a world-leading provider of design, procurement and construction services for floating production, storage and offloading (FPSO) topside modules, with customers in nearly 100 countries around the world."
+          zh="Shi Haowen 介绍了公司情况，指出公司作为荷兰海洋工程装备企业 Jord Oil & Gas Systems B.V. 的全资子公司，已发展成为浮式生产储卸油装置（FPSO）上部模块设计、采购与建造服务的全球领先供应商，客户遍及全球近 100 个国家。"
+        />
+      </p>
+      <p>
+        <T
+          en="He expressed the expectation that both parties will focus on the fields of marine equipment manufacturing and new energy and carry out comprehensive industry-university-research cooperation in terms of talent exchange and interaction, joint research projects, transformation of scientific and technological achievements, and co-construction of innovation platforms."
+          zh="他期望双方聚焦海洋装备制造与新能源领域，在人才交流互动、联合科研项目、科技成果转化以及创新平台共建等方面开展全面的产学研合作。"
+        />
+      </p>
+      <p>
+        <T
+          en="At the meeting, Xu Yiming, Dean of the School of Electrical Engineering and Automation, and Lu Liangjun, General Manager of our company, signed the Industry-University-Research Strategic Cooperation Agreement on behalf of both the university and the enterprise. Jorik Bik, Vice President, introduced the company's FPSO projects in the United Kingdom, the United Arab Emirates and other countries. Dr. Li Zhen from the School of Electrical Engineering and Automation presented the achievements of Nantong University in the fields of ship and marine engineering, new energy, etc."
+          zh="会上，电气工程与自动化学院院长 Xu Yiming 与我司总经理 Lu Liangjun 代表校企双方签署了产学研战略合作协议。副总裁 Jorik Bik 介绍了公司在英国、阿联酋等国家的 FPSO 项目。电气工程与自动化学院的 Li Zhen 博士介绍了南通大学在船舶与海洋工程、新能源等领域取得的成果。"
+        />
+      </p>
+    </NewsArticle>
 
     <GetInTouchBanner client:visible />
   </main>
