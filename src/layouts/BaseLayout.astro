@@ -75,6 +75,9 @@ const canonicalURL = new URL(currentPath, Astro.site);
     </script>
     <link rel="canonical" href={canonicalURL.href} />
     <link rel="icon" type="image/x-icon" href={`${base}favicon.ico`} />
+    <link rel="icon" type="image/png" sizes="32x32" href={`${base}favicon-32.png`} />
+    <link rel="icon" type="image/png" sizes="192x192" href={`${base}favicon-192.png`} />
+    <link rel="apple-touch-icon" sizes="192x192" href={`${base}favicon-192.png`} />
 
     <!-- Google Fonts with preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
