@@ -26,5 +26,8 @@ pnpm-debug.log*
 # claude code agent worktrees
 .claude/worktrees/
 
+# wrangler local state
+.wrangler/
+
 # Private working docs (not for version control)
 UIUX_GUIDE.md
