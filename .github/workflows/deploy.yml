@@ -25,8 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 343f1239a3142118174bfd686754d000
-          command: pages deploy dist --project-name=bbsd-astro --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: 343f1239a3142118174bfd686754d000
+        run: npx wrangler pages deploy dist --project-name=bbsd-astro --branch=main
